@@ -1,13 +1,10 @@
 from fastapi import FastAPI
 
+from .router import song
+import backend.util as util
+
+# util.init_db()
 app = FastAPI()
 
+app.include_router(song.router)
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
