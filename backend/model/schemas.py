@@ -28,6 +28,7 @@ class UserBase(BaseModel):
     account_number: int | None = None
     uuid: str | None = None
     anonymous_probe: bool | None = False
+    upload_token: str | None = None
     is_active: bool | None = True
     is_admin: bool | None = False
 
@@ -49,6 +50,7 @@ class User(UserBase):
 
 
 class SongLevelInfo(SongBase):
+    song_level_id: int
     difficulty_id: int
     difficulty: str | None = None
     level: float
@@ -59,13 +61,20 @@ class SongLevelInfo(SongBase):
         from_attributes = True
 
 
+class LevelInfo(BaseModel):
+    difficulty_id: int
+    difficulty: str | None = None
+    level: float
+    level_design: str | None = None
+
+
 class SongCreate(SongBase):
-    song_levels: list[SongLevelInfo]
+    song_levels: list[LevelInfo]
 
 
 class SongUpdate(SongBase):
     song_id: int
-    song_levels: list[SongLevelInfo]
+    song_levels: list[LevelInfo]
 
 
 class UserCreate(UserBase):
