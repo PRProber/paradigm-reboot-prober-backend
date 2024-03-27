@@ -1,8 +1,7 @@
 from typing import List, Optional
 from datetime import datetime
 
-from sqlalchemy import (ForeignKey,
-                        Boolean, Integer, Float, String, DateTime)
+from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column, relationship
 
@@ -55,13 +54,13 @@ class User(Base):
 
     user_id: Mapped[int] = mapped_column(primary_key=True)
     username: Mapped[str] = mapped_column(unique=True)
-    encodedPassword: Mapped[str] = mapped_column()
+    encoded_password: Mapped[str] = mapped_column()
     email: Mapped[str] = mapped_column()
-    qqNumber: Mapped[Optional[int]] = mapped_column()
+    qq_number: Mapped[Optional[int]] = mapped_column()
     account: Mapped[Optional[str]] = mapped_column()
-    accountNumber: Mapped[Optional[int]] = mapped_column()
+    account_number: Mapped[Optional[int]] = mapped_column()
     uuid: Mapped[Optional[str]] = mapped_column()
-    anonymousProbe: Mapped[bool] = mapped_column()
+    anonymous_probe: Mapped[bool] = mapped_column()
     is_active: Mapped[bool] = mapped_column()
     is_admin: Mapped[bool] = mapped_column()  # 权限管理
 
