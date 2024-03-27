@@ -60,7 +60,8 @@ class User(Base):
     account: Mapped[Optional[str]] = mapped_column()
     account_number: Mapped[Optional[int]] = mapped_column()
     uuid: Mapped[Optional[str]] = mapped_column()
-    anonymous_probe: Mapped[bool] = mapped_column()
+    anonymous_probe: Mapped[bool] = mapped_column()  # 允许匿名查询成绩
+    upload_token: Mapped[str] = mapped_column()  # 匿名上传成绩 token
     is_active: Mapped[bool] = mapped_column()
     is_admin: Mapped[bool] = mapped_column()  # 权限管理
 
