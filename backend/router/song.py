@@ -32,7 +32,6 @@ async def create_song(song: schemas.SongCreate, db: Session = Depends(get_db),
 @router.patch('/songs', response_model=list[schemas.SongLevelInfo])
 async def update_song(song: schemas.SongUpdate, db: Session = Depends(get_db),
                       user: entities.User = Depends(user_service.get_current_user)):
-    # TODO: Check authority
     if user.is_admin:
         song_levels = song_service.update_song(db, song)
         return song_levels
