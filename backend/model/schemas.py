@@ -22,7 +22,7 @@ class SongLevelBase(BaseModel):
 
 class UserBase(BaseModel):
     username: str
-    email: str | None = None
+    email: str
     qq_number: int | None = None
     account: str | None = None
     account_number: int | None = None
@@ -74,3 +74,9 @@ class UserCreate(UserBase):
 
 class PlayRecordCreate(PlayRecordBase):
     pass
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
