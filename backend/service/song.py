@@ -2,9 +2,9 @@ from typing import List
 
 from sqlalchemy.orm import Session
 
-from backend.model import schemas, entities
-from backend.crud import song as crud
-import backend.util as util
+from ..model import schemas, entities
+from ..crud import song as crud
+from .. import util
 
 
 def song_to_levels(song: entities.Song) -> List[util.SongLevelInfo]:

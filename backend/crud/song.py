@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from backend.model import entities, schemas
+from ..model import entities, schemas
 
 
 REPLACEABLE_ATTRIBUTES = [
