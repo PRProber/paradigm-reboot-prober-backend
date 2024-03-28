@@ -75,7 +75,7 @@ class PlayRecord(Base):
     song_level_id: Mapped[int] = mapped_column(ForeignKey('song_levels.song_level_id'))
     record_time: Mapped[datetime] = mapped_column()
     username: Mapped[str] = mapped_column(ForeignKey('prober_users.username'))
-    acc: Mapped[int] = mapped_column()
+    score: Mapped[int] = mapped_column()
     rating: Mapped[float] = mapped_column()
 
     user: Mapped["User"] = relationship(back_populates='play_records')

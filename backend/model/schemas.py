@@ -36,7 +36,7 @@ class UserBase(BaseModel):
 class PlayRecordBase(BaseModel):
     username: str
     song_level_id: int
-    acc: float
+    score: int
 
 
 class PlayRecord(PlayRecordBase):
