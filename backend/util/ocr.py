@@ -21,7 +21,7 @@ def _ocr_result_display(result, img_path: str, output_name):
     im_show.save(output_name)
 
 
-def _concentrate_string(result, threshold=0.9):
+def _concentrate_string(result, threshold=0.8):
     result_str = ''
     for idx in range(len(result)):
         res = result[idx]

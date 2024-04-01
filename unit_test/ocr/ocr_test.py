@@ -14,7 +14,7 @@ class OCRSimpleTestCase(unittest.TestCase):
         'CO5M1C R4ILR0AD': 1007983,
         'REDRAVE': 1008528,
         'キミとボクへの葬送歌': 1005532,
-        'クリムゾン帝王': 997650
+        'クリムゾン帝王': 1005140
     }
     test_img_root: str = 'ocr/test_img/'
 
