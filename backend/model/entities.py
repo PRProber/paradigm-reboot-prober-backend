@@ -66,6 +66,7 @@ class User(Base):
     is_admin: Mapped[bool] = mapped_column()  # 权限管理
 
     play_records: Mapped[List["PlayRecord"]] = relationship(back_populates='user')
+    best_play_records: Mapped[List["BestPlayRecord"]] = relationship(back_populates='user')
 
 
 class PlayRecord(Base):
@@ -80,3 +81,11 @@ class PlayRecord(Base):
 
     user: Mapped["User"] = relationship(back_populates='play_records')
     song_level: Mapped["SongLevel"] = relationship()
+
+
+class BestPlayRecord(Base):
+    __tablename__ = 'best_play_records'
+
+    play_record_id: Mapped[int] = mapped_column(ForeignKey('play_records.play_record_id'))
+
+    play_record: Mapped["PlayRecord"] = relationship(back_populates='best_play_records')
