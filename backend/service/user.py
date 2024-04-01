@@ -1,7 +1,8 @@
 import secrets
-from typing import Union, List, Tuple
+from typing import Union, List, Tuple, Type
 
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import AmbiguousForeignKeysError
 from fastapi import HTTPException, Depends
 
 from ..crud import user as crud
@@ -52,13 +53,15 @@ def get_active_user(db: Session, username: str) -> Union[User, None]:
 
 def get_user(db: Session, username: str) -> Union[User, None]:
     user: User = crud.get_user(db, username)
+    if user is None:
+        raise HTTPException(status_code=400, detail="User doesn't exist")
     return user
 
 
 def create_user(db: Session, user: UserCreate) -> User:
     user: User | None = crud.create_user(db, user)
     if user is None:
-        raise HTTPException(status_code=400, detail="Username has already exists")
+        raise HTTPException(status_code=400, detail="Username has already existed")
     return user
 
 
@@ -73,16 +76,23 @@ def refresh_upload_token(db: Session, user: User) -> User:
 
 
 def create_record(db: Session, record: PlayRecordCreate, user: User) -> PlayRecord:
-    # TODO: Implement this functino
-    pass
+    try:
+        record = crud.create_record(db, record, user)
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=e)
+    except AmbiguousForeignKeysError:
+        raise HTTPException(status_code=400, detail="User doesn't exist or song doesn't exist")
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=e)
+    return record
 
 
-def get_all_records(db: Session, username: str) -> List[PlayRecord]:
-    # TODO: Implement this function
-    pass
+def get_all_records(db: Session, username: str) -> List[Type[PlayRecord]]:
+    records = crud.get_all_records(db, username)
+    return records
 
 
 def get_best_records(db: Session, username: str, underflow: int = 0) \
-        -> Tuple[List[PlayRecord], List[PlayRecord]]:
-    # TODO: Implement this function
-    pass
+        -> Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]:
+    best_records = crud.get_best_records(db, username, underflow)
+    return best_records
