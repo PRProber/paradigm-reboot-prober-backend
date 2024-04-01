@@ -35,15 +35,15 @@ def _concentrate_string(result, threshold=0.9):
 def extract_record_info(img_path: str,
                         song_titles: list[str],
                         difficulties: list[str],
-                        threshold: int = 75):
+                        threshold: int = 75) -> dict:
     """
     Given a screenshot of a record, list of available song titles and difficulties, extract the corresponding record
-    information.
+    information. The result dictionary is like ``{"title": (str, dist), "difficulty": (str, dist), "score": int}``
     :param threshold: Levenshtein Distance threshold
     :param difficulties: list of difficulties
     :param song_titles: list of available song titles
     :param img_path: the path of screenshot
-    :return: a dictionary contains record information. Possible keys: 'title', 'difficulty', 'score'
+    :return: a dictionary contains record information. Keys: 'title', 'difficulty', 'score'
     """
 
     ch, jp = ch_ocr.ocr(img_path, cls=True), jp_ocr.ocr(img_path, cls=True)
