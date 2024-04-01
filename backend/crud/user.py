@@ -48,7 +48,6 @@ def create_record(db: Session, record: schemas.PlayRecordCreate) -> entities.Pla
     :param record: record details
     :return: record entity
     """
-    # TODO: Implement this function
     db_song_level: entities.SongLevel | None \
         = (db.query(entities.SongLevel).filter(entities.SongLevel.song_level_id == record.song_level_id).first())
     if db_song_level is None:
@@ -83,6 +82,7 @@ def get_best_records(db: Session, username: str) -> List[Type[PlayRecord]]:
            .order_by(PlayRecord.rating.desc()).distinct(PlayRecord.song_level_id).all())
     return records
 
+
 def get_best50_records(db: Session, username: str, underflow: int = 0) \
         -> tuple[list[Type[PlayRecord]], list[Type[PlayRecord]]]:
     """
@@ -95,11 +95,12 @@ def get_best50_records(db: Session, username: str, underflow: int = 0) \
     """
     b35: List[Type[PlayRecord]] \
         = (db.query(PlayRecord)
-           .filter(PlayRecord.username == username, PlayRecord.song_level.song.b15 is False)
+           .filter(PlayRecord.username == username and PlayRecord.song_level.song.b15 is False)
            .order_by(PlayRecord.rating.desc()).distinct(PlayRecord.song_level_id).limit(35 + underflow).all())
     b15: List[Type[PlayRecord]] \
         = (db.query(PlayRecord)
-           .filter(PlayRecord.username == username, PlayRecord.song_level.song.b15 is True)
+           .filter(PlayRecord.username == username and PlayRecord.song_level.song.b15 is True)
            .order_by(PlayRecord.rating.desc()).distinct(PlayRecord.song_level_id).limit(15 + underflow).all())
+
 
     return b35, b15
