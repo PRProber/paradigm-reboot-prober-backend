@@ -73,7 +73,7 @@ def refresh_upload_token(db: Session, user: User) -> User:
 
 
 def create_record(db: Session, record: PlayRecordCreate, user: User) -> PlayRecord:
-    # TODO: Implement this functino
+    # TODO: Implement this function
     pass
 
 
