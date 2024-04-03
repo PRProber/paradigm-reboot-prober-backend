@@ -1,3 +1,7 @@
+bounds = [900000, 930000, 950000, 970000, 980000, 990000]
+rewards = [0.06, 0.02, 0.02, 0.02, 0.02, 0.02]
+
+
 def single_rating(level: float, score: int) -> float:
     """
     Calculate the rating of a single chart.
@@ -6,20 +10,17 @@ def single_rating(level: float, score: int) -> float:
     :return: the (avg) rating.
     """
     # Reference: https://www.bilibili.com/read/cv29433852
-    rating: float
-
-    bounds = [900000, 930000, 950000, 970000, 980000, 990000]
-    rewards = [0.06, 0.02, 0.02, 0.02, 0.02, 0.02]
-
-    reward_rating: float = 0
-    for i, bound in enumerate(bounds):
-        if score >= bound:
-            reward_rating += rewards[i]
+    global bounds, rewards
+    rating: float = 0
 
     if score >= 1000000:
         rating = 0.2 * (level + 2 * (score - 1000000) / 30000)
     else:
-        rating = 0.2 * (level * ((score / 1000000) ** 1.5) - 0.9) + reward_rating
+        for bound, reward in zip(bounds, rewards):
+            rating += reward if score <= bound else 0
+        rating += 0.2 * (level * ((score / 1000000) ** 1.5) - 0.9)
+
+    rating = max(.0, rating)
 
     int_rating: int = int(rating * 10000)
     if int_rating % 2 != 0:
