@@ -15,12 +15,14 @@ class Song(Base):
     song_id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column()
     artist: Mapped[str] = mapped_column()
+    genre: Mapped[str] = mapped_column()
     cover: Mapped[str] = mapped_column()  # 实际上为封面的*文件名*
     illustrator: Mapped[str] = mapped_column()
     version: Mapped[str] = mapped_column()
     b15: Mapped[bool] = mapped_column()  # 是否为 b15 歌曲
     album: Mapped[str] = mapped_column()
     bpm: Mapped[float] = mapped_column()
+    length: Mapped[datetime] = mapped_column()
 
     song_levels: Mapped[List["SongLevel"]] = relationship(back_populates='song')
 
@@ -43,6 +45,7 @@ class SongLevel(Base):
     level: Mapped[float] = mapped_column()
     fitting_level: Mapped[Optional[float]] = mapped_column(nullable=True)
     level_design: Mapped[str] = mapped_column(nullable=True)  # 考虑到合作作谱，设计上不把谱师独立建表
+    notes: Mapped[int] = mapped_column()
 
     song: Mapped["Song"] = relationship(back_populates='song_levels')
     difficulty: Mapped["Difficulty"] = relationship(back_populates='song_levels')
