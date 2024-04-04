@@ -5,6 +5,7 @@ from PIL import Image
 from thefuzz import fuzz
 from paddleocr import PaddleOCR, draw_ocr
 
+
 logging.disable(logging.DEBUG)
 ch_ocr = PaddleOCR(use_angle_cls=True, lang="ch")
 jp_ocr = PaddleOCR(use_angle_cls=True, lang="japan")
@@ -43,7 +44,7 @@ def extract_record_info(img_path: str,
     :param difficulties: list of difficulties
     :param song_titles: list of available song titles
     :param img_path: the path of screenshot
-    :return: a dictionary contains record information. Keys: 'title', 'difficulty', 'score'
+    :return: A dictionary contains record information. Keys: ``'title'``, ``'difficulty'``, ``'score'``
     """
 
     ch, jp = ch_ocr.ocr(img_path, cls=True), jp_ocr.ocr(img_path, cls=True)

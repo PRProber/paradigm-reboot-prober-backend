@@ -102,5 +102,4 @@ def get_best50_records(db: Session, username: str, underflow: int = 0) \
            .filter(PlayRecord.username == username and PlayRecord.song_level.song.b15 is True)
            .order_by(PlayRecord.rating.desc()).distinct(PlayRecord.song_level_id).limit(15 + underflow).all())
 
-
     return b35, b15
