@@ -37,6 +37,7 @@ class PlayRecordBase(BaseModel):
 class PlayRecord(PlayRecordBase):
     play_record_id: int
     record_time: datetime
+    rating: float
 
     class Config:
         from_attributes = True

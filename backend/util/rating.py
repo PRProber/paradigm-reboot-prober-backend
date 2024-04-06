@@ -13,6 +13,8 @@ def single_rating(level: float, score: int) -> float:
     global bounds, rewards
     rating: float = 0
 
+    score = min(score, 1010000)
+
     if score >= 1000000:
         rating = 0.2 * (level + 2 * (score - 1000000) / 30000)
     else:

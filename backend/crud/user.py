@@ -66,7 +66,8 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bo
     db.refresh(db_record)
 
     db_best_record: BestPlayRecord | None \
-        = (db.query(BestPlayRecord).filter(BestPlayRecord.play_record.song.song_id == record.song_level_id).one_or_none())
+        = (db.query(BestPlayRecord)
+           .join(PlayRecord).filter(PlayRecord.song_level_id == record.song_level_id).one_or_none())
     if db_best_record is not None:
         best_record: PlayRecord = db_best_record.play_record
         if is_replaced or db_record.score > best_record.score:
