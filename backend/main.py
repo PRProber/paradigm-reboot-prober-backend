@@ -6,8 +6,8 @@ from fastapi_cache.backends.inmemory import InMemoryBackend
 
 from .router import song, user
 
-# from .util import database
-# database.init_db()
+from .util import database
+database.init_db()
 
 app = FastAPI(root_path="/api/v1")
 app.add_middleware(
@@ -21,7 +21,7 @@ app.add_middleware(
 app.include_router(song.router)
 app.include_router(user.router)
 
-app.mount('/cover', StaticFiles(directory='resources/static/cover'), name='cover')
+# app.mount('/cover', StaticFiles(directory='resources/static/cover'), name='cover')
 
 @app.on_event("startup")
 async def startup():
