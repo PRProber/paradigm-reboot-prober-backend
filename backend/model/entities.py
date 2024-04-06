@@ -15,12 +15,14 @@ class Song(Base):
     song_id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column()
     artist: Mapped[str] = mapped_column()
+    genre: Mapped[str] = mapped_column()
     cover: Mapped[str] = mapped_column()  # 实际上为封面的*文件名*
     illustrator: Mapped[str] = mapped_column()
     version: Mapped[str] = mapped_column()
     b15: Mapped[bool] = mapped_column()  # 是否为 b15 歌曲
     album: Mapped[str] = mapped_column()
-    bpm: Mapped[float] = mapped_column()
+    bpm: Mapped[str] = mapped_column()
+    length: Mapped[str] = mapped_column()
 
     song_levels: Mapped[List["SongLevel"]] = relationship(back_populates='song')
 
@@ -43,6 +45,7 @@ class SongLevel(Base):
     level: Mapped[float] = mapped_column()
     fitting_level: Mapped[Optional[float]] = mapped_column(nullable=True)
     level_design: Mapped[str] = mapped_column(nullable=True)  # 考虑到合作作谱，设计上不把谱师独立建表
+    notes: Mapped[int] = mapped_column()
 
     song: Mapped["Song"] = relationship(back_populates='song_levels')
     difficulty: Mapped["Difficulty"] = relationship(back_populates='song_levels')
@@ -75,8 +78,26 @@ class PlayRecord(Base):
     song_level_id: Mapped[int] = mapped_column(ForeignKey('song_levels.song_level_id'))
     record_time: Mapped[datetime] = mapped_column()
     username: Mapped[str] = mapped_column(ForeignKey('prober_users.username'))
-    acc: Mapped[int] = mapped_column()
-    rating: Mapped[float] = mapped_column()
+    score: Mapped[int] = mapped_column()
+    rating: Mapped[float] = mapped_column()  # 便于查询 b50
 
     user: Mapped["User"] = relationship(back_populates='play_records')
     song_level: Mapped["SongLevel"] = relationship()
+
+
+class BestPlayRecord(Base):
+    __tablename__ = 'best_play_records'
+
+    best_record_id: Mapped[int] = mapped_column(primary_key=True)
+    play_record_id: Mapped[int] = mapped_column(ForeignKey('play_records.play_record_id'))
+
+    play_record: Mapped["PlayRecord"] = relationship(uselist=False)
+
+
+class Best50Trend(Base):
+    __tablename__ = 'best50_trend'
+
+    b50_trend_id: Mapped[int] = mapped_column(primary_key=True)
+    record_time: Mapped[datetime] = mapped_column()
+
+    username: Mapped[str] = mapped_column(ForeignKey("prober_users.username"))
