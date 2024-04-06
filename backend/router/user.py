@@ -1,3 +1,4 @@
+from typing import List
 from fastapi import APIRouter, File, Form, UploadFile, Depends, HTTPException, Query
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
@@ -6,7 +7,7 @@ from starlette import status
 from ..model import schemas, entities
 from ..util.database import get_db
 from ..service import user as user_service
-# from ..util.b50 import json2img, json2csv, csv2json
+from ..util.b50 import json2img, json2csv, csv2json
 
 router = APIRouter()
 
@@ -49,23 +50,29 @@ async def get_play_records(username: str | None,
         play_records = user_service.get_best_records(db, username, underflow)
     else:
         play_records = user_service.get_all_records(db, username)
-    # if export_type == "csv":
-    #     return json2csv(play_records)
-    # if export_type == "img":
-    #     return json2img(play_records)
+    if export_type == "csv":
+        return json2csv(play_records)
+    if export_type == "img":
+        return json2img(play_records)
     return play_records
 
 
-@router.post('/user/records/batch')
-async def import_records(username: str = Form(), file: UploadFile = File()):
-    # TODO: Analyze .csv file and invoke user service to *replace* records
-    response_msg = None
-
-    return response_msg
-
-
-@router.post('/records', status_code=201, response_model=schemas.PlayRecord)
-async def post_record(record: schemas.PlayRecordCreate,
+@router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
+async def post_record(username: str | None,
+                      records: List[schemas.PlayRecordCreate],
+                      use_csv: str | None = Query(default=None, alias="use-csv"),
                       db: Session = Depends(get_db)):
-    response_msg = user_service.create_record(db, record)
+    if use_csv is None:
+        # TODO: upload a list of records
+        response_msg = user_service.create_record(db, records)
+    else:
+        # TODO: upload a .csv file
+        response_msg = user_service.create_record(db, csv2json(username, use_csv))
+    user_service.update_b50_record(db, username)
     return response_msg
+
+
+@router.get('/statistics/{username}', response_model=List[schemas.Best50Trends])
+async def get_b50_trends(username: str, db: Session = Depends(get_db)):
+    trends = user_service.get_b50_trends(db, username)
+    return trends

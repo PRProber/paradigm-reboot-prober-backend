@@ -5,7 +5,7 @@ from datetime import datetime
 from sqlalchemy.orm import Session
 
 from ..model import schemas
-from ..model.entities import User, PlayRecord, BestPlayRecord, SongLevel, Song
+from ..model.entities import User, PlayRecord, BestPlayRecord, SongLevel, Song, Best50Trends
 from ..util import security, rating
 
 
@@ -109,3 +109,38 @@ def get_best_records(db: Session, username: str, underflow: int = 0) \
         query.filter(Song.b15 is True).order_by(PlayRecord.rating.desc()).limit(35 + underflow).all()
 
     return b35, b15
+
+
+def remove_b50_record(db: Session, record: Best50Trends):
+    pass
+
+
+def update_b50_record(db: Session, username: str) -> Best50Trends:
+    b35, b15 = get_best_records(db, username)
+
+    b50rating: float = 0
+    for record in b35:
+        b50rating += record.rating
+    for record in b15:
+        b50rating += record.rating
+
+    db_b50_record: Best50Trends = Best50Trends(
+        username=username,
+        rating=b50rating,
+        record_time=datetime.now(),
+        is_valid=True,
+    )
+
+    db.add(db_b50_record)
+    db.commit()
+    db.refresh(db_b50_record)
+
+    return db_b50_record
+
+
+def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
+    trends: List[Type[Best50Trends]] = \
+        (db.query(Best50Trends).
+         filter(Best50Trends.username == username, Best50Trends.is_valid is True).
+         order_by(Best50Trends.record_time).all())
+    return trends

@@ -6,7 +6,7 @@ from sqlalchemy.exc import AmbiguousForeignKeysError
 from fastapi import HTTPException, Depends
 
 from ..crud import user as crud
-from ..model.entities import User, PlayRecord
+from ..model.entities import User, PlayRecord, Best50Trends
 from ..model.schemas import UserCreate, PlayRecordCreate
 from ..util import security, database
 from .. import config
@@ -94,3 +94,18 @@ def get_best_records(db: Session, username: str, underflow: int = 0) \
         -> Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]:
     best_records = crud.get_best_records(db, username, underflow)
     return best_records
+
+
+def remove_b50_record(db: Session, record: Best50Trends):
+    # TODO: remove a b50 record
+    pass
+
+
+def update_b50_record(db: Session, username: str) -> Best50Trends:
+    trends = crud.update_b50_record(db, username)
+    return trends
+
+
+def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
+    trends: List[Type[Best50Trends]] = crud.get_b50_trends(db, username)
+    return trends

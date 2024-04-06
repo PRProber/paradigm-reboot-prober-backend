@@ -4,9 +4,21 @@ from typing import List, Type, Tuple
 from ..model.entities import PlayRecord
 
 
-def json2img(play_records: Tuple[List[Type[PlayRecord]],List[Type[PlayRecord]]]):
+def json2img(play_records: Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]):
+    # TODO: json to .jpg/.png/...
     pass
 
 
 def json2csv(play_records: Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]):
+    # TODO: json to .csv file
+    pass
+
+
+def csv2json(play_records: Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]):
+    # TODO: .csv file to json
+    pass
+
+
+def generate_empty_csv():
+    # TODO: generate an empty .csv file
     pass

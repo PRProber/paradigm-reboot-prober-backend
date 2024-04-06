@@ -90,3 +90,7 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
+
+class Best50Trends(BaseModel):
+    b5rating: float
+    record_time: datetime
