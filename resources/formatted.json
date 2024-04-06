@@ -1,0 +1,4482 @@
+[
+    {
+        "title": "Awaken In Ruins",
+        "artist": "Supa7onyz",
+        "cover": "Awaken In Ruins.png",
+        "illustrator": "人間蛋",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Prelude: 目覚め",
+        "genre": "Digital Rock",
+        "bpm": "125",
+        "length": "2:16",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 1,
+                "level_design": "AxEradaS",
+                "notes": 279
+            },
+            {
+                "difficulty_id": 2,
+                "level": 6,
+                "level_design": "AxEradaS",
+                "notes": 362
+            },
+            {
+                "difficulty_id": 3,
+                "level": 10.5,
+                "level_design": "AxEradaS",
+                "notes": 592
+            }
+        ]
+    },
+    {
+        "title": "Chase",
+        "artist": "HLXQ",
+        "cover": "Chase.png",
+        "illustrator": "同极磁铁",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Prelude: 目覚め",
+        "genre": "Neurofunk",
+        "bpm": "174",
+        "length": "2:40",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "lino",
+                "notes": 361
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "lino",
+                "notes": 579
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12,
+                "level_design": "lino",
+                "notes": 985
+            }
+        ]
+    },
+    {
+        "title": "Press",
+        "artist": "VeetaCrush",
+        "cover": "Press.png",
+        "illustrator": "熊岚",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Prelude: 目覚め",
+        "genre": "Sleeping Anthem",
+        "bpm": "195",
+        "length": "2:07",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AxEradaS",
+                "notes": 314
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "AxEradaS",
+                "notes": 591
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.4,
+                "level_design": "AxEradaS",
+                "notes": 979
+            }
+        ]
+    },
+    {
+        "title": "Restricted Access",
+        "artist": "Knighthood",
+        "cover": "Restricted Access.png",
+        "illustrator": "苦苦",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Prelude: 目覚め",
+        "genre": "Mainstream Hardcore",
+        "bpm": "185",
+        "length": "2:40",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 443
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "TangScend",
+                "notes": 806
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.8,
+                "level_design": "TangScend",
+                "notes": 1159
+            }
+        ]
+    },
+    {
+        "title": "虚",
+        "artist": "Halv",
+        "cover": "虚.png",
+        "illustrator": "不正",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter1: 余温",
+        "genre": "Game Edit. / Artcore",
+        "bpm": "188",
+        "length": "2:27",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "SR::void",
+                "notes": 510
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "SR::void",
+                "notes": 694
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.9,
+                "level_design": "SR::void",
+                "notes": 1071
+            }
+        ]
+    },
+    {
+        "title": "Lucid Trigger",
+        "artist": "Liq_mmry",
+        "cover": "Lucid Trigger.png",
+        "illustrator": "2Al4wU4",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter1: 余温",
+        "genre": "Progressive Breakbeat",
+        "bpm": "150",
+        "length": "2:17",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "3rd Revision",
+                "notes": 325
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "3rd Revision",
+                "notes": 572
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.1,
+                "level_design": "3rd Revision",
+                "notes": 852
+            }
+        ]
+    },
+    {
+        "title": "Time's Up",
+        "artist": "rareguy",
+        "cover": "Time's Up.png",
+        "illustrator": "帕兹",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter1: 余温",
+        "genre": "Drum'N'Bass",
+        "bpm": "174",
+        "length": "2:19",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "AX -il est temps-",
+                "notes": 329
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "AX -il est temps-",
+                "notes": 552
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12.5,
+                "level_design": "AX -il est temps-",
+                "notes": 861
+            }
+        ]
+    },
+    {
+        "title": "Verreta",
+        "artist": "Se-U-Ra",
+        "cover": "Verreta.png",
+        "illustrator": "今风",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter1: 余温",
+        "genre": "Renaissance Hardcore",
+        "bpm": "198",
+        "length": "2:02",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "AX -la bataille-",
+                "notes": 599
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "AX -la bataille-",
+                "notes": 747
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.8,
+                "level_design": "AX -la bataille-",
+                "notes": 1190
+            }
+        ]
+    },
+    {
+        "title": "Rondo of the 3ND",
+        "artist": "Sephid",
+        "cover": "Rondo of the 3ND.png",
+        "illustrator": "人間蛋",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter1: 余温",
+        "genre": "Speedcore",
+        "bpm": "230",
+        "length": "2:03",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "3NDrez",
+                "notes": 659
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "3NDrez",
+                "notes": 1031
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.1,
+                "level_design": "3NDrez",
+                "notes": 1365
+            }
+        ]
+    },
+    {
+        "title": "Forgotten Asteroid",
+        "artist": "seatrus",
+        "cover": "Forgotten Asteroid.png",
+        "illustrator": "两仪",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter1: 余温",
+        "genre": "J-Core",
+        "bpm": "185",
+        "length": "2:35",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 658
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "TangScend",
+                "notes": 887
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.5,
+                "level_design": "TangScend",
+                "notes": 1349
+            }
+        ]
+    },
+    {
+        "title": "FATE FIRE",
+        "artist": "Liquart",
+        "cover": "FATE FIRE.png",
+        "illustrator": "2Al4wU4",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter2: ナイトホーク",
+        "genre": "MST",
+        "bpm": "210-260",
+        "length": "1:39",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "Kretz",
+                "notes": 198
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "Kretz",
+                "notes": 483
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.9,
+                "level_design": "Kretz",
+                "notes": 836
+            }
+        ]
+    },
+    {
+        "title": "零號車輛",
+        "artist": "seatrus",
+        "cover": "零號車輛.png",
+        "illustrator": "2Al4wU4",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter2: ナイトホーク",
+        "genre": "Rapid Hardcore",
+        "bpm": "240",
+        "length": "2:21",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "再瞬【無】",
+                "notes": 788
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "再瞬【散】",
+                "notes": 1179
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.3,
+                "level_design": "再瞬【零】",
+                "notes": 1496
+            }
+        ]
+    },
+    {
+        "title": "爆裂魔法",
+        "artist": "Spyro Kong vs. Daison",
+        "cover": "爆裂魔法.png",
+        "illustrator": "2Al4wU4",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter2: ナイトホーク",
+        "genre": "Brostep",
+        "bpm": "155",
+        "length": "2:26",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "TangScend",
+                "notes": 460
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "TangScend",
+                "notes": 706
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.7,
+                "level_design": "Kretz vs. SR",
+                "notes": 982
+            }
+        ]
+    },
+    {
+        "title": "[PRAW]",
+        "artist": "Knighthood",
+        "cover": "[PRAW].png",
+        "illustrator": "2Al4wU4",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter2: ナイトホーク",
+        "genre": "Paradigm Edit. / Frenchcore",
+        "bpm": "210",
+        "length": "2:37",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "[onil]",
+                "notes": 529
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "[onil]",
+                "notes": 1148
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.6,
+                "level_design": "[onil] (SR Edit)",
+                "notes": 1126
+            }
+        ]
+    },
+    {
+        "title": "[NWAD]",
+        "artist": "Knighthood",
+        "cover": "[NWAD].png",
+        "illustrator": "2Al4wU4",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter2: ナイトホーク",
+        "genre": "Frenchcore",
+        "bpm": "210",
+        "length": "2:39",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "[AЯΞXA]",
+                "notes": 782
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "[AЯΞXA]",
+                "notes": 1150
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.2,
+                "level_design": "[AЯΞXA]",
+                "notes": 1526
+            }
+        ]
+    },
+    {
+        "title": "Only One Light",
+        "artist": "Tatsh feat. MAYUMI MORINAGA",
+        "cover": "Only One Light.png",
+        "illustrator": "皇皇",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Chapter2: ナイトホーク",
+        "genre": "Vocal Pop",
+        "bpm": "140",
+        "length": "2:20",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Final Survivor",
+                "notes": 580
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "Paradox World",
+                "notes": 691
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.5,
+                "level_design": "Virtual Souls",
+                "notes": 1082
+            }
+        ]
+    },
+    {
+        "title": "静寂に憂う",
+        "artist": "Reku Mochizuki feat. せやかて硝酸太郎",
+        "cover": "静寂に憂う.png",
+        "illustrator": "卷蛾",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "Chapter3: 葬送",
+        "genre": "Electronica",
+        "bpm": "185",
+        "length": "2:10",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 1,
+                "level_design": "lino",
+                "notes": 433
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "lino",
+                "notes": 633
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13,
+                "level_design": "lino",
+                "notes": 1333
+            }
+        ]
+    },
+    {
+        "title": "Incineraxion",
+        "artist": "Ra vs. SunsetRay",
+        "cover": "Incineraxion.png",
+        "illustrator": "汉堡",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "Chapter3: 葬送",
+        "genre": "Symphonia",
+        "bpm": "131",
+        "length": "2:27",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AX ~降灰に遭う~",
+                "notes": 516
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "AX ~降灰に遭う~",
+                "notes": 743
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.2,
+                "level_design": "AX ~降灰に遭う~",
+                "notes": 1035
+            }
+        ]
+    },
+    {
+        "title": "Blessed Bleath",
+        "artist": "Metalliz",
+        "cover": "Blessed Bleath.png",
+        "illustrator": "硅",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "Chapter3: 葬送",
+        "genre": "Artcore",
+        "bpm": "195",
+        "length": "2:06",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "AX ~最果の祈り~",
+                "notes": 445
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "AX ~最果の祈り~",
+                "notes": 685
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.1,
+                "level_design": "AX ~最果の祈り~",
+                "notes": 1033
+            }
+        ]
+    },
+    {
+        "title": "The Grand F-STAR",
+        "artist": "AiSS",
+        "cover": "The Grand F-STAR.png",
+        "illustrator": "不正",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "Chapter3: 葬送",
+        "genre": "Paradigm Edit. / Metal",
+        "bpm": "208.5",
+        "length": "2:23",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "sFectrum",
+                "notes": 602
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "sFectrum",
+                "notes": 893
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.4,
+                "level_design": "sFectrum",
+                "notes": 1404
+            }
+        ]
+    },
+    {
+        "title": "Echoes of the Forest",
+        "artist": "DJ Noriken",
+        "cover": "Echoes of the Forest.png",
+        "illustrator": "八十八夜",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "Chapter3: 葬送",
+        "genre": "Uplifting Trancecore",
+        "bpm": "168",
+        "length": "2:37",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "ScendRez [木]",
+                "notes": 635
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "ScendRez [林]",
+                "notes": 959
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.8,
+                "level_design": "ScendRez [森]",
+                "notes": 1429
+            }
+        ]
+    },
+    {
+        "title": "Cybernetic Vampire",
+        "artist": "void (Mournfinale)",
+        "cover": "Cybernetic Vampire.png",
+        "illustrator": "皇皇",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "Chapter3: 葬送",
+        "genre": "Midtempo Darksynth",
+        "bpm": "110",
+        "length": "2:23",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "DENGEKI AKUMA [α]",
+                "notes": 506
+            },
+            {
+                "difficulty_id": 2,
+                "level": 13,
+                "level_design": "DENGEKI AKUMA [β]",
+                "notes": 719
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.6,
+                "level_design": "DENGEKI AKUMA [γ]",
+                "notes": 1248
+            }
+        ]
+    },
+    {
+        "title": "緋星",
+        "artist": "モリモリあつし",
+        "cover": "緋星.png",
+        "illustrator": "矢澤 豆太郎",
+        "version": "2.3.0",
+        "b15": true,
+        "album": "花咲く季節花咲く季節",
+        "genre": "Oriental Hardcore",
+        "bpm": "175",
+        "length": "?:??",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "凛源",
+                "notes": 419
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "凛源",
+                "notes": 846
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.7,
+                "level_design": "凛源",
+                "notes": 1332
+            }
+        ]
+    },
+    {
+        "title": "胡蝶乃舞",
+        "artist": "Srav3R",
+        "cover": "胡蝶乃舞.png",
+        "illustrator": "魂苍",
+        "version": "2.3.0",
+        "b15": true,
+        "album": "花咲く季節花咲く季節",
+        "genre": "Multicolored Rave",
+        "bpm": "180",
+        "length": "?:??",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "再瞬",
+                "notes": 666
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "再瞬",
+                "notes": 916
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.8,
+                "level_design": "再瞬",
+                "notes": 1166
+            }
+        ]
+    },
+    {
+        "title": "Kakuriyo",
+        "artist": "polysha",
+        "cover": "Kakuriyo.png",
+        "illustrator": "咪酱",
+        "version": "2.3.0",
+        "b15": true,
+        "album": "花咲く季節花咲く季節",
+        "genre": "Oriental Hardcore",
+        "bpm": "170",
+        "length": "?:??",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "月刊ScendRez",
+                "notes": 706
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "月刊ScendRez",
+                "notes": 919
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.6,
+                "level_design": "月刊ScendRez",
+                "notes": 1199
+            }
+        ]
+    },
+    {
+        "title": "桜花怨雷",
+        "artist": "溝口ゆうま feat. 大瀬良あい",
+        "cover": "桜花怨雷.png",
+        "illustrator": "烧子",
+        "version": "2.3.0",
+        "b15": true,
+        "album": "花咲く季節花咲く季節",
+        "genre": "Mythology",
+        "bpm": "124-160",
+        "length": "?:??",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "森雷",
+                "notes": 917
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "森雷",
+                "notes": 1102
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.2,
+                "level_design": "森雷",
+                "notes": 1723
+            }
+        ]
+    },
+    {
+        "title": "Knight Rider",
+        "artist": "USAO",
+        "cover": "Knight Rider.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Super Ultimate Hyper Core",
+        "bpm": "200",
+        "length": "2:08",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "lino",
+                "notes": 595
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "lino",
+                "notes": 759
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.9,
+                "level_design": "lino",
+                "notes": 1374
+            }
+        ]
+    },
+    {
+        "title": "猫娘",
+        "artist": "かねこちはる",
+        "cover": "猫娘.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Speedcore",
+        "bpm": "140",
+        "length": "2:21",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "紫猫",
+                "notes": 413
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "紫猫",
+                "notes": 727
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.1,
+                "level_design": "紫猫",
+                "notes": 1362
+            }
+        ]
+    },
+    {
+        "title": "ARTEMiS",
+        "artist": "BlackY",
+        "cover": "ARTEMiS.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Hard Renaissance",
+        "bpm": "186",
+        "length": "2:27",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AxEradaS vs. TangScend",
+                "notes": 805
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "AxEradaS vs. TangScend",
+                "notes": 1007
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.9,
+                "level_design": "AxEradaS vs. TangScend",
+                "notes": 1534
+            }
+        ]
+    },
+    {
+        "title": "天使光輪",
+        "artist": "REDALiCE & cosMo@暴走P",
+        "cover": "天使光輪.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Angelicore",
+        "bpm": "203",
+        "length": "2:19",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "lino",
+                "notes": 851
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "lino",
+                "notes": 1107
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.4,
+                "level_design": "lino feat. Alterspect",
+                "notes": 1696
+            }
+        ]
+    },
+    {
+        "title": "EPHMR",
+        "artist": "aran",
+        "cover": "EPHMR.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Hybrid Hardcore",
+        "bpm": "200",
+        "length": "2:17",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Jizici",
+                "notes": 607
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "Jizici \\aran氏/",
+                "notes": 905
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.9,
+                "level_design": "Jizici \\大好き/",
+                "notes": 1378
+            }
+        ]
+    },
+    {
+        "title": "Chariot",
+        "artist": "USAO",
+        "cover": "Chariot.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Bass House",
+        "bpm": "128",
+        "length": "2:25",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "AX as \"Bass Avenger\"",
+                "notes": 541
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "AX as \"Bass Avenger\"",
+                "notes": 756
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.2,
+                "level_design": "AX as \"Bass Avenger\"",
+                "notes": 1287
+            }
+        ]
+    },
+    {
+        "title": "Dimension Hacker",
+        "artist": "Kobaryo",
+        "cover": "Dimension Hacker.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Chaotic Speedcore",
+        "bpm": "343",
+        "length": "2:28",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "AX hacked by Alterspect",
+                "notes": 1246
+            },
+            {
+                "difficulty_id": 2,
+                "level": 13.3,
+                "level_design": "AX hacked by Alterspect",
+                "notes": 1690
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.9,
+                "level_design": "Kretz vs. SR",
+                "notes": 1847
+            }
+        ]
+    },
+    {
+        "title": "クリムゾン帝王",
+        "artist": "REDALiCE",
+        "cover": "クリムゾン帝王.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Emperor Core",
+        "bpm": "130-230",
+        "length": "2:24",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "TangScend",
+                "notes": 1056
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "TangScend",
+                "notes": 1295
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.5,
+                "level_design": "IV:THE EMPEROR/TangScend",
+                "notes": 1856
+            }
+        ]
+    },
+    {
+        "title": "Little Boy",
+        "artist": "mmry",
+        "cover": "Little Boy.png",
+        "illustrator": "C4Cat",
+        "version": "1.8.0",
+        "b15": false,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Glitch Symphony",
+        "bpm": "125",
+        "length": "2:19",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "逆染",
+                "notes": 450
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "_i逆E氿/木",
+                "notes": 820
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14,
+                "level_design": "i_]E氵|丿/-十ㄟ",
+                "notes": 1020
+            }
+        ]
+    },
+    {
+        "title": "Invaded",
+        "artist": "Spyro Kong",
+        "cover": "Invaded.png",
+        "illustrator": "C4Cat",
+        "version": "1.8.0",
+        "b15": false,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Brostep",
+        "bpm": "145",
+        "length": "2:22",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "【警報】再瞬、侵入準備",
+                "notes": 633
+            },
+            {
+                "difficulty_id": 2,
+                "level": 14,
+                "level_design": "【警報】再瞬、侵入中",
+                "notes": 1000
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.2,
+                "level_design": "【警報】再瞬、侵入完了",
+                "notes": 1483
+            }
+        ]
+    },
+    {
+        "title": "Ashes",
+        "artist": "Zekk",
+        "cover": "Ashes.png",
+        "illustrator": "AFZero",
+        "version": "1.8.0",
+        "b15": false,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Drumstep",
+        "bpm": "200",
+        "length": "2:00",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "凛源",
+                "notes": 468
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "凛源",
+                "notes": 704
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.9,
+                "level_design": "凛源 vs. 山刀",
+                "notes": 1391
+            }
+        ]
+    },
+    {
+        "title": "ほしぞらトラベル",
+        "artist": "奏音",
+        "cover": "ほしぞらトラベル.png",
+        "illustrator": "BerryVerine",
+        "version": "1.8.0",
+        "b15": false,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Happy Hardcore",
+        "bpm": "200",
+        "length": "2:08",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "森雷旅人",
+                "notes": 621
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "森雷旅人",
+                "notes": 795
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.3,
+                "level_design": "森雷旅人",
+                "notes": 1194
+            }
+        ]
+    },
+    {
+        "title": "Heart Eyes",
+        "artist": "M-O-T-U",
+        "cover": "Heart Eyes.png",
+        "illustrator": "しち",
+        "version": "2.1.0",
+        "b15": true,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Future Bass",
+        "bpm": "150",
+        "length": "2:27",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "逆染: 心の願",
+                "notes": 628
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "逆染: 心の動",
+                "notes": 949
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.9,
+                "level_design": "再瞬: 心の目",
+                "notes": 1156
+            }
+        ]
+    },
+    {
+        "title": "Last farewell",
+        "artist": "Un vs. らせん",
+        "cover": "Last farewell.png",
+        "illustrator": "いつきり君",
+        "version": "2.1.0",
+        "b15": true,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Trancecore",
+        "bpm": "203",
+        "length": "2:20",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "山刀",
+                "notes": 929
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "再瞬",
+                "notes": 1043
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.6,
+                "level_design": "山刀再瞬",
+                "notes": 1396
+            }
+        ]
+    },
+    {
+        "title": "Kokytos",
+        "artist": "しーけー",
+        "cover": "Kokytos.png",
+        "illustrator": "ケシks",
+        "version": "2.1.0",
+        "b15": true,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Happy Hardcore",
+        "bpm": "190",
+        "length": "2:00",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "山刀",
+                "notes": 633
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "山刀",
+                "notes": 855
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.7,
+                "level_design": "山刀",
+                "notes": 1285
+            }
+        ]
+    },
+    {
+        "title": "Hemisphere",
+        "artist": "ARForest",
+        "cover": "Hemisphere.png",
+        "illustrator": "C4Cat",
+        "version": "2.1.0",
+        "b15": true,
+        "album": "Dynamic DazzleDynamic Dazzle",
+        "genre": "Artcore",
+        "bpm": "193",
+        "length": "2:07",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "森雷旅人",
+                "notes": 463
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "森雷旅人",
+                "notes": 653
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.4,
+                "level_design": "森雷旅人",
+                "notes": 869
+            }
+        ]
+    },
+    {
+        "title": "Mint Choco",
+        "artist": "超威蓝猫",
+        "cover": "Mint Choco.png",
+        "illustrator": "十六弦+Jizici",
+        "version": "1.7.0",
+        "b15": false,
+        "album": "Infinite PassionInfinite Passion",
+        "genre": "Dance Pop",
+        "bpm": "122",
+        "length": "2:57",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "lino",
+                "notes": 481
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "lino",
+                "notes": 816
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.1,
+                "level_design": "lino (AX Flavored Edit)",
+                "notes": 1251
+            }
+        ]
+    },
+    {
+        "title": "Heartpoint",
+        "artist": "HyuN feat. 駄々子",
+        "cover": "Heartpoint.png",
+        "illustrator": "微菌+Jizici",
+        "version": "1.7.0",
+        "b15": false,
+        "album": "Infinite PassionInfinite Passion",
+        "genre": "J-Pop",
+        "bpm": "148",
+        "length": "2:30",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AXERA in first love",
+                "notes": 689
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "AXERA lost first love",
+                "notes": 732
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.3,
+                "level_design": "AXERA lost in LOVE",
+                "notes": 1353
+            }
+        ]
+    },
+    {
+        "title": "Veil of Summer",
+        "artist": "Maozon",
+        "cover": "Veil of Summer.png",
+        "illustrator": "昭和+Jizici",
+        "version": "1.7.0",
+        "b15": false,
+        "album": "Infinite PassionInfinite Passion",
+        "genre": "Drum'N'Bass",
+        "bpm": "174",
+        "length": "2:44",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 1084
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "TangScend",
+                "notes": 1083
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.7,
+                "level_design": "Kretz vs. SR",
+                "notes": 1219
+            }
+        ]
+    },
+    {
+        "title": "夏色の思い出",
+        "artist": "Yesod (Rabbit House + litmus* + A. Ki)",
+        "cover": "夏色の思い出.png",
+        "illustrator": "2Al4wU4+Jizici",
+        "version": "1.7.0",
+        "b15": false,
+        "album": "Infinite PassionInfinite Passion",
+        "genre": "a.k.a. \"Summer Memories\" / Emotional Rock",
+        "bpm": "198",
+        "length": "2:23",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 602
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "TangScend",
+                "notes": 942
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16,
+                "level_design": "Have a nice day! --AXERA",
+                "notes": 1375
+            }
+        ]
+    },
+    {
+        "title": "#D3D3D3 (Blank Universe)",
+        "artist": "Supa7onyz",
+        "cover": "#D3D3D3 (Blank Universe).png",
+        "illustrator": "自然卷",
+        "version": "1.5.0",
+        "b15": false,
+        "album": "Metabolic ReactionMetabolic Reaction",
+        "genre": "Hyper Trance",
+        "bpm": "160",
+        "length": "1:56",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "#58C6EB -Percieve-",
+                "notes": 423
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "#E96068 -Encroach-",
+                "notes": 624
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.2,
+                "level_design": "#F28AE9 -Immense-",
+                "notes": 852
+            }
+        ]
+    },
+    {
+        "title": "Rebooted Mind",
+        "artist": "Reku Mochizuki",
+        "cover": "Rebooted Mind.png",
+        "illustrator": "十五",
+        "version": "1.5.0",
+        "b15": false,
+        "album": "Metabolic ReactionMetabolic Reaction",
+        "genre": "J-Core",
+        "bpm": "185",
+        "length": "2:32",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "再瞬: Reboot (AX 2023 Rebuild)",
+                "notes": 487
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "再瞬: Reboot (AX 2023 Rebuild)",
+                "notes": 808
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.3,
+                "level_design": "再瞬: Reboot (AX 2023 Rebuild)",
+                "notes": 1218
+            }
+        ]
+    },
+    {
+        "title": "Yokyuumi",
+        "artist": "Knighthood",
+        "cover": "Yokyuumi.png",
+        "illustrator": "Sin.",
+        "version": "1.5.0",
+        "b15": false,
+        "album": "Metabolic ReactionMetabolic Reaction",
+        "genre": "Frenchcore",
+        "bpm": "210",
+        "length": "2:41",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "TangScend",
+                "notes": 564
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "TangScend",
+                "notes": 1120
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.5,
+                "level_design": "TangScend",
+                "notes": 1248
+            }
+        ]
+    },
+    {
+        "title": "Viyella's Melancholy",
+        "artist": "Laur",
+        "cover": "Viyella's Melancholy.png",
+        "illustrator": "みしゃも",
+        "version": "1.5.0",
+        "b15": false,
+        "album": "Metabolic ReactionMetabolic Reaction",
+        "genre": "Classical Hardcore",
+        "bpm": "190-220",
+        "length": "2:30",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 7,
+                "level_design": "Status: Denial",
+                "notes": 1178
+            },
+            {
+                "difficulty_id": 2,
+                "level": 13.8,
+                "level_design": "Status: Bargaining",
+                "notes": 1386
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.8,
+                "level_design": "Status: Acceptance",
+                "notes": 1828
+            }
+        ]
+    },
+    {
+        "title": "Tequila Sunrise And Planter's Punch",
+        "artist": "Nirotiy",
+        "cover": "Tequila Sunrise And Planter's Punch.png",
+        "illustrator": "夕烧",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Duplex FusionDuplex Fusion",
+        "genre": "Drum'N'Bass",
+        "bpm": "180",
+        "length": "2:07",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Kretz",
+                "notes": 607
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "Kretz",
+                "notes": 692
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.7,
+                "level_design": "Kretz",
+                "notes": 1068
+            }
+        ]
+    },
+    {
+        "title": "Marsh Winds",
+        "artist": "ETIA.",
+        "cover": "Marsh Winds.png",
+        "illustrator": "眼",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Duplex FusionDuplex Fusion",
+        "genre": "J-Core",
+        "bpm": "175",
+        "length": "2:29",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "再瞬: Operation#3714",
+                "notes": 445
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "再瞬: Operation#3714",
+                "notes": 928
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.4,
+                "level_design": "再瞬: Operation#3714",
+                "notes": 1288
+            }
+        ]
+    },
+    {
+        "title": "REDRAVE",
+        "artist": "Tatsh & NAOKI feat. Kent Alexander",
+        "cover": "REDRAVE.png",
+        "illustrator": "白叽",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Duplex FusionDuplex Fusion",
+        "genre": "Speedrave",
+        "bpm": "165",
+        "length": "2:30",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 8,
+                "level_design": "ScendRaver inspired by C.",
+                "notes": 888
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "ScendRaver inspired by C.",
+                "notes": 888
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.6,
+                "level_design": "ScendRaver inspired by C.",
+                "notes": 1488
+            }
+        ]
+    },
+    {
+        "title": "Indelible Scar",
+        "artist": "Noah",
+        "cover": "Indelible Scar.png",
+        "illustrator": "兜",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Duplex FusionDuplex Fusion",
+        "genre": "Symphonic Metal",
+        "bpm": "223",
+        "length": "2:16",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "Ancestral Xhronicle",
+                "notes": 1119
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "Ancestral Xhronicle",
+                "notes": 1179
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.2,
+                "level_design": "Ancestral Xhronicle",
+                "notes": 1520
+            }
+        ]
+    },
+    {
+        "title": "Turning POINT",
+        "artist": "Junk",
+        "cover": "Turning POINT.png",
+        "illustrator": "鄂季",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Still ExistenceStill Existence",
+        "genre": "Urban Electro",
+        "bpm": "133",
+        "length": "2:15",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "ScendRez @Urban",
+                "notes": 482
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "ScendRez @Journey",
+                "notes": 704
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.3,
+                "level_design": "ScendRez @Life",
+                "notes": 1020
+            }
+        ]
+    },
+    {
+        "title": "Protection",
+        "artist": "Tatsh feat みぃ(GET IN THE RING)",
+        "cover": "Protection.png",
+        "illustrator": "同极磁铁",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Still ExistenceStill Existence",
+        "genre": "Rock",
+        "bpm": "174",
+        "length": "2:30",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Jizici+SR",
+                "notes": 860
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "Jizici+SR",
+                "notes": 1024
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.9,
+                "level_design": "Jizici+SR",
+                "notes": 1680
+            }
+        ]
+    },
+    {
+        "title": "Reversed Zenith",
+        "artist": "硝酸生菜",
+        "cover": "Reversed Zenith.png",
+        "illustrator": "巷子",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Still ExistenceStill Existence",
+        "genre": "Hardcore",
+        "bpm": "195",
+        "length": "2:34",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "AxEradaS",
+                "notes": 475
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "AxEradaS",
+                "notes": 867
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.1,
+                "level_design": "AxEradaS",
+                "notes": 1234
+            }
+        ]
+    },
+    {
+        "title": "Secret Maneuvers",
+        "artist": "seatrus",
+        "cover": "Secret Maneuvers.png",
+        "illustrator": "缠_Chan",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "Still ExistenceStill Existence",
+        "genre": "Piano Dance",
+        "bpm": "155",
+        "length": "1:59",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "TangScend",
+                "notes": 407
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "TangScend",
+                "notes": 781
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.4,
+                "level_design": "TangScend",
+                "notes": 1090
+            }
+        ]
+    },
+    {
+        "title": "OCCHOCO-REST-LESS",
+        "artist": "MYUKKE.",
+        "cover": "OCCHOCO-REST-LESS.png",
+        "illustrator": "MYUKKE.",
+        "version": "1.2.0",
+        "b15": false,
+        "album": "Vivacious PartyVivacious Party",
+        "genre": "Future House",
+        "bpm": "135",
+        "length": "2:08",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "リノ",
+                "notes": 369
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "リノ",
+                "notes": 540
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.6,
+                "level_design": "リノ",
+                "notes": 967
+            }
+        ]
+    },
+    {
+        "title": "SUTTA MONDAY",
+        "artist": "MYUKKE.",
+        "cover": "SUTTA MONDAY.png",
+        "illustrator": "人間蛋",
+        "version": "1.2.0",
+        "b15": false,
+        "album": "Vivacious PartyVivacious Party",
+        "genre": "Drumstep",
+        "bpm": "175",
+        "length": "2:03",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AXERA'S SATURDAY",
+                "notes": 517
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "AXERA'S SUNDAY",
+                "notes": 689
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.5,
+                "level_design": "AXERA'S MONDAY",
+                "notes": 1202
+            }
+        ]
+    },
+    {
+        "title": "Hiyaiya!",
+        "artist": "MYUKKE.",
+        "cover": "Hiyaiya!.png",
+        "illustrator": "Akim",
+        "version": "1.2.0",
+        "b15": false,
+        "album": "Vivacious PartyVivacious Party",
+        "genre": "Future House",
+        "bpm": "128",
+        "length": "2:21",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Jizici",
+                "notes": 455
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "Jizici",
+                "notes": 577
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12.5,
+                "level_design": "Ah! Jizici! xxx",
+                "notes": 933
+            }
+        ]
+    },
+    {
+        "title": "Equality of Equites",
+        "artist": "MYUKKE.",
+        "cover": "Equality of Equites.png",
+        "illustrator": "乌龟面包",
+        "version": "1.2.0",
+        "b15": false,
+        "album": "Vivacious PartyVivacious Party",
+        "genre": "Hardccore",
+        "bpm": "170",
+        "length": "2:08",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "TangScend",
+                "notes": 555
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "TangScend",
+                "notes": 753
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16,
+                "level_design": "TangScend",
+                "notes": 1109
+            }
+        ]
+    },
+    {
+        "title": "Skyscape",
+        "artist": "Plum",
+        "cover": "Skyscape.png",
+        "illustrator": "山崎团",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "Artistic LinesArtistic Lines",
+        "genre": "Piano House",
+        "bpm": "133",
+        "length": "2:25",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Jizici",
+                "notes": 473
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "Jizici",
+                "notes": 567
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12.5,
+                "level_design": "Jzici",
+                "notes": 857
+            }
+        ]
+    },
+    {
+        "title": "Clock Paradox",
+        "artist": "WyvernP",
+        "cover": "Clock Paradox.png",
+        "illustrator": "山崎团",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "Artistic LinesArtistic Lines",
+        "genre": "Melodic Psy Trance",
+        "bpm": "140",
+        "length": "2:31",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "lino",
+                "notes": 521
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "lino ft. CN_115",
+                "notes": 645
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.4,
+                "level_design": "lino",
+                "notes": 1007
+            }
+        ]
+    },
+    {
+        "title": "macro.wav",
+        "artist": "dandeless",
+        "cover": "macro.wav.png",
+        "illustrator": "绀屋",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "Artistic LinesArtistic Lines",
+        "genre": "Beepcore",
+        "bpm": "172",
+        "length": "2:13",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "scend.rez",
+                "notes": 391
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "scend.rez",
+                "notes": 693
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.4,
+                "level_design": "scend.rez",
+                "notes": 1232
+            }
+        ]
+    },
+    {
+        "title": "Paradial Resonator",
+        "artist": "Reku Mochizuki",
+        "cover": "Paradial Resonator.png",
+        "illustrator": "2Al4wU4",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "Artistic LinesArtistic Lines",
+        "genre": "Tech Dance",
+        "bpm": "156",
+        "length": "2:13",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "再瞬: Act.PR",
+                "notes": 562
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "AXERA: Act.PR",
+                "notes": 761
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.1,
+                "level_design": "再瞬 =resonate= AXERA",
+                "notes": 1063
+            }
+        ]
+    },
+    {
+        "title": "devil¿la6ue",
+        "artist": "天々まる (prod. U-ske)",
+        "cover": "devil_legna.png",
+        "illustrator": "DFRA",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "ハコニワエトワールハコニワエトワール",
+        "genre": "Devilcore",
+        "bpm": "172",
+        "length": "2:05",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "lino",
+                "notes": 501
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "lino",
+                "notes": 719
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.7,
+                "level_design": "lino",
+                "notes": 1267
+            }
+        ]
+    },
+    {
+        "title": "天Q.",
+        "artist": "天々まる (prod. Ponchi♪)",
+        "cover": "天Q..png",
+        "illustrator": "おのこ",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "ハコニワエトワールハコニワエトワール",
+        "genre": "Alternative Utopia",
+        "bpm": "155",
+        "length": "2:11",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "TangScend",
+                "notes": 508
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "TangScend",
+                "notes": 776
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.8,
+                "level_design": "Tarotora030+SR",
+                "notes": 1390
+            }
+        ]
+    },
+    {
+        "title": "席替えやったー！",
+        "artist": "天々まる (prod. 立秋)",
+        "cover": "席替えやったー！.png",
+        "illustrator": "DFRA",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "ハコニワエトワールハコニワエトワール",
+        "genre": "席替えPop",
+        "bpm": "165",
+        "length": "2:05",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Alterspect (:3)",
+                "notes": 646
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "Alterspect (:3)",
+                "notes": 911
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.7,
+                "level_design": "Alterspect (?!!)",
+                "notes": 1388
+            }
+        ]
+    },
+    {
+        "title": "Save And Continue",
+        "artist": "Liq_mmry",
+        "cover": "Save And Continue.png",
+        "illustrator": "mmry_i",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Schranz Chiptune",
+        "bpm": "170",
+        "length": "2:09",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "TangScend",
+                "notes": 400
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "TangScend",
+                "notes": 635
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.5,
+                "level_design": "TangScend",
+                "notes": 852
+            }
+        ]
+    },
+    {
+        "title": "Yorixiro",
+        "artist": "Reku Mochizuki",
+        "cover": "Yorixiro.png",
+        "illustrator": "染染",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Oriental Hardcore",
+        "bpm": "185",
+        "length": "2:10",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "lino",
+                "notes": 388
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "lino",
+                "notes": 563
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.2,
+                "level_design": "lino+AX",
+                "notes": 900
+            }
+        ]
+    },
+    {
+        "title": "Can't it be true",
+        "artist": "Zris feat. Kri",
+        "cover": "Can't it be true.png",
+        "illustrator": "Project_G",
+        "version": "1.1.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Kill Kill",
+        "bpm": "134",
+        "length": "2:18",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Oh",
+                "notes": 531
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "OK, OK, i know",
+                "notes": 622
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12,
+                "level_design": "Is that right?",
+                "notes": 938
+            }
+        ]
+    },
+    {
+        "title": "Black：Magnam",
+        "artist": "adaptor",
+        "cover": "Black：Magnam.png",
+        "illustrator": "ANT",
+        "version": "1.3.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Bass House",
+        "bpm": "128",
+        "length": "2:16",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "ScendRez.357",
+                "notes": 444
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "ScendRez.44",
+                "notes": 683
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.6,
+                "level_design": "ScendRez.50",
+                "notes": 1056
+            }
+        ]
+    },
+    {
+        "title": "Rrhar'il",
+        "artist": "Team Grimoire",
+        "cover": "Rrhar'il.png",
+        "illustrator": "犀牛坨动画工坊",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Hardcore",
+        "bpm": "190",
+        "length": "2:13",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "Alter-X as \"Mh'ithrha\"",
+                "notes": 609
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "Alter-X as \"Mh'ithrha\"",
+                "notes": 1008
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.7,
+                "level_design": "Alter-X as \"Mh'ithrha\"",
+                "notes": 1526
+            }
+        ]
+    },
+    {
+        "title": "Psyched Fevereiro",
+        "artist": "t+pazolite",
+        "cover": "Psyched Fevereiro.png",
+        "illustrator": "Shinichiro Miyazaki",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Psy Trance",
+        "bpm": "150",
+        "length": "2:13",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "lino",
+                "notes": 320
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "lino",
+                "notes": 638
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.2,
+                "level_design": "lino",
+                "notes": 933
+            }
+        ]
+    },
+    {
+        "title": "Chartreuse Green",
+        "artist": "t+pazolite",
+        "cover": "Chartreuse Green.png",
+        "illustrator": "Shinichiro Miyazaki",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "J-Hardcore",
+        "bpm": "180",
+        "length": "2:12",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "SR#7FFF00",
+                "notes": 409
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "SR#7FFF00",
+                "notes": 786
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.8,
+                "level_design": "SR#7FFF00",
+                "notes": 1008
+            }
+        ]
+    },
+    {
+        "title": "Dogbite",
+        "artist": "t+pazolite",
+        "cover": "Dogbite.png",
+        "illustrator": "Shinichiro Miyazaki",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Hardcore",
+        "bpm": "195",
+        "length": "2:02",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "Ctymax",
+                "notes": 375
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "Ctymax",
+                "notes": 521
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13,
+                "level_design": "Ctymax",
+                "notes": 960
+            }
+        ]
+    },
+    {
+        "title": "BPM=RT",
+        "artist": "t+pazolite",
+        "cover": "BPM=RT.png",
+        "illustrator": "Shinichiro Miyazaki",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Extratone",
+        "bpm": "1962",
+        "length": "2:15",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Kretz",
+                "notes": 829
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "Kretz",
+                "notes": 1083
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.5,
+                "level_design": "Kretz",
+                "notes": 1794
+            }
+        ]
+    },
+    {
+        "title": "Inner Norm",
+        "artist": "Zris",
+        "cover": "Inner Norm.png",
+        "illustrator": "Jizici",
+        "version": "1.4.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Breakbeat",
+        "bpm": "154",
+        "length": "2:04",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Inner Kretz",
+                "notes": 330
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "Inner Kretz",
+                "notes": 558
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15,
+                "level_design": "Inner Kretz",
+                "notes": 888
+            }
+        ]
+    },
+    {
+        "title": "REDASH",
+        "artist": "Lax1u57",
+        "cover": "REDASH.png",
+        "illustrator": "Jizici",
+        "version": "1.9.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Hi-Tech+Schranz",
+        "bpm": "180",
+        "length": "2:44",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "RvPloysic+SR",
+                "notes": 770
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "RvPloysic",
+                "notes": 1042
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.2,
+                "level_design": "RvPloysic+SR",
+                "notes": 1707
+            }
+        ]
+    },
+    {
+        "title": "OMG",
+        "artist": "Halv",
+        "cover": "OMG.png",
+        "illustrator": "長井りく",
+        "version": "1.9.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Swingcore",
+        "bpm": "170",
+        "length": "2:25",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "lino",
+                "notes": 501
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "lino",
+                "notes": 691
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.3,
+                "level_design": "lino",
+                "notes": 1161
+            }
+        ]
+    },
+    {
+        "title": "Oriens",
+        "artist": "ginkiha",
+        "cover": "Oriens.png",
+        "illustrator": "wk.",
+        "version": "1.9.2",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Freestyle Oriental Electro",
+        "bpm": "140-185",
+        "length": "2:15",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "Eastern Ailuropoda Gang",
+                "notes": 766
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "Eastern Ailuropoda Gang",
+                "notes": 951
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.4,
+                "level_design": "Eastern Ailuropoda Gang",
+                "notes": 1323
+            }
+        ]
+    },
+    {
+        "title": "Houkago OVERDRIVE!!!!!",
+        "artist": "Rukadesu",
+        "cover": "Houkago OVERDRIVE!!!!!.png",
+        "illustrator": "Jizici",
+        "version": "1.9.3",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Future Core",
+        "bpm": "190",
+        "length": "2:04",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "AXERA >>",
+                "notes": 471
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "AXERA >>>>",
+                "notes": 688
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.3,
+                "level_design": "AXERA >>>>>>",
+                "notes": 1059
+            }
+        ]
+    },
+    {
+        "title": "Paradigm Shift",
+        "artist": "モリモリあつし",
+        "cover": "Paradigm Shift.png",
+        "illustrator": "みもざ",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Tech Dance",
+        "bpm": "145",
+        "length": "1:55",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "AX: [PARADIGM] REBOOT",
+                "notes": 391
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "AX: [PARADIGM] REBOOT",
+                "notes": 601
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.4,
+                "level_design": "AX: [PARADIGM] REBOOT",
+                "notes": 1041
+            }
+        ]
+    },
+    {
+        "title": "Fading Star",
+        "artist": "ginkiha",
+        "cover": "Fading Star.png",
+        "illustrator": "みもざ",
+        "version": "2.0.1",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Trance",
+        "bpm": "140",
+        "length": "2:19",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AXERA",
+                "notes": 462
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "AXERA",
+                "notes": 653
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.2,
+                "level_design": "AXERA",
+                "notes": 921
+            }
+        ]
+    },
+    {
+        "title": "アイム・マイヒーロー",
+        "artist": "Ino(chronoize) feat. 柳瀬マサキ",
+        "cover": "アイム・マイヒーロー.png",
+        "illustrator": "kkkfff2",
+        "version": "2.1.1",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Boys Discotheque Dance Pop",
+        "bpm": "138",
+        "length": "2:10",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "TangScend -to the best future-",
+                "notes": 635
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "TangScend -to the best future-",
+                "notes": 839
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.7,
+                "level_design": "TangScend -to the best future-",
+                "notes": 1207
+            }
+        ]
+    },
+    {
+        "title": "conflict",
+        "artist": "siromaru + cranky",
+        "cover": "conflict.png",
+        "illustrator": "Jizici",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "WORLDCALL",
+        "genre": "Harmonic Schranz",
+        "bpm": "160",
+        "length": "2:39",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "lino",
+                "notes": 626
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "lino",
+                "notes": 973
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.2,
+                "level_design": "AX ~commenced battle~",
+                "notes": 1322
+            }
+        ]
+    },
+    {
+        "title": "Kronos",
+        "artist": "削除",
+        "cover": "Kronos.png",
+        "illustrator": "Taiyo Yamamoto",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "WORLDCALL",
+        "genre": "Desire",
+        "bpm": "156",
+        "length": "2:46",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "lino",
+                "notes": 962
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "lino",
+                "notes": 858
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.5,
+                "level_design": "lino",
+                "notes": 1277
+            }
+        ]
+    },
+    {
+        "title": "Avantgarde",
+        "artist": "Raimukun",
+        "cover": "Avantgarde.png",
+        "illustrator": "あるし",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "WORLDCALL",
+        "genre": "Neurocore",
+        "bpm": "200",
+        "length": "2:37",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Arbarvojaĝanto",
+                "notes": 999
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "Arbarvojaĝanto",
+                "notes": 1276
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.3,
+                "level_design": "Arbarvojaĝanto",
+                "notes": 1899
+            }
+        ]
+    },
+    {
+        "title": "MilK",
+        "artist": "モリモリあつし",
+        "cover": "MilK.png",
+        "illustrator": "出前",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "WORLDCALL",
+        "genre": "Future Bass",
+        "bpm": "150",
+        "length": "2:02",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "AXERA?",
+                "notes": 676
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "AXERA...",
+                "notes": 756
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.6,
+                "level_design": "AXERA!",
+                "notes": 1115
+            }
+        ]
+    },
+    {
+        "title": "WORLDCALL",
+        "artist": "Blacklolita",
+        "cover": "WORLDCALL.png",
+        "illustrator": "Jizici & 樱坂璃子",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "WORLDCALL",
+        "genre": "Neo Digital Future",
+        "bpm": "105",
+        "length": "2:27",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "AX ～世界の響き～",
+                "notes": 616
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "AX ～世界の響き～",
+                "notes": 825
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.1,
+                "level_design": "AX ～世界の響き～",
+                "notes": 1253
+            }
+        ]
+    },
+    {
+        "title": "今天不是明天 (feat. 兰音Reine)",
+        "artist": "PIKASONIC",
+        "cover": "今天不是明天 (feat. 兰音Reine).png",
+        "illustrator": "KiTA/一击即溃",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "次元LAB次元LAB",
+        "genre": "Pop Music",
+        "bpm": "125",
+        "length": "2:50",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "【Ψ字航兔[30]】凛源",
+                "notes": 527
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "【Ψ字航兔[30]】凛源",
+                "notes": 677
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12.5,
+                "level_design": "【Ψ字航兔[30]】凛源",
+                "notes": 1158
+            }
+        ]
+    },
+    {
+        "title": "爱上想象的你 (feat. 穆小泠)",
+        "artist": "KOTONOHOUSE",
+        "cover": "爱上想象的你 (feat. 穆小泠).png",
+        "illustrator": "生物碱/黑茶/kkmfd",
+        "version": "2.3.0",
+        "b15": true,
+        "album": "次元LAB次元LAB",
+        "genre": "Dubstep",
+        "bpm": "144",
+        "length": "?:??",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "【Ψ泠泠妻[30]】森雷",
+                "notes": 628
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "【Ψ泠泠妻[30]】森雷",
+                "notes": 952
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.3,
+                "level_design": "【Ψ泠泠妻[30]】森雷",
+                "notes": 1615
+            }
+        ]
+    },
+    {
+        "title": "甜涩之梦 (feat. 早稻叽)",
+        "artist": "YUC'e",
+        "cover": "甜涩之梦 (feat. 早稻叽).png",
+        "illustrator": "岚",
+        "version": "2.3.0",
+        "b15": true,
+        "album": "次元LAB次元LAB",
+        "genre": "Future Bass",
+        "bpm": "160",
+        "length": "?:??",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "【Ψ储备娘[30]】凛源",
+                "notes": 790
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "【Ψ储备娘[30]】凛源",
+                "notes": 1465
+            },
+            {
+                "difficulty_id": 3,
+                "level": 11.5,
+                "level_design": "【Ψ储备娘[30]】凛源",
+                "notes": 1695
+            }
+        ]
+    },
+    {
+        "title": "恶修女——永火熔铸 (feat. 黑泽诺亚NOIR)",
+        "artist": "负离子SYNTHETIC",
+        "cover": "恶修女——永火熔铸 (feat. 黑泽诺亚NOIR).png",
+        "illustrator": "黑茶",
+        "version": "2.3.0",
+        "b15": true,
+        "album": "次元LAB次元LAB",
+        "genre": "UK Dubstep",
+        "bpm": "90",
+        "length": "?:??",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "【Ψ黑聖徒[30]】紫猫",
+                "notes": 616
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "【Ψ黑聖徒[30]】紫猫",
+                "notes": 744
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.1,
+                "level_design": "【Ψ黑聖徒[30]】紫猫",
+                "notes": 1245
+            }
+        ]
+    },
+    {
+        "title": "Let you DIVE!",
+        "artist": "HARDCORE TANO*C & エリザベス (CV:大西沙織)",
+        "cover": "Let you DIVE!.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Hardcore",
+        "bpm": "185",
+        "length": "2:01/2:24",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AuRousKiNN",
+                "notes": 574
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "RvPloysic",
+                "notes": 898
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.5,
+                "level_design": "AuRousKiNN+RvPloysic",
+                "notes": 1430
+            }
+        ]
+    },
+    {
+        "title": "Ouvertüre",
+        "artist": "USAO & DJ Genki feat. ルーン(CV:河瀬茉希)",
+        "cover": "Ouvertüre.png",
+        "illustrator": "Jacket Designed by WACCA",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "ETERNAL DiVERETERNAL DiVER",
+        "genre": "Hardcore",
+        "bpm": "120-200",
+        "length": "2:22/2:25",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "TangScend",
+                "notes": 739
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "TangScend",
+                "notes": 1016
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.3,
+                "level_design": "AxEradaS -INFERNO-",
+                "notes": 1625
+            }
+        ]
+    },
+    {
+        "title": "Subterranean Blastoff",
+        "artist": "Sephid",
+        "cover": "Subterranean Blastoff.png",
+        "illustrator": "EraPiOneer",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Blastcore",
+        "bpm": "195",
+        "length": "2:04",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 466
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "TangScend",
+                "notes": 720
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.6,
+                "level_design": "TangScend",
+                "notes": 1076
+            }
+        ]
+    },
+    {
+        "title": "Encore",
+        "artist": "ZxNX & Hiryur",
+        "cover": "Encore.png",
+        "illustrator": "ANT",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Future Core",
+        "bpm": "174",
+        "length": "1:56",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "ScendRez",
+                "notes": 374
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "ScendRez",
+                "notes": 500
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12.5,
+                "level_design": "ScendRez",
+                "notes": 781
+            }
+        ]
+    },
+    {
+        "title": "resoLve",
+        "artist": "Halv",
+        "cover": "resoLve.png",
+        "illustrator": "CatKnife",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Renaissance Hardcore",
+        "bpm": "190",
+        "length": "2:10",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "axeRadas",
+                "notes": 554
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "axeRadas",
+                "notes": 623
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.2,
+                "level_design": "axeRadas",
+                "notes": 1036
+            }
+        ]
+    },
+    {
+        "title": "On And On!!",
+        "artist": "ETIA. feat. Jenga",
+        "cover": "On And On!!.png",
+        "illustrator": "わっふゑ",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "J-Core",
+        "bpm": "170",
+        "length": "2:03",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Ctymax feat. AX",
+                "notes": 364
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "Ctymax feat. AX",
+                "notes": 627
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.2,
+                "level_design": "Ctymax feat. AX",
+                "notes": 941
+            }
+        ]
+    },
+    {
+        "title": "IKAROS",
+        "artist": "ETIA. feat. Jenga",
+        "cover": "IKAROS.png",
+        "illustrator": "HDLV",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "J-Core",
+        "bpm": "175",
+        "length": "2:05",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "lino",
+                "notes": 331
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "lino",
+                "notes": 668
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.9,
+                "level_design": "lino+SR",
+                "notes": 1024
+            }
+        ]
+    },
+    {
+        "title": "The Night City",
+        "artist": "system[Σ]",
+        "cover": "The Night City.png",
+        "illustrator": "Sin.",
+        "version": "1.1.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Fusion",
+        "bpm": "148",
+        "length": "2:22",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AX+lino",
+                "notes": 403
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "AX",
+                "notes": 704
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.4,
+                "level_design": "AX+lino",
+                "notes": 1092
+            }
+        ]
+    },
+    {
+        "title": "Gray：MachineGang",
+        "artist": "adaptor",
+        "cover": "Gray：MachineGang.png",
+        "illustrator": "ANT",
+        "version": "1.3.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Bass House",
+        "bpm": "128",
+        "length": "2:24",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "First Strike",
+                "notes": 709
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "Exact Wallbanging",
+                "notes": 748
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.1,
+                "level_design": "Golden Headshot",
+                "notes": 1128
+            }
+        ]
+    },
+    {
+        "title": "White：Revolve",
+        "artist": "adaptor",
+        "cover": "White：Revolve.png",
+        "illustrator": "ANT",
+        "version": "1.3.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Bass House",
+        "bpm": "143",
+        "length": "2:25",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "ScendRez.SA",
+                "notes": 565
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "ScendRez.SA",
+                "notes": 676
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.8,
+                "level_design": "ScendRez.SA",
+                "notes": 1072
+            }
+        ]
+    },
+    {
+        "title": "Xenolith",
+        "artist": "Tatsh",
+        "cover": "Xenolith.png",
+        "illustrator": "2Al4wU4",
+        "version": "1.4.2",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Medieval Choir",
+        "bpm": "170",
+        "length": "2:17",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Oath of \"X\" -Awake-",
+                "notes": 849
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "Oath of \"X\" -Alive-",
+                "notes": 1044
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15,
+                "level_design": "Oath of \"X\" -Align-",
+                "notes": 1288
+            }
+        ]
+    },
+    {
+        "title": "Grilled Cheese Burger",
+        "artist": "UN1C0DE",
+        "cover": "Grilled Cheese Burger.png",
+        "illustrator": "fienkrad",
+        "version": "1.6.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Spicy Ver / Techno Trance",
+        "bpm": "152",
+        "length": "2:37",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "1+1=12",
+                "notes": 650
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "1+1=12.9",
+                "notes": 784
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.4,
+                "level_design": "1+1=13.9",
+                "notes": 1280
+            }
+        ]
+    },
+    {
+        "title": "Divergence",
+        "artist": "Nego_tiator",
+        "cover": "Divergence.png",
+        "illustrator": "Fiz",
+        "version": "1.7.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Liquid DnB",
+        "bpm": "175",
+        "length": "2:25",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "ScendRez",
+                "notes": 643
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "ScendRez",
+                "notes": 867
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.2,
+                "level_design": "ScendRez",
+                "notes": 1140
+            }
+        ]
+    },
+    {
+        "title": "Pantomime",
+        "artist": "Halv",
+        "cover": "Pantomime.png",
+        "illustrator": "熊苏鲁的面包坊",
+        "version": "1.7.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Kawaii Future Jersey",
+        "bpm": "155",
+        "length": "1:59",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "AXERA!",
+                "notes": 695
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "AXERA...",
+                "notes": 703
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.2,
+                "level_design": "AXERA?",
+                "notes": 1252
+            }
+        ]
+    },
+    {
+        "title": "Artificial Existence",
+        "artist": "Jun Kuroda",
+        "cover": "Artificial Existence.png",
+        "illustrator": "2Al4wU4",
+        "version": "1.9.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Artcore",
+        "bpm": "191",
+        "length": "2:13",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "存在証明 [A]",
+                "notes": 716
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "存在証明 [E]",
+                "notes": 793
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.4,
+                "level_design": "存在証明 [X]",
+                "notes": 1022
+            }
+        ]
+    },
+    {
+        "title": "felys -final remix-",
+        "artist": "onoken",
+        "cover": "felys -final remix-.png",
+        "illustrator": "逆染 feat. 微菌",
+        "version": "1.9.0",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Artcore",
+        "bpm": "180",
+        "length": "2:51",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "TangScend",
+                "notes": 834
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "TangScend",
+                "notes": 1254
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.6,
+                "level_design": "TangScend",
+                "notes": 1670
+            }
+        ]
+    },
+    {
+        "title": "TOT",
+        "artist": "seatrus",
+        "cover": "TOT.png",
+        "illustrator": "熊苏鲁的面包坊",
+        "version": "1.9.1",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Electro Swing",
+        "bpm": "140",
+        "length": "2:51",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "lino",
+                "notes": 498
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "lino",
+                "notes": 691
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15,
+                "level_design": "lino",
+                "notes": 1370
+            }
+        ]
+    },
+    {
+        "title": "Fracture Temporelle",
+        "artist": "黒皇帝",
+        "cover": "Fracture Temporelle.png",
+        "illustrator": "翠冷",
+        "version": "1.9.2",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Paradigm Edit. / Time/Null",
+        "bpm": "232",
+        "length": "2:13",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Alterspect: NULL",
+                "notes": 789
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "Alterspect: NULL",
+                "notes": 973
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.8,
+                "level_design": "Alterspect: NULL",
+                "notes": 1378
+            }
+        ]
+    },
+    {
+        "title": "Unpredictable Nascent Invasion",
+        "artist": "硝酸生菜",
+        "cover": "Unpredictable Nascent Invasion.png",
+        "illustrator": "2AI4wU4",
+        "version": "1.9.3",
+        "b15": false,
+        "album": "シングル: カオス信号",
+        "genre": "Drum'N'Bass",
+        "bpm": "174",
+        "length": "2:26",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Kretz",
+                "notes": 567
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "Kretz",
+                "notes": 765
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.7,
+                "level_design": "Kretz",
+                "notes": 1277
+            }
+        ]
+    },
+    {
+        "title": "RE; Boot",
+        "artist": "溝口ゆうま feat. 柚木つばめ",
+        "cover": "RE; Boot.png",
+        "illustrator": "染染",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Hi-Tech Full On",
+        "bpm": "150",
+        "length": "2:25",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "AX: PARADIGM [REBOOT]",
+                "notes": 674
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "AX: PARADIGM [REBOOT]",
+                "notes": 967
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.7,
+                "level_design": "AX: PARADIGM [REBOOT]",
+                "notes": 1355
+            }
+        ]
+    },
+    {
+        "title": "Midnight Fairy Tale",
+        "artist": "しーけー",
+        "cover": "Midnight Fairy Tale.png",
+        "illustrator": "紫米",
+        "version": "2.0.1",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Toy Pop",
+        "bpm": "216",
+        "length": "2:01",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "lino",
+                "notes": 444
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9.5,
+                "level_design": "lino",
+                "notes": 759
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.1,
+                "level_design": "lino",
+                "notes": 1013
+            }
+        ]
+    },
+    {
+        "title": "カラッポ・ノンフィクション",
+        "artist": "Ino(chronoize) feat. 柳瀬マサキ",
+        "cover": "カラッポ・ノンフィクション.png",
+        "illustrator": "TOHRU MiTSUHASHi",
+        "version": "2.1.1",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Boys Futurecore Pop",
+        "bpm": "170",
+        "length": "2:28",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AXERA@非虛構少年",
+                "notes": 668
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "AXERA@非虛構少年",
+                "notes": 895
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.4,
+                "level_design": "AXERA@非虛構少年",
+                "notes": 1231
+            }
+        ]
+    },
+    {
+        "title": "月下桜天國",
+        "artist": "Zuxin with Utsuro",
+        "cover": "月下桜天國.png",
+        "illustrator": "MANAexe",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Oriental",
+        "bpm": "170",
+        "length": "2:10",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "凛源",
+                "notes": 268
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "凛源",
+                "notes": 478
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12,
+                "level_design": "凛源",
+                "notes": 920
+            }
+        ]
+    },
+    {
+        "title": "庚子桜天國",
+        "artist": "IanMirror aka Utsuro",
+        "cover": "庚子桜天國.png",
+        "illustrator": "同极磁铁",
+        "version": "2.2.0",
+        "b15": true,
+        "album": "シングル: カオス信号",
+        "genre": "Oriental Trance",
+        "bpm": "138",
+        "length": "2:34",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "再瞬",
+                "notes": 444
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "再瞬",
+                "notes": 666
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12,
+                "level_design": "再瞬",
+                "notes": 999
+            }
+        ]
+    },
+    {
+        "title": "Disintegrate of Eden",
+        "artist": "seatrus",
+        "cover": "Disintegrate of Eden.png",
+        "illustrator": "染染",
+        "version": "2.3.1",
+        "b15": true,
+        "album": "探索: 迷いの旅",
+        "genre": "Revolution Hardcore",
+        "bpm": "230",
+        "length": "1:58",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "Sileary 「最初」",
+                "notes": 600
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "Sileary 「最初」",
+                "notes": 1061
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.5,
+                "level_design": "Sileary 「最初」",
+                "notes": 1290
+            }
+        ]
+    },
+    {
+        "title": "Alexandrite",
+        "artist": "WAiKURO",
+        "cover": "Alexandrite.png",
+        "illustrator": "シエラ",
+        "version": "2.3.1",
+        "b15": true,
+        "album": "探索: 迷いの旅",
+        "genre": "Trance",
+        "bpm": "146",
+        "length": "2:19",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "山刀※空の宝石",
+                "notes": 634
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "山刀※空の宝石",
+                "notes": 907
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.7,
+                "level_design": "山刀※空の宝石",
+                "notes": 1333
+            }
+        ]
+    },
+    {
+        "title": "Class Memories",
+        "artist": "Antistar/Ctymax",
+        "cover": "Class Memories.png",
+        "illustrator": "xperz",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Trance",
+        "bpm": "145",
+        "length": "2:27",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "TangScend",
+                "notes": 361
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "AxEradaS",
+                "notes": 482
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12,
+                "level_design": "AxEradaS+SR",
+                "notes": 945
+            }
+        ]
+    },
+    {
+        "title": "Winter ↑cube↓",
+        "artist": "Ctymax",
+        "cover": "Winter ↑cube↓.png",
+        "illustrator": "紫米",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Melodic House",
+        "bpm": "104",
+        "length": "2:36",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "lino",
+                "notes": 283
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "lino",
+                "notes": 530
+            },
+            {
+                "difficulty_id": 3,
+                "level": 11,
+                "level_design": "lino",
+                "notes": 737
+            }
+        ]
+    },
+    {
+        "title": "Cipher:/2&//<|0",
+        "artist": "Tetrajectory feat. Ctymax",
+        "cover": "Cipher.png",
+        "illustrator": "菊花猹",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Viral Break",
+        "bpm": "179",
+        "length": "2:35",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "That tiger",
+                "notes": 432
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "That tiger",
+                "notes": 997
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.6,
+                "level_design": "Ctymax feat. That tiger",
+                "notes": 1217
+            }
+        ]
+    },
+    {
+        "title": "Vault of Sky",
+        "artist": "神尾光临",
+        "cover": "Vault of Sky.png",
+        "illustrator": "Jizici",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Artcore",
+        "bpm": "140",
+        "length": "2:14",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "AX",
+                "notes": 461
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "AX",
+                "notes": 534
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.3,
+                "level_design": "AX+lino",
+                "notes": 788
+            }
+        ]
+    },
+    {
+        "title": "Burn",
+        "artist": "NceS",
+        "cover": "Burn.png",
+        "illustrator": "人間蛋",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Euphoric Hardstyle",
+        "bpm": "148",
+        "length": "2:19",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "JUMPo",
+                "notes": 294
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "PMUJo",
+                "notes": 544
+            },
+            {
+                "difficulty_id": 3,
+                "level": 11,
+                "level_design": "JUMPo",
+                "notes": 786
+            }
+        ]
+    },
+    {
+        "title": "Cereris",
+        "artist": "SunsetRay vs. NceS",
+        "cover": "Cereris.png",
+        "illustrator": "Sin.",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Original Mix / Neurofunk",
+        "bpm": "175",
+        "length": "2:46",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "AX -the origin-",
+                "notes": 400
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "AX -the origin-",
+                "notes": 523
+            },
+            {
+                "difficulty_id": 3,
+                "level": 12.5,
+                "level_design": "AX -the origin-",
+                "notes": 892
+            }
+        ]
+    },
+    {
+        "title": "VEZZELiX",
+        "artist": "Reku Mochizuki",
+        "cover": "VEZZELiX.png",
+        "illustrator": "Reku Mochizuki",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Arcade Core",
+        "bpm": "190",
+        "length": "2:10",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 4,
+                "level_design": "山刀: Mark.09",
+                "notes": 439
+            },
+            {
+                "difficulty_id": 2,
+                "level": 9,
+                "level_design": "山刀: Mark.09",
+                "notes": 636
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.1,
+                "level_design": "山刀: Mark.09",
+                "notes": 1089
+            }
+        ]
+    },
+    {
+        "title": "キミとボクへの葬送歌",
+        "artist": "ROKINA",
+        "cover": "キミとボクへの葬送歌.png",
+        "illustrator": "不正",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Hard Renaissance",
+        "bpm": "220",
+        "length": "2:35",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 733
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "TangScend",
+                "notes": 1285
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.1,
+                "level_design": "レイ+SR",
+                "notes": 1540
+            }
+        ]
+    },
+    {
+        "title": "Cross†Ray",
+        "artist": "HyuN feat. 月下Lia",
+        "cover": "Cross†Ray.png",
+        "illustrator": "脚乐宝",
+        "version": "1.6.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Digital Rock",
+        "bpm": "176",
+        "length": "2:08",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "Rhezobar -Form P-",
+                "notes": 443
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "Rhezobar -Form P-",
+                "notes": 585
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.1,
+                "level_design": "Rhezobar -Form P-",
+                "notes": 1011
+            }
+        ]
+    },
+    {
+        "title": "EVERYTHING",
+        "artist": "Tatsh feat. 小田ユウ",
+        "cover": "EVERYTHING.png",
+        "illustrator": "AO",
+        "version": "2.0.0",
+        "b15": true,
+        "album": "探索: 迷いの旅",
+        "genre": "Euro Beat",
+        "bpm": "150",
+        "length": "1:57",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "lino",
+                "notes": 422
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "lino",
+                "notes": 534
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14.1,
+                "level_design": "lino",
+                "notes": 1031
+            }
+        ]
+    },
+    {
+        "title": "Etude -Sunset-",
+        "artist": "Polymath9",
+        "cover": "Etude -Sunset-.png",
+        "illustrator": "Rs",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Piano Trance Crossover",
+        "bpm": "159",
+        "length": "2:08",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 400
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11.5,
+                "level_design": "TangScend",
+                "notes": 774
+            },
+            {
+                "difficulty_id": 3,
+                "level": 14,
+                "level_design": "TangScend",
+                "notes": 970
+            }
+        ]
+    },
+    {
+        "title": "Pulsar",
+        "artist": "Daison",
+        "cover": "Pulsar.png",
+        "illustrator": "reivunsinda",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Dubstep",
+        "bpm": "160",
+        "length": "2:26",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "lino",
+                "notes": 340
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "lino+SR",
+                "notes": 575
+            },
+            {
+                "difficulty_id": 3,
+                "level": 11,
+                "level_design": "lino+SR",
+                "notes": 977
+            }
+        ]
+    },
+    {
+        "title": "Selenotaxis",
+        "artist": "Est",
+        "cover": "Selenotaxis.png",
+        "illustrator": "140/fth",
+        "version": "1.9.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Trance",
+        "bpm": "145",
+        "length": "2:38",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 2,
+                "level_design": "Disappeared Moon",
+                "notes": 450
+            },
+            {
+                "difficulty_id": 2,
+                "level": 7,
+                "level_design": "Shattered Moon",
+                "notes": 584
+            },
+            {
+                "difficulty_id": 3,
+                "level": 11,
+                "level_design": "Lightened Moon",
+                "notes": 772
+            }
+        ]
+    },
+    {
+        "title": "Chronostasis",
+        "artist": "黒皇帝",
+        "cover": "Chronostasis.png",
+        "illustrator": "三落",
+        "version": "1.0.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Timeless Artcore",
+        "bpm": "196",
+        "length": "2:30",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "辣子鸡",
+                "notes": 649
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10.5,
+                "level_design": "辣子鸡",
+                "notes": 937
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.1,
+                "level_design": "辣子鸡 (AX 2022 Remaster)",
+                "notes": 1415
+            }
+        ]
+    },
+    {
+        "title": "Anökumene",
+        "artist": "Jun Kuroda",
+        "cover": "Anökumene.png",
+        "illustrator": "染染",
+        "version": "1.6.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Artcore",
+        "bpm": "185",
+        "length": "1:56",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 3,
+                "level_design": "TangScend",
+                "notes": 502
+            },
+            {
+                "difficulty_id": 2,
+                "level": 8,
+                "level_design": "TangScend",
+                "notes": 640
+            },
+            {
+                "difficulty_id": 3,
+                "level": 13.4,
+                "level_design": "TangScend",
+                "notes": 943
+            }
+        ]
+    },
+    {
+        "title": "Destr0yer",
+        "artist": "削除 feat. Nikki Simmons",
+        "cover": "Destr0yer.png",
+        "illustrator": "yoshimo & Radiosity",
+        "version": "1.6.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Beam",
+        "bpm": "90",
+        "length": "3:00",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "TangScend",
+                "notes": 502
+            },
+            {
+                "difficulty_id": 2,
+                "level": 11,
+                "level_design": "TangScend",
+                "notes": 640
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.9,
+                "level_design": "TangScend",
+                "notes": 943
+            }
+        ]
+    },
+    {
+        "title": "c.s.q.n.",
+        "artist": "Aoi",
+        "cover": "c.s.q.n..png",
+        "illustrator": "出前",
+        "version": "1.6.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Hybrid Core",
+        "bpm": "174",
+        "length": "2:04",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "l.i.n.o.",
+                "notes": 555
+            },
+            {
+                "difficulty_id": 2,
+                "level": 10,
+                "level_design": "l.i.n.o.",
+                "notes": 866
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.2,
+                "level_design": "l.i.n.o.",
+                "notes": 1477
+            }
+        ]
+    },
+    {
+        "title": "CO5M1C R4ILR0AD",
+        "artist": "kanone",
+        "cover": "CO5M1C R4ILR0AD.png",
+        "illustrator": "Shuto",
+        "version": "2.3.1",
+        "b15": true,
+        "album": "探索: 迷いの旅",
+        "genre": "Hi-NRGTECH Trance",
+        "bpm": "155",
+        "length": "2:17",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 5,
+                "level_design": "ALT3RSP3CT",
+                "notes": 672
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "ALT3RSP3CT",
+                "notes": 993
+            },
+            {
+                "difficulty_id": 3,
+                "level": 15.9,
+                "level_design": "ALT3RSP3CT vs.  KR3TZ",
+                "notes": 1344
+            }
+        ]
+    },
+    {
+        "title": "Re：End of a Dream",
+        "artist": "uma vs. モリモリあつし",
+        "cover": "Re：End of a Dream.png",
+        "illustrator": "masiro vs. adaptor",
+        "version": "1.9.0",
+        "b15": false,
+        "album": "探索: 迷いの旅",
+        "genre": "Hard Renaissance",
+        "bpm": "212",
+        "length": "2:21",
+        "song_levels": [
+            {
+                "difficulty_id": 1,
+                "level": 6,
+                "level_design": "TangScend",
+                "notes": 707
+            },
+            {
+                "difficulty_id": 2,
+                "level": 12,
+                "level_design": "TangScend",
+                "notes": 925
+            },
+            {
+                "difficulty_id": 3,
+                "level": 16.5,
+                "level_design": "TangScend",
+                "notes": 1476
+            }
+        ]
+    }
+]
