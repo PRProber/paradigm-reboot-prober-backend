@@ -21,7 +21,7 @@ app.add_middleware(
 app.include_router(song.router)
 app.include_router(user.router)
 
-app.mount('/cover', StaticFiles(directory='resource/static/cover'), name='cover')
+app.mount('/cover', StaticFiles(directory='resources/static/cover'), name='cover')
 
 @app.on_event("startup")
 async def startup():

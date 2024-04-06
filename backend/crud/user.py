@@ -5,7 +5,7 @@ from datetime import datetime
 from sqlalchemy.orm import Session
 
 from ..model import schemas
-from ..model.entities import User, PlayRecord, BestPlayRecord, SongLevel
+from ..model.entities import User, PlayRecord, BestPlayRecord, SongLevel, Song
 from ..util import security, rating
 
 
@@ -39,12 +39,12 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
     return db_user
 
 
-def create_record(db: Session, record: schemas.PlayRecordCreate, user: User):
+def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bool = False) -> PlayRecord:
     """Record
     Create a play record.
     :param db: SQLAlchemy.orm Session
     :param record: record details
-    :param user: validated user
+    :param is_replaced: whether to replace the best record or not
     :return: record entity
     """
 
@@ -69,7 +69,7 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, user: User):
         = (db.query(BestPlayRecord).filter(BestPlayRecord.play_record.song.song_id == record.song_level_id).one_or_none())
     if db_best_record is not None:
         best_record: PlayRecord = db_best_record.play_record
-        if db_record.score > best_record.score:
+        if is_replaced or db_record.score > best_record.score:
             setattr(db_best_record, "play_record", db_record)
             db.commit()
             db.refresh(db_best_record)
@@ -100,13 +100,11 @@ def get_best_records(db: Session, username: str, underflow: int = 0) \
     :param underflow: underflow records threshold
     :return: (list, list) like tuple
     """
-    b35: List[Type[PlayRecord]] \
-        = (db.query(BestPlayRecord)
-           .filter(BestPlayRecord.play_record.username == username, BestPlayRecord.play_record.song.b15 is False)
-           .order_by(BestPlayRecord.play_record.rating.desc()).limit(35 + underflow).all())
-    b15: List[Type[PlayRecord]] \
-        = (db.query(BestPlayRecord)
-           .filter(BestPlayRecord.play_record.username == username, BestPlayRecord.play_record.song.b15 is True)
-           .order_by(BestPlayRecord.play_record.rating.desc()).limit(15 + underflow).all())
+    query = db.query(BestPlayRecord).join(PlayRecord).filter(PlayRecord.username == username).join(SongLevel).join(Song)
+
+    b35: List[Type[PlayRecord]] = \
+        query.filter(Song.b15 is False).order_by(PlayRecord.rating.desc()).limit(35 + underflow).all()
+    b15: List[Type[PlayRecord]] = \
+        query.filter(Song.b15 is True).order_by(PlayRecord.rating.desc()).limit(35 + underflow).all()
 
     return b35, b15

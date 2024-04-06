@@ -14,19 +14,19 @@
             {
                 "difficulty_id": 1,
                 "level": 1,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 279
             },
             {
                 "difficulty_id": 2,
                 "level": 6,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 362
             },
             {
                 "difficulty_id": 3,
                 "level": 10.5,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 592
             }
         ]
@@ -46,19 +46,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 361
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 579
             },
             {
                 "difficulty_id": 3,
                 "level": 12,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 985
             }
         ]
@@ -78,19 +78,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 314
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 591
             },
             {
                 "difficulty_id": 3,
                 "level": 13.4,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 979
             }
         ]
@@ -110,19 +110,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 443
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 806
             },
             {
                 "difficulty_id": 3,
                 "level": 15.8,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1159
             }
         ]
@@ -142,19 +142,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "SR::void",
+                "level_design": "SR::void",
                 "notes": 510
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "SR::void",
+                "level_design": "SR::void",
                 "notes": 694
             },
             {
                 "difficulty_id": 3,
                 "level": 13.9,
-                "level_deign": "SR::void",
+                "level_design": "SR::void",
                 "notes": 1071
             }
         ]
@@ -174,19 +174,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "3rd Revision",
+                "level_design": "3rd Revision",
                 "notes": 325
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "3rd Revision",
+                "level_design": "3rd Revision",
                 "notes": 572
             },
             {
                 "difficulty_id": 3,
                 "level": 13.1,
-                "level_deign": "3rd Revision",
+                "level_design": "3rd Revision",
                 "notes": 852
             }
         ]
@@ -206,19 +206,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "AX -il est temps-",
+                "level_design": "AX -il est temps-",
                 "notes": 329
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "AX -il est temps-",
+                "level_design": "AX -il est temps-",
                 "notes": 552
             },
             {
                 "difficulty_id": 3,
                 "level": 12.5,
-                "level_deign": "AX -il est temps-",
+                "level_design": "AX -il est temps-",
                 "notes": 861
             }
         ]
@@ -238,19 +238,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "AX -la bataille-",
+                "level_design": "AX -la bataille-",
                 "notes": 599
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "AX -la bataille-",
+                "level_design": "AX -la bataille-",
                 "notes": 747
             },
             {
                 "difficulty_id": 3,
                 "level": 15.8,
-                "level_deign": "AX -la bataille-",
+                "level_design": "AX -la bataille-",
                 "notes": 1190
             }
         ]
@@ -270,19 +270,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "3NDrez",
+                "level_design": "3NDrez",
                 "notes": 659
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "3NDrez",
+                "level_design": "3NDrez",
                 "notes": 1031
             },
             {
                 "difficulty_id": 3,
                 "level": 16.1,
-                "level_deign": "3NDrez",
+                "level_design": "3NDrez",
                 "notes": 1365
             }
         ]
@@ -302,19 +302,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 658
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 887
             },
             {
                 "difficulty_id": 3,
                 "level": 15.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1349
             }
         ]
@@ -334,19 +334,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 198
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 483
             },
             {
                 "difficulty_id": 3,
                 "level": 14.9,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 836
             }
         ]
@@ -366,19 +366,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "再瞬【無】",
+                "level_design": "再瞬【無】",
                 "notes": 788
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "再瞬【散】",
+                "level_design": "再瞬【散】",
                 "notes": 1179
             },
             {
                 "difficulty_id": 3,
                 "level": 15.3,
-                "level_deign": "再瞬【零】",
+                "level_design": "再瞬【零】",
                 "notes": 1496
             }
         ]
@@ -398,19 +398,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 460
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 706
             },
             {
                 "difficulty_id": 3,
                 "level": 15.7,
-                "level_deign": "Kretz vs. SR",
+                "level_design": "Kretz vs. SR",
                 "notes": 982
             }
         ]
@@ -430,19 +430,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "[onil]",
+                "level_design": "[onil]",
                 "notes": 529
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "[onil]",
+                "level_design": "[onil]",
                 "notes": 1148
             },
             {
                 "difficulty_id": 3,
                 "level": 15.6,
-                "level_deign": "[onil] (SR Edit)",
+                "level_design": "[onil] (SR Edit)",
                 "notes": 1126
             }
         ]
@@ -462,19 +462,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "[AЯΞXA]",
+                "level_design": "[AЯΞXA]",
                 "notes": 782
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "[AЯΞXA]",
+                "level_design": "[AЯΞXA]",
                 "notes": 1150
             },
             {
                 "difficulty_id": 3,
                 "level": 16.2,
-                "level_deign": "[AЯΞXA]",
+                "level_design": "[AЯΞXA]",
                 "notes": 1526
             }
         ]
@@ -494,19 +494,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Final Survivor",
+                "level_design": "Final Survivor",
                 "notes": 580
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "Paradox World",
+                "level_design": "Paradox World",
                 "notes": 691
             },
             {
                 "difficulty_id": 3,
                 "level": 13.5,
-                "level_deign": "Virtual Souls",
+                "level_design": "Virtual Souls",
                 "notes": 1082
             }
         ]
@@ -526,19 +526,19 @@
             {
                 "difficulty_id": 1,
                 "level": 1,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 433
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 633
             },
             {
                 "difficulty_id": 3,
                 "level": 13,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1333
             }
         ]
@@ -558,19 +558,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AX ~降灰に遭う~",
+                "level_design": "AX ~降灰に遭う~",
                 "notes": 516
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "AX ~降灰に遭う~",
+                "level_design": "AX ~降灰に遭う~",
                 "notes": 743
             },
             {
                 "difficulty_id": 3,
                 "level": 14.2,
-                "level_deign": "AX ~降灰に遭う~",
+                "level_design": "AX ~降灰に遭う~",
                 "notes": 1035
             }
         ]
@@ -590,19 +590,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "AX ~最果の祈り~",
+                "level_design": "AX ~最果の祈り~",
                 "notes": 445
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "AX ~最果の祈り~",
+                "level_design": "AX ~最果の祈り~",
                 "notes": 685
             },
             {
                 "difficulty_id": 3,
                 "level": 15.1,
-                "level_deign": "AX ~最果の祈り~",
+                "level_design": "AX ~最果の祈り~",
                 "notes": 1033
             }
         ]
@@ -622,19 +622,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "sFectrum",
+                "level_design": "sFectrum",
                 "notes": 602
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "sFectrum",
+                "level_design": "sFectrum",
                 "notes": 893
             },
             {
                 "difficulty_id": 3,
                 "level": 15.4,
-                "level_deign": "sFectrum",
+                "level_design": "sFectrum",
                 "notes": 1404
             }
         ]
@@ -654,19 +654,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "ScendRez [木]",
+                "level_design": "ScendRez [木]",
                 "notes": 635
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "ScendRez [林]",
+                "level_design": "ScendRez [林]",
                 "notes": 959
             },
             {
                 "difficulty_id": 3,
                 "level": 15.8,
-                "level_deign": "ScendRez [森]",
+                "level_design": "ScendRez [森]",
                 "notes": 1429
             }
         ]
@@ -686,19 +686,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "DENGEKI AKUMA [α]",
+                "level_design": "DENGEKI AKUMA [α]",
                 "notes": 506
             },
             {
                 "difficulty_id": 2,
                 "level": 13,
-                "level_deign": "DENGEKI AKUMA [β]",
+                "level_design": "DENGEKI AKUMA [β]",
                 "notes": 719
             },
             {
                 "difficulty_id": 3,
                 "level": 16.6,
-                "level_deign": "DENGEKI AKUMA [γ]",
+                "level_design": "DENGEKI AKUMA [γ]",
                 "notes": 1248
             }
         ]
@@ -718,19 +718,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 419
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 846
             },
             {
                 "difficulty_id": 3,
                 "level": 13.7,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 1332
             }
         ]
@@ -750,19 +750,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "再瞬",
+                "level_design": "再瞬",
                 "notes": 666
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "再瞬",
+                "level_design": "再瞬",
                 "notes": 916
             },
             {
                 "difficulty_id": 3,
                 "level": 14.8,
-                "level_deign": "再瞬",
+                "level_design": "再瞬",
                 "notes": 1166
             }
         ]
@@ -782,19 +782,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "月刊ScendRez",
+                "level_design": "月刊ScendRez",
                 "notes": 706
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "月刊ScendRez",
+                "level_design": "月刊ScendRez",
                 "notes": 919
             },
             {
                 "difficulty_id": 3,
                 "level": 15.6,
-                "level_deign": "月刊ScendRez",
+                "level_design": "月刊ScendRez",
                 "notes": 1199
             }
         ]
@@ -814,19 +814,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "森雷",
+                "level_design": "森雷",
                 "notes": 917
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "森雷",
+                "level_design": "森雷",
                 "notes": 1102
             },
             {
                 "difficulty_id": 3,
                 "level": 16.2,
-                "level_deign": "森雷",
+                "level_design": "森雷",
                 "notes": 1723
             }
         ]
@@ -846,19 +846,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 595
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 759
             },
             {
                 "difficulty_id": 3,
                 "level": 14.9,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1374
             }
         ]
@@ -878,19 +878,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "紫猫",
+                "level_design": "紫猫",
                 "notes": 413
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "紫猫",
+                "level_design": "紫猫",
                 "notes": 727
             },
             {
                 "difficulty_id": 3,
                 "level": 15.1,
-                "level_deign": "紫猫",
+                "level_design": "紫猫",
                 "notes": 1362
             }
         ]
@@ -910,19 +910,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AxEradaS vs. TangScend",
+                "level_design": "AxEradaS vs. TangScend",
                 "notes": 805
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "AxEradaS vs. TangScend",
+                "level_design": "AxEradaS vs. TangScend",
                 "notes": 1007
             },
             {
                 "difficulty_id": 3,
                 "level": 15.9,
-                "level_deign": "AxEradaS vs. TangScend",
+                "level_design": "AxEradaS vs. TangScend",
                 "notes": 1534
             }
         ]
@@ -942,19 +942,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 851
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1107
             },
             {
                 "difficulty_id": 3,
                 "level": 16.4,
-                "level_deign": "lino feat. Alterspect",
+                "level_design": "lino feat. Alterspect",
                 "notes": 1696
             }
         ]
@@ -974,19 +974,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Jizici",
+                "level_design": "Jizici",
                 "notes": 607
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "Jizici \\aran氏/",
+                "level_design": "Jizici \\aran氏/",
                 "notes": 905
             },
             {
                 "difficulty_id": 3,
                 "level": 14.9,
-                "level_deign": "Jizici \\大好き/",
+                "level_design": "Jizici \\大好き/",
                 "notes": 1378
             }
         ]
@@ -1006,19 +1006,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "AX as \"Bass Avenger\"",
+                "level_design": "AX as \"Bass Avenger\"",
                 "notes": 541
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "AX as \"Bass Avenger\"",
+                "level_design": "AX as \"Bass Avenger\"",
                 "notes": 756
             },
             {
                 "difficulty_id": 3,
                 "level": 15.2,
-                "level_deign": "AX as \"Bass Avenger\"",
+                "level_design": "AX as \"Bass Avenger\"",
                 "notes": 1287
             }
         ]
@@ -1038,19 +1038,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "AX hacked by Alterspect",
+                "level_design": "AX hacked by Alterspect",
                 "notes": 1246
             },
             {
                 "difficulty_id": 2,
                 "level": 13.3,
-                "level_deign": "AX hacked by Alterspect",
+                "level_design": "AX hacked by Alterspect",
                 "notes": 1690
             },
             {
                 "difficulty_id": 3,
                 "level": 15.9,
-                "level_deign": "Kretz vs. SR",
+                "level_design": "Kretz vs. SR",
                 "notes": 1847
             }
         ]
@@ -1070,19 +1070,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1056
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1295
             },
             {
                 "difficulty_id": 3,
                 "level": 16.5,
-                "level_deign": "IV:THE EMPEROR/TangScend",
+                "level_design": "IV:THE EMPEROR/TangScend",
                 "notes": 1856
             }
         ]
@@ -1102,19 +1102,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "逆染",
+                "level_design": "逆染",
                 "notes": 450
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "_i逆E氿/木",
+                "level_design": "_i逆E氿/木",
                 "notes": 820
             },
             {
                 "difficulty_id": 3,
                 "level": 14,
-                "level_deign": "i_]E氵|丿/-十ㄟ",
+                "level_design": "i_]E氵|丿/-十ㄟ",
                 "notes": 1020
             }
         ]
@@ -1134,19 +1134,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "【警報】再瞬、侵入準備",
+                "level_design": "【警報】再瞬、侵入準備",
                 "notes": 633
             },
             {
                 "difficulty_id": 2,
                 "level": 14,
-                "level_deign": "【警報】再瞬、侵入中",
+                "level_design": "【警報】再瞬、侵入中",
                 "notes": 1000
             },
             {
                 "difficulty_id": 3,
                 "level": 14.2,
-                "level_deign": "【警報】再瞬、侵入完了",
+                "level_design": "【警報】再瞬、侵入完了",
                 "notes": 1483
             }
         ]
@@ -1166,19 +1166,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 468
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 704
             },
             {
                 "difficulty_id": 3,
                 "level": 15.9,
-                "level_deign": "凛源 vs. 山刀",
+                "level_design": "凛源 vs. 山刀",
                 "notes": 1391
             }
         ]
@@ -1198,19 +1198,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "森雷旅人",
+                "level_design": "森雷旅人",
                 "notes": 621
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "森雷旅人",
+                "level_design": "森雷旅人",
                 "notes": 795
             },
             {
                 "difficulty_id": 3,
                 "level": 16.3,
-                "level_deign": "森雷旅人",
+                "level_design": "森雷旅人",
                 "notes": 1194
             }
         ]
@@ -1230,19 +1230,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "逆染: 心の願",
+                "level_design": "逆染: 心の願",
                 "notes": 628
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "逆染: 心の動",
+                "level_design": "逆染: 心の動",
                 "notes": 949
             },
             {
                 "difficulty_id": 3,
                 "level": 13.9,
-                "level_deign": "再瞬: 心の目",
+                "level_design": "再瞬: 心の目",
                 "notes": 1156
             }
         ]
@@ -1262,19 +1262,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "山刀",
+                "level_design": "山刀",
                 "notes": 929
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "再瞬",
+                "level_design": "再瞬",
                 "notes": 1043
             },
             {
                 "difficulty_id": 3,
                 "level": 15.6,
-                "level_deign": "山刀再瞬",
+                "level_design": "山刀再瞬",
                 "notes": 1396
             }
         ]
@@ -1294,19 +1294,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "山刀",
+                "level_design": "山刀",
                 "notes": 633
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "山刀",
+                "level_design": "山刀",
                 "notes": 855
             },
             {
                 "difficulty_id": 3,
                 "level": 15.7,
-                "level_deign": "山刀",
+                "level_design": "山刀",
                 "notes": 1285
             }
         ]
@@ -1326,19 +1326,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "森雷旅人",
+                "level_design": "森雷旅人",
                 "notes": 463
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "森雷旅人",
+                "level_design": "森雷旅人",
                 "notes": 653
             },
             {
                 "difficulty_id": 3,
                 "level": 16.4,
-                "level_deign": "森雷旅人",
+                "level_design": "森雷旅人",
                 "notes": 869
             }
         ]
@@ -1358,19 +1358,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 481
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 816
             },
             {
                 "difficulty_id": 3,
                 "level": 13.1,
-                "level_deign": "lino (AX Flavored Edit)",
+                "level_design": "lino (AX Flavored Edit)",
                 "notes": 1251
             }
         ]
@@ -1390,19 +1390,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AXERA in first love",
+                "level_design": "AXERA in first love",
                 "notes": 689
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "AXERA lost first love",
+                "level_design": "AXERA lost first love",
                 "notes": 732
             },
             {
                 "difficulty_id": 3,
                 "level": 14.3,
-                "level_deign": "AXERA lost in LOVE",
+                "level_design": "AXERA lost in LOVE",
                 "notes": 1353
             }
         ]
@@ -1422,19 +1422,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1084
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1083
             },
             {
                 "difficulty_id": 3,
                 "level": 15.7,
-                "level_deign": "Kretz vs. SR",
+                "level_design": "Kretz vs. SR",
                 "notes": 1219
             }
         ]
@@ -1454,19 +1454,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 602
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 942
             },
             {
                 "difficulty_id": 3,
                 "level": 16,
-                "level_deign": "Have a nice day! --AXERA",
+                "level_design": "Have a nice day! --AXERA",
                 "notes": 1375
             }
         ]
@@ -1486,19 +1486,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "#58C6EB -Percieve-",
+                "level_design": "#58C6EB -Percieve-",
                 "notes": 423
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "#E96068 -Encroach-",
+                "level_design": "#E96068 -Encroach-",
                 "notes": 624
             },
             {
                 "difficulty_id": 3,
                 "level": 14.2,
-                "level_deign": "#F28AE9 -Immense-",
+                "level_design": "#F28AE9 -Immense-",
                 "notes": 852
             }
         ]
@@ -1518,19 +1518,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "再瞬: Reboot (AX 2023 Rebuild)",
+                "level_design": "再瞬: Reboot (AX 2023 Rebuild)",
                 "notes": 487
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "再瞬: Reboot (AX 2023 Rebuild)",
+                "level_design": "再瞬: Reboot (AX 2023 Rebuild)",
                 "notes": 808
             },
             {
                 "difficulty_id": 3,
                 "level": 15.3,
-                "level_deign": "再瞬: Reboot (AX 2023 Rebuild)",
+                "level_design": "再瞬: Reboot (AX 2023 Rebuild)",
                 "notes": 1218
             }
         ]
@@ -1550,19 +1550,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 564
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1120
             },
             {
                 "difficulty_id": 3,
                 "level": 15.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1248
             }
         ]
@@ -1582,19 +1582,19 @@
             {
                 "difficulty_id": 1,
                 "level": 7,
-                "level_deign": "Status: Denial",
+                "level_design": "Status: Denial",
                 "notes": 1178
             },
             {
                 "difficulty_id": 2,
                 "level": 13.8,
-                "level_deign": "Status: Bargaining",
+                "level_design": "Status: Bargaining",
                 "notes": 1386
             },
             {
                 "difficulty_id": 3,
                 "level": 16.8,
-                "level_deign": "Status: Acceptance",
+                "level_design": "Status: Acceptance",
                 "notes": 1828
             }
         ]
@@ -1614,19 +1614,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 607
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 692
             },
             {
                 "difficulty_id": 3,
                 "level": 14.7,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 1068
             }
         ]
@@ -1646,19 +1646,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "再瞬: Operation#3714",
+                "level_design": "再瞬: Operation#3714",
                 "notes": 445
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "再瞬: Operation#3714",
+                "level_design": "再瞬: Operation#3714",
                 "notes": 928
             },
             {
                 "difficulty_id": 3,
                 "level": 15.4,
-                "level_deign": "再瞬: Operation#3714",
+                "level_design": "再瞬: Operation#3714",
                 "notes": 1288
             }
         ]
@@ -1678,19 +1678,19 @@
             {
                 "difficulty_id": 1,
                 "level": 8,
-                "level_deign": "ScendRaver inspired by C.",
+                "level_design": "ScendRaver inspired by C.",
                 "notes": 888
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "ScendRaver inspired by C.",
+                "level_design": "ScendRaver inspired by C.",
                 "notes": 888
             },
             {
                 "difficulty_id": 3,
                 "level": 15.6,
-                "level_deign": "ScendRaver inspired by C.",
+                "level_design": "ScendRaver inspired by C.",
                 "notes": 1488
             }
         ]
@@ -1710,19 +1710,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "Ancestral Xhronicle",
+                "level_design": "Ancestral Xhronicle",
                 "notes": 1119
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "Ancestral Xhronicle",
+                "level_design": "Ancestral Xhronicle",
                 "notes": 1179
             },
             {
                 "difficulty_id": 3,
                 "level": 16.2,
-                "level_deign": "Ancestral Xhronicle",
+                "level_design": "Ancestral Xhronicle",
                 "notes": 1520
             }
         ]
@@ -1742,19 +1742,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "ScendRez @Urban",
+                "level_design": "ScendRez @Urban",
                 "notes": 482
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "ScendRez @Journey",
+                "level_design": "ScendRez @Journey",
                 "notes": 704
             },
             {
                 "difficulty_id": 3,
                 "level": 14.3,
-                "level_deign": "ScendRez @Life",
+                "level_design": "ScendRez @Life",
                 "notes": 1020
             }
         ]
@@ -1774,19 +1774,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Jizici+SR",
+                "level_design": "Jizici+SR",
                 "notes": 860
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "Jizici+SR",
+                "level_design": "Jizici+SR",
                 "notes": 1024
             },
             {
                 "difficulty_id": 3,
                 "level": 14.9,
-                "level_deign": "Jizici+SR",
+                "level_design": "Jizici+SR",
                 "notes": 1680
             }
         ]
@@ -1806,19 +1806,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 475
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 867
             },
             {
                 "difficulty_id": 3,
                 "level": 15.1,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 1234
             }
         ]
@@ -1838,19 +1838,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 407
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 781
             },
             {
                 "difficulty_id": 3,
                 "level": 16.4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1090
             }
         ]
@@ -1870,19 +1870,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "リノ",
+                "level_design": "リノ",
                 "notes": 369
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "リノ",
+                "level_design": "リノ",
                 "notes": 540
             },
             {
                 "difficulty_id": 3,
                 "level": 13.6,
-                "level_deign": "リノ",
+                "level_design": "リノ",
                 "notes": 967
             }
         ]
@@ -1902,19 +1902,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AXERA'S SATURDAY",
+                "level_design": "AXERA'S SATURDAY",
                 "notes": 517
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "AXERA'S SUNDAY",
+                "level_design": "AXERA'S SUNDAY",
                 "notes": 689
             },
             {
                 "difficulty_id": 3,
                 "level": 14.5,
-                "level_deign": "AXERA'S MONDAY",
+                "level_design": "AXERA'S MONDAY",
                 "notes": 1202
             }
         ]
@@ -1934,19 +1934,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Jizici",
+                "level_design": "Jizici",
                 "notes": 455
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "Jizici",
+                "level_design": "Jizici",
                 "notes": 577
             },
             {
                 "difficulty_id": 3,
                 "level": 12.5,
-                "level_deign": "Ah! Jizici! xxx",
+                "level_design": "Ah! Jizici! xxx",
                 "notes": 933
             }
         ]
@@ -1966,19 +1966,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 555
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 753
             },
             {
                 "difficulty_id": 3,
                 "level": 16,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1109
             }
         ]
@@ -1998,19 +1998,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Jizici",
+                "level_design": "Jizici",
                 "notes": 473
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "Jizici",
+                "level_design": "Jizici",
                 "notes": 567
             },
             {
                 "difficulty_id": 3,
                 "level": 12.5,
-                "level_deign": "Jzici",
+                "level_design": "Jzici",
                 "notes": 857
             }
         ]
@@ -2030,19 +2030,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 521
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "lino ft. CN_115",
+                "level_design": "lino ft. CN_115",
                 "notes": 645
             },
             {
                 "difficulty_id": 3,
                 "level": 13.4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1007
             }
         ]
@@ -2062,19 +2062,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "scend.rez",
+                "level_design": "scend.rez",
                 "notes": 391
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "scend.rez",
+                "level_design": "scend.rez",
                 "notes": 693
             },
             {
                 "difficulty_id": 3,
                 "level": 15.4,
-                "level_deign": "scend.rez",
+                "level_design": "scend.rez",
                 "notes": 1232
             }
         ]
@@ -2094,19 +2094,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "再瞬: Act.PR",
+                "level_design": "再瞬: Act.PR",
                 "notes": 562
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "AXERA: Act.PR",
+                "level_design": "AXERA: Act.PR",
                 "notes": 761
             },
             {
                 "difficulty_id": 3,
                 "level": 15.1,
-                "level_deign": "再瞬 =resonate= AXERA",
+                "level_design": "再瞬 =resonate= AXERA",
                 "notes": 1063
             }
         ]
@@ -2126,19 +2126,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 501
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 719
             },
             {
                 "difficulty_id": 3,
                 "level": 13.7,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1267
             }
         ]
@@ -2158,19 +2158,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 508
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 776
             },
             {
                 "difficulty_id": 3,
                 "level": 14.8,
-                "level_deign": "Tarotora030+SR",
+                "level_design": "Tarotora030+SR",
                 "notes": 1390
             }
         ]
@@ -2190,19 +2190,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Alterspect (:3)",
+                "level_design": "Alterspect (:3)",
                 "notes": 646
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "Alterspect (:3)",
+                "level_design": "Alterspect (:3)",
                 "notes": 911
             },
             {
                 "difficulty_id": 3,
                 "level": 15.7,
-                "level_deign": "Alterspect (?!!)",
+                "level_design": "Alterspect (?!!)",
                 "notes": 1388
             }
         ]
@@ -2222,19 +2222,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 400
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 635
             },
             {
                 "difficulty_id": 3,
                 "level": 14.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 852
             }
         ]
@@ -2254,19 +2254,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 388
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 563
             },
             {
                 "difficulty_id": 3,
                 "level": 13.2,
-                "level_deign": "lino+AX",
+                "level_design": "lino+AX",
                 "notes": 900
             }
         ]
@@ -2286,19 +2286,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Oh",
+                "level_design": "Oh",
                 "notes": 531
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "OK, OK, i know",
+                "level_design": "OK, OK, i know",
                 "notes": 622
             },
             {
                 "difficulty_id": 3,
                 "level": 12,
-                "level_deign": "Is that right?",
+                "level_design": "Is that right?",
                 "notes": 938
             }
         ]
@@ -2318,19 +2318,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "ScendRez.357",
+                "level_design": "ScendRez.357",
                 "notes": 444
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "ScendRez.44",
+                "level_design": "ScendRez.44",
                 "notes": 683
             },
             {
                 "difficulty_id": 3,
                 "level": 15.6,
-                "level_deign": "ScendRez.50",
+                "level_design": "ScendRez.50",
                 "notes": 1056
             }
         ]
@@ -2350,19 +2350,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "Alter-X as \"Mh'ithrha\"",
+                "level_design": "Alter-X as \"Mh'ithrha\"",
                 "notes": 609
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "Alter-X as \"Mh'ithrha\"",
+                "level_design": "Alter-X as \"Mh'ithrha\"",
                 "notes": 1008
             },
             {
                 "difficulty_id": 3,
                 "level": 16.7,
-                "level_deign": "Alter-X as \"Mh'ithrha\"",
+                "level_design": "Alter-X as \"Mh'ithrha\"",
                 "notes": 1526
             }
         ]
@@ -2382,19 +2382,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 320
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 638
             },
             {
                 "difficulty_id": 3,
                 "level": 13.2,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 933
             }
         ]
@@ -2414,19 +2414,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "SR#7FFF00",
+                "level_design": "SR#7FFF00",
                 "notes": 409
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "SR#7FFF00",
+                "level_design": "SR#7FFF00",
                 "notes": 786
             },
             {
                 "difficulty_id": 3,
                 "level": 14.8,
-                "level_deign": "SR#7FFF00",
+                "level_design": "SR#7FFF00",
                 "notes": 1008
             }
         ]
@@ -2446,19 +2446,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "Ctymax",
+                "level_design": "Ctymax",
                 "notes": 375
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "Ctymax",
+                "level_design": "Ctymax",
                 "notes": 521
             },
             {
                 "difficulty_id": 3,
                 "level": 13,
-                "level_deign": "Ctymax",
+                "level_design": "Ctymax",
                 "notes": 960
             }
         ]
@@ -2478,19 +2478,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 829
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 1083
             },
             {
                 "difficulty_id": 3,
                 "level": 15.5,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 1794
             }
         ]
@@ -2510,19 +2510,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Inner Kretz",
+                "level_design": "Inner Kretz",
                 "notes": 330
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "Inner Kretz",
+                "level_design": "Inner Kretz",
                 "notes": 558
             },
             {
                 "difficulty_id": 3,
                 "level": 15,
-                "level_deign": "Inner Kretz",
+                "level_design": "Inner Kretz",
                 "notes": 888
             }
         ]
@@ -2542,19 +2542,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "RvPloysic+SR",
+                "level_design": "RvPloysic+SR",
                 "notes": 770
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "RvPloysic",
+                "level_design": "RvPloysic",
                 "notes": 1042
             },
             {
                 "difficulty_id": 3,
                 "level": 15.2,
-                "level_deign": "RvPloysic+SR",
+                "level_design": "RvPloysic+SR",
                 "notes": 1707
             }
         ]
@@ -2574,19 +2574,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 501
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 691
             },
             {
                 "difficulty_id": 3,
                 "level": 14.3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1161
             }
         ]
@@ -2606,19 +2606,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "Eastern Ailuropoda Gang",
+                "level_design": "Eastern Ailuropoda Gang",
                 "notes": 766
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "Eastern Ailuropoda Gang",
+                "level_design": "Eastern Ailuropoda Gang",
                 "notes": 951
             },
             {
                 "difficulty_id": 3,
                 "level": 14.4,
-                "level_deign": "Eastern Ailuropoda Gang",
+                "level_design": "Eastern Ailuropoda Gang",
                 "notes": 1323
             }
         ]
@@ -2638,19 +2638,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "AXERA >>",
+                "level_design": "AXERA >>",
                 "notes": 471
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "AXERA >>>>",
+                "level_design": "AXERA >>>>",
                 "notes": 688
             },
             {
                 "difficulty_id": 3,
                 "level": 14.3,
-                "level_deign": "AXERA >>>>>>",
+                "level_design": "AXERA >>>>>>",
                 "notes": 1059
             }
         ]
@@ -2670,19 +2670,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "AX: [PARADIGM] REBOOT",
+                "level_design": "AX: [PARADIGM] REBOOT",
                 "notes": 391
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "AX: [PARADIGM] REBOOT",
+                "level_design": "AX: [PARADIGM] REBOOT",
                 "notes": 601
             },
             {
                 "difficulty_id": 3,
                 "level": 14.4,
-                "level_deign": "AX: [PARADIGM] REBOOT",
+                "level_design": "AX: [PARADIGM] REBOOT",
                 "notes": 1041
             }
         ]
@@ -2702,19 +2702,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AXERA",
+                "level_design": "AXERA",
                 "notes": 462
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "AXERA",
+                "level_design": "AXERA",
                 "notes": 653
             },
             {
                 "difficulty_id": 3,
                 "level": 14.2,
-                "level_deign": "AXERA",
+                "level_design": "AXERA",
                 "notes": 921
             }
         ]
@@ -2734,19 +2734,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "TangScend -to the best future-",
+                "level_design": "TangScend -to the best future-",
                 "notes": 635
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "TangScend -to the best future-",
+                "level_design": "TangScend -to the best future-",
                 "notes": 839
             },
             {
                 "difficulty_id": 3,
                 "level": 13.7,
-                "level_deign": "TangScend -to the best future-",
+                "level_design": "TangScend -to the best future-",
                 "notes": 1207
             }
         ]
@@ -2766,19 +2766,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 626
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 973
             },
             {
                 "difficulty_id": 3,
                 "level": 15.2,
-                "level_deign": "AX ~commenced battle~",
+                "level_design": "AX ~commenced battle~",
                 "notes": 1322
             }
         ]
@@ -2798,19 +2798,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 962
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 858
             },
             {
                 "difficulty_id": 3,
                 "level": 14.5,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1277
             }
         ]
@@ -2830,19 +2830,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Arbarvojaĝanto",
+                "level_design": "Arbarvojaĝanto",
                 "notes": 999
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "Arbarvojaĝanto",
+                "level_design": "Arbarvojaĝanto",
                 "notes": 1276
             },
             {
                 "difficulty_id": 3,
                 "level": 16.3,
-                "level_deign": "Arbarvojaĝanto",
+                "level_design": "Arbarvojaĝanto",
                 "notes": 1899
             }
         ]
@@ -2862,19 +2862,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "AXERA?",
+                "level_design": "AXERA?",
                 "notes": 676
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "AXERA...",
+                "level_design": "AXERA...",
                 "notes": 756
             },
             {
                 "difficulty_id": 3,
                 "level": 13.6,
-                "level_deign": "AXERA!",
+                "level_design": "AXERA!",
                 "notes": 1115
             }
         ]
@@ -2894,19 +2894,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "AX ～世界の響き～",
+                "level_design": "AX ～世界の響き～",
                 "notes": 616
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "AX ～世界の響き～",
+                "level_design": "AX ～世界の響き～",
                 "notes": 825
             },
             {
                 "difficulty_id": 3,
                 "level": 15.1,
-                "level_deign": "AX ～世界の響き～",
+                "level_design": "AX ～世界の響き～",
                 "notes": 1253
             }
         ]
@@ -2926,19 +2926,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "【Ψ字航兔[30]】凛源",
+                "level_design": "【Ψ字航兔[30]】凛源",
                 "notes": 527
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "【Ψ字航兔[30]】凛源",
+                "level_design": "【Ψ字航兔[30]】凛源",
                 "notes": 677
             },
             {
                 "difficulty_id": 3,
                 "level": 12.5,
-                "level_deign": "【Ψ字航兔[30]】凛源",
+                "level_design": "【Ψ字航兔[30]】凛源",
                 "notes": 1158
             }
         ]
@@ -2958,19 +2958,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "【Ψ泠泠妻[30]】森雷",
+                "level_design": "【Ψ泠泠妻[30]】森雷",
                 "notes": 628
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "【Ψ泠泠妻[30]】森雷",
+                "level_design": "【Ψ泠泠妻[30]】森雷",
                 "notes": 952
             },
             {
                 "difficulty_id": 3,
                 "level": 13.3,
-                "level_deign": "【Ψ泠泠妻[30]】森雷",
+                "level_design": "【Ψ泠泠妻[30]】森雷",
                 "notes": 1615
             }
         ]
@@ -2990,19 +2990,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "【Ψ储备娘[30]】凛源",
+                "level_design": "【Ψ储备娘[30]】凛源",
                 "notes": 790
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "【Ψ储备娘[30]】凛源",
+                "level_design": "【Ψ储备娘[30]】凛源",
                 "notes": 1465
             },
             {
                 "difficulty_id": 3,
                 "level": 11.5,
-                "level_deign": "【Ψ储备娘[30]】凛源",
+                "level_design": "【Ψ储备娘[30]】凛源",
                 "notes": 1695
             }
         ]
@@ -3022,19 +3022,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "【Ψ黑聖徒[30]】紫猫",
+                "level_design": "【Ψ黑聖徒[30]】紫猫",
                 "notes": 616
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "【Ψ黑聖徒[30]】紫猫",
+                "level_design": "【Ψ黑聖徒[30]】紫猫",
                 "notes": 744
             },
             {
                 "difficulty_id": 3,
                 "level": 14.1,
-                "level_deign": "【Ψ黑聖徒[30]】紫猫",
+                "level_design": "【Ψ黑聖徒[30]】紫猫",
                 "notes": 1245
             }
         ]
@@ -3054,19 +3054,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AuRousKiNN",
+                "level_design": "AuRousKiNN",
                 "notes": 574
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "RvPloysic",
+                "level_design": "RvPloysic",
                 "notes": 898
             },
             {
                 "difficulty_id": 3,
                 "level": 14.5,
-                "level_deign": "AuRousKiNN+RvPloysic",
+                "level_design": "AuRousKiNN+RvPloysic",
                 "notes": 1430
             }
         ]
@@ -3086,19 +3086,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 739
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1016
             },
             {
                 "difficulty_id": 3,
                 "level": 15.3,
-                "level_deign": "AxEradaS -INFERNO-",
+                "level_design": "AxEradaS -INFERNO-",
                 "notes": 1625
             }
         ]
@@ -3118,19 +3118,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 466
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 720
             },
             {
                 "difficulty_id": 3,
                 "level": 15.6,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1076
             }
         ]
@@ -3150,19 +3150,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "ScendRez",
+                "level_design": "ScendRez",
                 "notes": 374
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "ScendRez",
+                "level_design": "ScendRez",
                 "notes": 500
             },
             {
                 "difficulty_id": 3,
                 "level": 12.5,
-                "level_deign": "ScendRez",
+                "level_design": "ScendRez",
                 "notes": 781
             }
         ]
@@ -3182,19 +3182,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "axeRadas",
+                "level_design": "axeRadas",
                 "notes": 554
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "axeRadas",
+                "level_design": "axeRadas",
                 "notes": 623
             },
             {
                 "difficulty_id": 3,
                 "level": 15.2,
-                "level_deign": "axeRadas",
+                "level_design": "axeRadas",
                 "notes": 1036
             }
         ]
@@ -3214,19 +3214,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Ctymax feat. AX",
+                "level_design": "Ctymax feat. AX",
                 "notes": 364
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "Ctymax feat. AX",
+                "level_design": "Ctymax feat. AX",
                 "notes": 627
             },
             {
                 "difficulty_id": 3,
                 "level": 14.2,
-                "level_deign": "Ctymax feat. AX",
+                "level_design": "Ctymax feat. AX",
                 "notes": 941
             }
         ]
@@ -3246,19 +3246,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 331
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 668
             },
             {
                 "difficulty_id": 3,
                 "level": 14.9,
-                "level_deign": "lino+SR",
+                "level_design": "lino+SR",
                 "notes": 1024
             }
         ]
@@ -3278,19 +3278,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AX+lino",
+                "level_design": "AX+lino",
                 "notes": 403
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "AX",
+                "level_design": "AX",
                 "notes": 704
             },
             {
                 "difficulty_id": 3,
                 "level": 14.4,
-                "level_deign": "AX+lino",
+                "level_design": "AX+lino",
                 "notes": 1092
             }
         ]
@@ -3310,19 +3310,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "First Strike",
+                "level_design": "First Strike",
                 "notes": 709
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "Exact Wallbanging",
+                "level_design": "Exact Wallbanging",
                 "notes": 748
             },
             {
                 "difficulty_id": 3,
                 "level": 14.1,
-                "level_deign": "Golden Headshot",
+                "level_design": "Golden Headshot",
                 "notes": 1128
             }
         ]
@@ -3342,19 +3342,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "ScendRez.SA",
+                "level_design": "ScendRez.SA",
                 "notes": 565
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "ScendRez.SA",
+                "level_design": "ScendRez.SA",
                 "notes": 676
             },
             {
                 "difficulty_id": 3,
                 "level": 14.8,
-                "level_deign": "ScendRez.SA",
+                "level_design": "ScendRez.SA",
                 "notes": 1072
             }
         ]
@@ -3374,19 +3374,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Oath of \"X\" -Awake-",
+                "level_design": "Oath of \"X\" -Awake-",
                 "notes": 849
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "Oath of \"X\" -Alive-",
+                "level_design": "Oath of \"X\" -Alive-",
                 "notes": 1044
             },
             {
                 "difficulty_id": 3,
                 "level": 15,
-                "level_deign": "Oath of \"X\" -Align-",
+                "level_design": "Oath of \"X\" -Align-",
                 "notes": 1288
             }
         ]
@@ -3406,19 +3406,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "1+1=12",
+                "level_design": "1+1=12",
                 "notes": 650
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "1+1=12.9",
+                "level_design": "1+1=12.9",
                 "notes": 784
             },
             {
                 "difficulty_id": 3,
                 "level": 15.4,
-                "level_deign": "1+1=13.9",
+                "level_design": "1+1=13.9",
                 "notes": 1280
             }
         ]
@@ -3438,19 +3438,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "ScendRez",
+                "level_design": "ScendRez",
                 "notes": 643
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "ScendRez",
+                "level_design": "ScendRez",
                 "notes": 867
             },
             {
                 "difficulty_id": 3,
                 "level": 14.2,
-                "level_deign": "ScendRez",
+                "level_design": "ScendRez",
                 "notes": 1140
             }
         ]
@@ -3470,19 +3470,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "AXERA!",
+                "level_design": "AXERA!",
                 "notes": 695
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "AXERA...",
+                "level_design": "AXERA...",
                 "notes": 703
             },
             {
                 "difficulty_id": 3,
                 "level": 15.2,
-                "level_deign": "AXERA?",
+                "level_design": "AXERA?",
                 "notes": 1252
             }
         ]
@@ -3502,19 +3502,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "存在証明 [A]",
+                "level_design": "存在証明 [A]",
                 "notes": 716
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "存在証明 [E]",
+                "level_design": "存在証明 [E]",
                 "notes": 793
             },
             {
                 "difficulty_id": 3,
                 "level": 14.4,
-                "level_deign": "存在証明 [X]",
+                "level_design": "存在証明 [X]",
                 "notes": 1022
             }
         ]
@@ -3534,19 +3534,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 834
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1254
             },
             {
                 "difficulty_id": 3,
                 "level": 15.6,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1670
             }
         ]
@@ -3566,19 +3566,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 498
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 691
             },
             {
                 "difficulty_id": 3,
                 "level": 15,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1370
             }
         ]
@@ -3598,19 +3598,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Alterspect: NULL",
+                "level_design": "Alterspect: NULL",
                 "notes": 789
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "Alterspect: NULL",
+                "level_design": "Alterspect: NULL",
                 "notes": 973
             },
             {
                 "difficulty_id": 3,
                 "level": 15.8,
-                "level_deign": "Alterspect: NULL",
+                "level_design": "Alterspect: NULL",
                 "notes": 1378
             }
         ]
@@ -3630,19 +3630,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 567
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 765
             },
             {
                 "difficulty_id": 3,
                 "level": 15.7,
-                "level_deign": "Kretz",
+                "level_design": "Kretz",
                 "notes": 1277
             }
         ]
@@ -3662,19 +3662,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "AX: PARADIGM [REBOOT]",
+                "level_design": "AX: PARADIGM [REBOOT]",
                 "notes": 674
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "AX: PARADIGM [REBOOT]",
+                "level_design": "AX: PARADIGM [REBOOT]",
                 "notes": 967
             },
             {
                 "difficulty_id": 3,
                 "level": 15.7,
-                "level_deign": "AX: PARADIGM [REBOOT]",
+                "level_design": "AX: PARADIGM [REBOOT]",
                 "notes": 1355
             }
         ]
@@ -3694,19 +3694,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 444
             },
             {
                 "difficulty_id": 2,
                 "level": 9.5,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 759
             },
             {
                 "difficulty_id": 3,
                 "level": 14.1,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1013
             }
         ]
@@ -3726,19 +3726,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AXERA@非虛構少年",
+                "level_design": "AXERA@非虛構少年",
                 "notes": 668
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "AXERA@非虛構少年",
+                "level_design": "AXERA@非虛構少年",
                 "notes": 895
             },
             {
                 "difficulty_id": 3,
                 "level": 14.4,
-                "level_deign": "AXERA@非虛構少年",
+                "level_design": "AXERA@非虛構少年",
                 "notes": 1231
             }
         ]
@@ -3758,19 +3758,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 268
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 478
             },
             {
                 "difficulty_id": 3,
                 "level": 12,
-                "level_deign": "凛源",
+                "level_design": "凛源",
                 "notes": 920
             }
         ]
@@ -3790,19 +3790,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "再瞬",
+                "level_design": "再瞬",
                 "notes": 444
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "再瞬",
+                "level_design": "再瞬",
                 "notes": 666
             },
             {
                 "difficulty_id": 3,
                 "level": 12,
-                "level_deign": "再瞬",
+                "level_design": "再瞬",
                 "notes": 999
             }
         ]
@@ -3822,19 +3822,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "Sileary 「最初」",
+                "level_design": "Sileary 「最初」",
                 "notes": 600
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "Sileary 「最初」",
+                "level_design": "Sileary 「最初」",
                 "notes": 1061
             },
             {
                 "difficulty_id": 3,
                 "level": 15.5,
-                "level_deign": "Sileary 「最初」",
+                "level_design": "Sileary 「最初」",
                 "notes": 1290
             }
         ]
@@ -3854,19 +3854,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "山刀※空の宝石",
+                "level_design": "山刀※空の宝石",
                 "notes": 634
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "山刀※空の宝石",
+                "level_design": "山刀※空の宝石",
                 "notes": 907
             },
             {
                 "difficulty_id": 3,
                 "level": 15.7,
-                "level_deign": "山刀※空の宝石",
+                "level_design": "山刀※空の宝石",
                 "notes": 1333
             }
         ]
@@ -3886,19 +3886,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 361
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "AxEradaS",
+                "level_design": "AxEradaS",
                 "notes": 482
             },
             {
                 "difficulty_id": 3,
                 "level": 12,
-                "level_deign": "AxEradaS+SR",
+                "level_design": "AxEradaS+SR",
                 "notes": 945
             }
         ]
@@ -3918,19 +3918,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 283
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 530
             },
             {
                 "difficulty_id": 3,
                 "level": 11,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 737
             }
         ]
@@ -3950,19 +3950,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "That tiger",
+                "level_design": "That tiger",
                 "notes": 432
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "That tiger",
+                "level_design": "That tiger",
                 "notes": 997
             },
             {
                 "difficulty_id": 3,
                 "level": 14.6,
-                "level_deign": "Ctymax feat. That tiger",
+                "level_design": "Ctymax feat. That tiger",
                 "notes": 1217
             }
         ]
@@ -3982,19 +3982,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "AX",
+                "level_design": "AX",
                 "notes": 461
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "AX",
+                "level_design": "AX",
                 "notes": 534
             },
             {
                 "difficulty_id": 3,
                 "level": 13.3,
-                "level_deign": "AX+lino",
+                "level_design": "AX+lino",
                 "notes": 788
             }
         ]
@@ -4014,19 +4014,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "JUMPo",
+                "level_design": "JUMPo",
                 "notes": 294
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "PMUJo",
+                "level_design": "PMUJo",
                 "notes": 544
             },
             {
                 "difficulty_id": 3,
                 "level": 11,
-                "level_deign": "JUMPo",
+                "level_design": "JUMPo",
                 "notes": 786
             }
         ]
@@ -4046,19 +4046,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "AX -the origin-",
+                "level_design": "AX -the origin-",
                 "notes": 400
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "AX -the origin-",
+                "level_design": "AX -the origin-",
                 "notes": 523
             },
             {
                 "difficulty_id": 3,
                 "level": 12.5,
-                "level_deign": "AX -the origin-",
+                "level_design": "AX -the origin-",
                 "notes": 892
             }
         ]
@@ -4078,19 +4078,19 @@
             {
                 "difficulty_id": 1,
                 "level": 4,
-                "level_deign": "山刀: Mark.09",
+                "level_design": "山刀: Mark.09",
                 "notes": 439
             },
             {
                 "difficulty_id": 2,
                 "level": 9,
-                "level_deign": "山刀: Mark.09",
+                "level_design": "山刀: Mark.09",
                 "notes": 636
             },
             {
                 "difficulty_id": 3,
                 "level": 14.1,
-                "level_deign": "山刀: Mark.09",
+                "level_design": "山刀: Mark.09",
                 "notes": 1089
             }
         ]
@@ -4110,19 +4110,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 733
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1285
             },
             {
                 "difficulty_id": 3,
                 "level": 16.1,
-                "level_deign": "レイ+SR",
+                "level_design": "レイ+SR",
                 "notes": 1540
             }
         ]
@@ -4142,19 +4142,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "Rhezobar -Form P-",
+                "level_design": "Rhezobar -Form P-",
                 "notes": 443
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "Rhezobar -Form P-",
+                "level_design": "Rhezobar -Form P-",
                 "notes": 585
             },
             {
                 "difficulty_id": 3,
                 "level": 15.1,
-                "level_deign": "Rhezobar -Form P-",
+                "level_design": "Rhezobar -Form P-",
                 "notes": 1011
             }
         ]
@@ -4174,19 +4174,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 422
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 534
             },
             {
                 "difficulty_id": 3,
                 "level": 14.1,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 1031
             }
         ]
@@ -4206,19 +4206,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 400
             },
             {
                 "difficulty_id": 2,
                 "level": 11.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 774
             },
             {
                 "difficulty_id": 3,
                 "level": 14,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 970
             }
         ]
@@ -4238,19 +4238,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "lino",
+                "level_design": "lino",
                 "notes": 340
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "lino+SR",
+                "level_design": "lino+SR",
                 "notes": 575
             },
             {
                 "difficulty_id": 3,
                 "level": 11,
-                "level_deign": "lino+SR",
+                "level_design": "lino+SR",
                 "notes": 977
             }
         ]
@@ -4270,19 +4270,19 @@
             {
                 "difficulty_id": 1,
                 "level": 2,
-                "level_deign": "Disappeared Moon",
+                "level_design": "Disappeared Moon",
                 "notes": 450
             },
             {
                 "difficulty_id": 2,
                 "level": 7,
-                "level_deign": "Shattered Moon",
+                "level_design": "Shattered Moon",
                 "notes": 584
             },
             {
                 "difficulty_id": 3,
                 "level": 11,
-                "level_deign": "Lightened Moon",
+                "level_design": "Lightened Moon",
                 "notes": 772
             }
         ]
@@ -4302,19 +4302,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "辣子鸡",
+                "level_design": "辣子鸡",
                 "notes": 649
             },
             {
                 "difficulty_id": 2,
                 "level": 10.5,
-                "level_deign": "辣子鸡",
+                "level_design": "辣子鸡",
                 "notes": 937
             },
             {
                 "difficulty_id": 3,
                 "level": 15.1,
-                "level_deign": "辣子鸡 (AX 2022 Remaster)",
+                "level_design": "辣子鸡 (AX 2022 Remaster)",
                 "notes": 1415
             }
         ]
@@ -4334,19 +4334,19 @@
             {
                 "difficulty_id": 1,
                 "level": 3,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 502
             },
             {
                 "difficulty_id": 2,
                 "level": 8,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 640
             },
             {
                 "difficulty_id": 3,
                 "level": 13.4,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 943
             }
         ]
@@ -4366,19 +4366,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 502
             },
             {
                 "difficulty_id": 2,
                 "level": 11,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 640
             },
             {
                 "difficulty_id": 3,
                 "level": 15.9,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 943
             }
         ]
@@ -4398,19 +4398,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "l.i.n.o.",
+                "level_design": "l.i.n.o.",
                 "notes": 555
             },
             {
                 "difficulty_id": 2,
                 "level": 10,
-                "level_deign": "l.i.n.o.",
+                "level_design": "l.i.n.o.",
                 "notes": 866
             },
             {
                 "difficulty_id": 3,
                 "level": 15.2,
-                "level_deign": "l.i.n.o.",
+                "level_design": "l.i.n.o.",
                 "notes": 1477
             }
         ]
@@ -4430,19 +4430,19 @@
             {
                 "difficulty_id": 1,
                 "level": 5,
-                "level_deign": "ALT3RSP3CT",
+                "level_design": "ALT3RSP3CT",
                 "notes": 672
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "ALT3RSP3CT",
+                "level_design": "ALT3RSP3CT",
                 "notes": 993
             },
             {
                 "difficulty_id": 3,
                 "level": 15.9,
-                "level_deign": "ALT3RSP3CT vs.  KR3TZ",
+                "level_design": "ALT3RSP3CT vs.  KR3TZ",
                 "notes": 1344
             }
         ]
@@ -4462,19 +4462,19 @@
             {
                 "difficulty_id": 1,
                 "level": 6,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 707
             },
             {
                 "difficulty_id": 2,
                 "level": 12,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 925
             },
             {
                 "difficulty_id": 3,
                 "level": 16.5,
-                "level_deign": "TangScend",
+                "level_design": "TangScend",
                 "notes": 1476
             }
         ]

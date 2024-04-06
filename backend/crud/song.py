@@ -15,12 +15,14 @@ def create_song(db: Session, song: schemas.SongCreate):
     db_song = entities.Song(
         title=song.title,
         artist=song.artist,
+        genre=song.genre,
         cover=song.cover,
         illustrator=song.illustrator,
         version=song.version,
         b15=song.b15,
         album=song.album,
-        bpm=song.bpm
+        bpm=song.bpm,
+        length=song.length,
     )
     db.add(db_song)
     db.commit()
@@ -33,6 +35,7 @@ def create_song(db: Session, song: schemas.SongCreate):
             difficulty_id=level.difficulty_id,
             level=level.level,
             level_design=level.level_design,
+            notes=level.notes,
         )
         for level in song.song_levels
     ]

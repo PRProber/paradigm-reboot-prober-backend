@@ -5,19 +5,14 @@ from datetime import datetime
 class SongBase(BaseModel):
     title: str | None = None
     artist: str | None = None
+    genre: str | None = None
     cover: str | None = None
     illustrator: str | None = None
     version: str | None = None
     b15: bool | None = False
     album: str | None = None
-    bpm: float | None = None
-
-
-class SongLevelBase(BaseModel):
-    difficulty_id: int | None = None
-    difficulty: str | None = None
-    level: float | None = None
-    level_design: str | None = None
+    bpm: str | None = None
+    length: str | None = None
 
 
 class UserBase(BaseModel):
@@ -43,6 +38,9 @@ class PlayRecord(PlayRecordBase):
     play_record_id: int
     record_time: datetime
 
+    class Config:
+        from_attributes = True
+
 
 class User(UserBase):
     class Config:
@@ -56,6 +54,7 @@ class SongLevelInfo(SongBase):
     level: float
     fitting_level: float | None = None
     level_design: str | None = None
+    notes: int | None = None
 
     class Config:
         from_attributes = True
@@ -66,6 +65,7 @@ class LevelInfo(BaseModel):
     difficulty: str | None = None
     level: float
     level_design: str | None = None
+    notes: int | None = None
 
 
 class SongCreate(SongBase):

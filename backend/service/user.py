@@ -73,9 +73,9 @@ def refresh_upload_token(db: Session, user: User) -> User:
     return user
 
 
-def create_record(db: Session, record: PlayRecordCreate, user: User) -> PlayRecord:
+def create_record(db: Session, record: PlayRecordCreate, is_replaced: bool = False) -> PlayRecord:
     try:
-        record = crud.create_record(db, record, user)
+        record = crud.create_record(db, record, is_replaced)
     except RuntimeError as e:
         raise HTTPException(status_code=400, detail=e)
     except AmbiguousForeignKeysError:

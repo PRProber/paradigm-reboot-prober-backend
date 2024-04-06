@@ -23,6 +23,7 @@ def song_to_levels(song: entities.Song) -> List[util.SongLevelInfo]:
         song_level.level = level.level
         song_level.fitting_level = level.fitting_level
         song_level.level_design = level.level_design
+        song_level.notes = level.notes
 
         song_levels.append(song_level)
 

@@ -21,8 +21,8 @@ class Song(Base):
     version: Mapped[str] = mapped_column()
     b15: Mapped[bool] = mapped_column()  # 是否为 b15 歌曲
     album: Mapped[str] = mapped_column()
-    bpm: Mapped[float] = mapped_column()
-    length: Mapped[datetime] = mapped_column()
+    bpm: Mapped[str] = mapped_column()
+    length: Mapped[str] = mapped_column()
 
     song_levels: Mapped[List["SongLevel"]] = relationship(back_populates='song')
 
@@ -69,7 +69,6 @@ class User(Base):
     is_admin: Mapped[bool] = mapped_column()  # 权限管理
 
     play_records: Mapped[List["PlayRecord"]] = relationship(back_populates='user')
-    best_play_records: Mapped[List["BestPlayRecord"]] = relationship(back_populates='user')
 
 
 class PlayRecord(Base):
@@ -89,6 +88,7 @@ class PlayRecord(Base):
 class BestPlayRecord(Base):
     __tablename__ = 'best_play_records'
 
+    best_record_id: Mapped[int] = mapped_column(primary_key=True)
     play_record_id: Mapped[int] = mapped_column(ForeignKey('play_records.play_record_id'))
 
-    play_record: Mapped["PlayRecord"] = relationship(back_populates='best_play_records')
+    play_record: Mapped["PlayRecord"] = relationship(uselist=False)

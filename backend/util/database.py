@@ -13,7 +13,7 @@ def init_db():
     database.Base.metadata.create_all(bind=database.engine)
 
     with Session(database.engine) as db:
-        # init_difficulties(db)
+        init_difficulties(db)
         init_songs(db)
 
 
@@ -27,7 +27,7 @@ def init_difficulties(db: Session):
 def init_songs(db: Session):
     songs: list
     try:
-        with open('resource/formatted.json', 'r', encoding='utf-8') as f:
+        with open('resources/formatted.json', 'r', encoding='utf-8') as f:
             songs = json.load(f)
     except FileNotFoundError | json.JSONDecodeError as e:
         print("Error occurs when initializing song information\n", e)
