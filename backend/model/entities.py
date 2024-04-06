@@ -80,7 +80,7 @@ class PlayRecord(Base):
     record_time: Mapped[datetime] = mapped_column()
     username: Mapped[str] = mapped_column(ForeignKey('prober_users.username'))
     score: Mapped[int] = mapped_column()
-    rating: Mapped[float] = mapped_column()
+    rating: Mapped[float] = mapped_column()  # 便于查询 b50
 
     user: Mapped["User"] = relationship(back_populates='play_records')
     song_level: Mapped["SongLevel"] = relationship()

@@ -53,8 +53,6 @@ def get_active_user(db: Session, username: str) -> Union[User, None]:
 
 def get_user(db: Session, username: str) -> Union[User, None]:
     user: User = crud.get_user(db, username)
-    if user is None:
-        raise HTTPException(status_code=400, detail="User doesn't exist")
     return user
 
 
