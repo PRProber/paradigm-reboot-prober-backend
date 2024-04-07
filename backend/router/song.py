@@ -11,7 +11,7 @@ router = APIRouter()
 
 
 @router.get('/songs', response_model=list[schemas.SongLevelInfo])
-@cache(expire=60)
+@cache(expire=3600)
 async def get_all_song_levels(db: Session = Depends(get_db)):
     song_levels = song_service.get_all_song_levels(db)
 
@@ -19,7 +19,7 @@ async def get_all_song_levels(db: Session = Depends(get_db)):
 
 
 @router.get('/songs/{song_id}', response_model=schemas.Song)
-@cache(expire=60)
+@cache(expire=3600)
 async def get_single_song_info(song_id: int, db: Session = Depends(get_db)):
     song = song_service.get_single_song_by_id(db, song_id)
 

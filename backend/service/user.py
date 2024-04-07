@@ -66,7 +66,7 @@ def create_user(db: Session, user: UserCreate) -> User:
 def refresh_upload_token(db: Session, user: User) -> User:
     if user is None:
         raise HTTPException(status_code=400, detail="User doesn't exist")
-    user.upload_token = secrets.token_hex(256)
+    user.upload_token = secrets.token_hex(32)
     db.commit()
     db.refresh(user)
 
