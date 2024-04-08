@@ -11,3 +11,15 @@ class SongLevelInfo:
                 setattr(self, key, getattr(song, key))
             else:
                 setattr(self, key, None)
+
+
+class SongInfo:
+    """
+    A simple wrapper class to convert an ORM song to a Song schema (flatten entities.Difficulty).
+    """
+    def __init__(self, song: entities.Song):
+        for key in schemas.SongLevelInfo.model_fields.keys():
+            if hasattr(song, key):
+                setattr(self, key, getattr(song, key))
+            else:
+                setattr(self, key, None)

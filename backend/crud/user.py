@@ -28,7 +28,7 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
         account_number=user.account_number,
         uuid=user.uuid,
         anonymous_probe=user.anonymous_probe,
-        upload_token=secrets.token_hex(256),
+        upload_token=secrets.token_hex(32),
         is_active=True,
         is_admin=False
     )
