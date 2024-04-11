@@ -94,10 +94,13 @@ class BestPlayRecord(Base):
     play_record: Mapped["PlayRecord"] = relationship(uselist=False)
 
 
-class Best50Trend(Base):
+class Best50Trends(Base):
     __tablename__ = 'best50_trend'
 
     b50_trend_id: Mapped[int] = mapped_column(primary_key=True)
-    record_time: Mapped[datetime] = mapped_column()
-
     username: Mapped[str] = mapped_column(ForeignKey("prober_users.username"))
+
+    b50rating: Mapped[float] = mapped_column()
+    record_time: Mapped[datetime] = mapped_column()
+    is_valid: Mapped[bool] = mapped_column()
+

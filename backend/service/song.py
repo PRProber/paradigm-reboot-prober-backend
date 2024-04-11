@@ -16,16 +16,8 @@ def song_to_levels(song: entities.Song) -> List[util.SongLevelInfo]:
     """
     song_levels = []
     for level in song.song_levels:
-        song_level = util.SongLevelInfo(song)
-        # TODO: More elegant method
-        setattr(song_level, "song_level_id", level.song_level_id)
-        song_level.difficulty_id = level.difficulty_id
-        song_level.difficulty = level.difficulty.name
-        song_level.level = level.level
-        song_level.fitting_level = level.fitting_level
-        song_level.level_design = level.level_design
-        song_level.notes = level.notes
-
+        song_level = util.SongLevelInfo(level)
+        song_level.difficulty_name = level.difficulty.name
         song_levels.append(song_level)
 
     return song_levels

@@ -1,14 +1,16 @@
 import secrets
 from typing import Union, List, Tuple, Type
 
+from sqlalchemy import Row
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import AmbiguousForeignKeysError
 from fastapi import HTTPException, Depends
 
 from ..crud import user as crud
-from ..model.entities import User, PlayRecord
+from ..model.entities import User, PlayRecord, Best50Trends, SongLevel, BestPlayRecord, Song
 from ..model.schemas import UserCreate, PlayRecordCreate
 from ..util import security, database
+from .. import util
 from .. import config
 
 
@@ -73,16 +75,18 @@ def refresh_upload_token(db: Session, user: User) -> User:
     return user
 
 
-def create_record(db: Session, record: PlayRecordCreate, is_replaced: bool = False) -> PlayRecord:
+def create_record(db: Session, records: List[PlayRecordCreate], is_replaced: bool = False) -> List[PlayRecord]:
+    response_records = []
     try:
-        record = crud.create_record(db, record, is_replaced)
+        for record in records:
+            response_records.append(crud.create_record(db, record, is_replaced))
     except RuntimeError as e:
         raise HTTPException(status_code=400, detail=e)
     except AmbiguousForeignKeysError:
         raise HTTPException(status_code=400, detail="User doesn't exist or song doesn't exist")
     except Exception as e:
         raise HTTPException(status_code=400, detail=e)
-    return record
+    return response_records
 
 
 def get_all_records(db: Session, username: str) -> List[Type[PlayRecord]]:
@@ -90,7 +94,32 @@ def get_all_records(db: Session, username: str) -> List[Type[PlayRecord]]:
     return records
 
 
-def get_best_records(db: Session, username: str, underflow: int = 0) \
-        -> Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]:
-    best_records = crud.get_best_records(db, username, underflow)
-    return best_records
+def wrap_record(record: Row[Tuple[BestPlayRecord, PlayRecord]]) -> util.PlayRecordInfo:
+    best_record = util.PlayRecordInfo(record[1])
+    return best_record
+
+
+def get_best_records(db: Session, username: str, underflow: int = 0):
+    b35_records, b15_records = crud.get_best_records(db, username, underflow)
+    b35_records_list: List[util.PlayRecordInfo] = []
+    b15_records_list: List[util.PlayRecordInfo] = []
+    for record in b35_records:
+        b35_records_list.append(wrap_record(record))
+    for record in b15_records:
+        b15_records_list.append(wrap_record(record))
+    return b35_records_list, b15_records_list
+
+
+def remove_b50_record(db: Session, record: Best50Trends):
+    # TODO: remove a b50 record
+    pass
+
+
+def update_b50_record(db: Session, username: str) -> Best50Trends:
+    trends = crud.update_b50_record(db, username)
+    return trends
+
+
+def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
+    trends: List[Type[Best50Trends]] = crud.get_b50_trends(db, username)
+    return trends
