@@ -1,6 +1,7 @@
 from typing import List
 from fastapi import APIRouter, File, Form, UploadFile, Depends, HTTPException, Query
 from fastapi.security import OAuth2PasswordRequestForm
+from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
 from starlette import status
 
@@ -50,10 +51,11 @@ async def get_play_records(username: str | None,
         play_records = user_service.get_best_records(db, username, underflow)
     else:
         play_records = user_service.get_all_records(db, username)
-    if export_type == "csv":
-        return json2csv(play_records)
-    if export_type == "img":
-        return json2img(play_records)
+    # if export_type == "csv":
+    #     return json2csv(play_records)
+    # if export_type == "img":
+    #     return json2img(play_records)
+    print("out ", play_records)
     return play_records
 
 
@@ -63,7 +65,6 @@ async def post_record(username: str | None,
                       use_csv: str | None = Query(default=None, alias="use-csv"),
                       db: Session = Depends(get_db)):
     if use_csv is None:
-        # TODO: upload a list of records
         response_msg = user_service.create_record(db, records)
     else:
         # TODO: upload a .csv file
@@ -72,7 +73,7 @@ async def post_record(username: str | None,
     return response_msg
 
 
-@router.get('/statistics/{username}', response_model=List[schemas.Best50Trends])
+@router.get('/statistics/{username}')
 async def get_b50_trends(username: str, db: Session = Depends(get_db)):
     trends = user_service.get_b50_trends(db, username)
     return trends

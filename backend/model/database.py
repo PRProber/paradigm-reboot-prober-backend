@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, Session
 
 from .. import config
 
@@ -9,6 +9,6 @@ engine = create_engine(DATABASE_URL,
                        connect_args={"check_same_thread": False})
 
 # 数据库会话
-SessionLocal = sessionmaker(engine)
+SessionLocal = sessionmaker(engine, future=True)
 # ORM Base
 Base = declarative_base()

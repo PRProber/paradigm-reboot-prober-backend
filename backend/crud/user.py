@@ -2,6 +2,7 @@ import secrets
 from typing import Type, Tuple, List
 from datetime import datetime
 
+from sqlalchemy import Row, select
 from sqlalchemy.orm import Session
 
 from ..model import schemas
@@ -91,8 +92,7 @@ def get_all_records(db: Session, username: str) -> List[Type[PlayRecord]]:
     return records
 
 
-def get_best_records(db: Session, username: str, underflow: int = 0) \
-        -> Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]:
+def get_best_records(db: Session, username: str, underflow: int = 0):
     """
     Get best play records of a user. Returns a tuple. The first element is the list of records of old version (b35),
     and the second element is the list of records of new version (b15).
@@ -101,12 +101,18 @@ def get_best_records(db: Session, username: str, underflow: int = 0) \
     :param underflow: underflow records threshold
     :return: (list, list) like tuple
     """
-    query = db.query(BestPlayRecord).join(PlayRecord).filter(PlayRecord.username == username).join(SongLevel).join(Song)
 
-    b35: List[Type[PlayRecord]] = \
-        query.filter(Song.b15 is False).order_by(PlayRecord.rating.desc()).limit(35 + underflow).all()
-    b15: List[Type[PlayRecord]] = \
-        query.filter(Song.b15 is True).order_by(PlayRecord.rating.desc()).limit(35 + underflow).all()
+    statement = \
+        (select(BestPlayRecord, PlayRecord).
+         join(BestPlayRecord.play_record).
+         join(PlayRecord.song_level).
+         join(SongLevel.song).
+         filter(PlayRecord.username == username))
+
+    b35_statement = statement.filter(Song.b15 == 0).order_by(PlayRecord.rating.desc()).limit(35 + underflow)
+    b35 = db.execute(b35_statement).all()
+    b15_statement = statement.filter(Song.b15 == 1).order_by(PlayRecord.rating.desc()).limit(15 + underflow)
+    b15 = db.execute(b15_statement).all()
 
     return b35, b15
 
@@ -120,13 +126,13 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
 
     b50rating: float = 0
     for record in b35:
-        b50rating += record.rating
+        b50rating += record.play_record.rating
     for record in b15:
-        b50rating += record.rating
+        b50rating += record.play_record.rating
 
     db_b50_record: Best50Trends = Best50Trends(
         username=username,
-        rating=b50rating,
+        b50rating=b50rating,
         record_time=datetime.now(),
         is_valid=True,
     )
@@ -141,6 +147,6 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
 def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
     trends: List[Type[Best50Trends]] = \
         (db.query(Best50Trends).
-         filter(Best50Trends.username == username, Best50Trends.is_valid is True).
+         filter(Best50Trends.username == username, Best50Trends.is_valid == 1).
          order_by(Best50Trends.record_time).all())
     return trends

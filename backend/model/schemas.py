@@ -51,7 +51,7 @@ class User(UserBase):
 class SongLevelInfo(SongBase):
     song_level_id: int
     difficulty_id: int
-    difficulty: str | None = None
+    difficulty_name: str | None = None
     level: float
     fitting_level: float | None = None
     level_design: str | None = None
@@ -86,11 +86,14 @@ class PlayRecordCreate(PlayRecordBase):
     pass
 
 
+class PlayRecordInfo(BaseModel):
+    play_record_id: int
+    record_time: datetime
+    score: int
+    rating: float
+    song_level: SongLevelInfo
+
+
 class Token(BaseModel):
     access_token: str
     token_type: str
-
-
-class Best50Trends(BaseModel):
-    b5rating: float
-    record_time: datetime
