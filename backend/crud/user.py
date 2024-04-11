@@ -69,15 +69,17 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bo
     db_best_record: BestPlayRecord | None \
         = (db.query(BestPlayRecord)
            .join(PlayRecord).filter(PlayRecord.song_level_id == record.song_level_id).one_or_none())
-    if db_best_record is not None:
+    if db_best_record:
         best_record: PlayRecord = db_best_record.play_record
         if is_replaced or db_record.score > best_record.score:
             setattr(db_best_record, "play_record", db_record)
+            setattr(db_best_record, "play_record_id", db_record.play_record_id)
             db.commit()
             db.refresh(db_best_record)
     else:
         best_play_record: BestPlayRecord = BestPlayRecord(
             play_record_id=db_record.play_record_id,
+            play_record=db_record,
         )
         db.add(best_play_record)
         db.commit()
@@ -126,9 +128,9 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
 
     b50rating: float = 0
     for record in b35:
-        b50rating += record.play_record.rating
+        b50rating += record[1].rating
     for record in b15:
-        b50rating += record.play_record.rating
+        b50rating += record[1].rating
 
     db_b50_record: Best50Trends = Best50Trends(
         username=username,

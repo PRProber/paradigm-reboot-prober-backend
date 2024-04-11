@@ -55,7 +55,6 @@ async def get_play_records(username: str | None,
     #     return json2csv(play_records)
     # if export_type == "img":
     #     return json2img(play_records)
-    print("out ", play_records)
     return play_records
 
 
