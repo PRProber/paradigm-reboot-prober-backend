@@ -23,6 +23,7 @@ app.include_router(user.router)
 
 app.mount('/cover', StaticFiles(directory='resources/static/cover'), name='cover')
 
+
 @app.on_event("startup")
 async def startup():
     FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")

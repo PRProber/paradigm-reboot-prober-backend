@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
-from ..model import entities, schemas
+from ..model import schemas
+from ..model.entities import Song, SongLevel
 
 
 REPLACEABLE_ATTRIBUTES = [
@@ -8,11 +9,15 @@ REPLACEABLE_ATTRIBUTES = [
 
 
 def get_all_songs(db: Session):
-    return db.query(entities.Song)
+    return db.query(Song).all()
+
+
+def get_single_song_by_id(db: Session, song_id: int):
+    return db.query(Song).filter(Song.song_id == song_id).one_or_none()
 
 
 def create_song(db: Session, song: schemas.SongCreate):
-    db_song = entities.Song(
+    db_song = Song(
         title=song.title,
         artist=song.artist,
         genre=song.genre,
@@ -30,7 +35,7 @@ def create_song(db: Session, song: schemas.SongCreate):
     db.refresh(db_song)
 
     db_levels = [
-        entities.SongLevel(
+        SongLevel(
             song_id=db_song.song_id,
             difficulty_id=level.difficulty_id,
             level=level.level,
@@ -47,8 +52,8 @@ def create_song(db: Session, song: schemas.SongCreate):
 
 
 def update_song(db: Session, song: schemas.SongUpdate):
-    db_song: entities.Song | None \
-        = db.query(entities.Song).filter(entities.Song.song_id == song.song_id).first()
+    db_song: Song | None \
+        = db.query(Song).filter(Song.song_id == song.song_id).first()
     if db_song is not None:
         # 更新可以直接替换的歌曲属性
         for attr in REPLACEABLE_ATTRIBUTES:
@@ -62,7 +67,7 @@ def update_song(db: Session, song: schemas.SongUpdate):
                 if diff_id in db_song_levels.keys():
                     db_song_levels[diff_id].level = song_levels[diff_id].level
                 else:
-                    new_level = entities.SongLevel(
+                    new_level = SongLevel(
                         song_id=db_song.song_id,
                         difficulty_id=diff_id,
                         level=song_levels[diff_id].level,

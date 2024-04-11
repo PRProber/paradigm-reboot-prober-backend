@@ -49,6 +49,7 @@ class User(UserBase):
 
 
 class SongLevelInfo(SongBase):
+    song_id: int
     song_level_id: int
     difficulty_id: int
     difficulty_name: str | None = None
@@ -67,6 +68,17 @@ class LevelInfo(BaseModel):
     level: float
     level_design: str | None = None
     notes: int | None = None
+
+    class Config:
+        from_attributes = True
+
+
+class Song(SongBase):
+    song_id: int
+    song_levels: list[LevelInfo]
+
+    class Config:
+        from_attributes = True
 
 
 class SongCreate(SongBase):
