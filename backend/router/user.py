@@ -79,7 +79,6 @@ async def post_record(username: str,
                       current_user: entities.User | None = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
     if not use_csv:
-        print(current_user.username)
         if current_user and current_user.username == username:
             response_msg = user_service.create_record(db, username, records.play_records)
         elif records.upload_token and records.upload_token == user_service.get_user(db, username).upload_token:

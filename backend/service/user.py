@@ -36,7 +36,7 @@ async def get_current_user_or_none(db: Session = Depends(database.get_db),
     try:
         username = security.extract_username(token)
         user = get_user(db, username)
-        return user and user.is_active
+        return user if user and user.is_active else None
     except security.bad_credential_exception:
         return None
 
