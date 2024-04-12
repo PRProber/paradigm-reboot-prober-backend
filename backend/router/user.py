@@ -1,9 +1,9 @@
 from typing import List
+
+from fastapi_cache.decorator import cache
 from fastapi import APIRouter, File, Form, UploadFile, Depends, HTTPException, Query
 from fastapi.security import OAuth2PasswordRequestForm
-from fastapi.encoders import jsonable_encoder
 from sqlalchemy.orm import Session
-from starlette import status
 
 from ..model import schemas, entities
 from ..util.database import get_db
@@ -16,6 +16,7 @@ router = APIRouter()
 @router.post('/user/register', response_model=schemas.User)
 async def register(user: schemas.UserCreate,
                    db: Session = Depends(get_db)):
+    # TODO: 过滤同 IP 重复的成功注册
     user = user_service.create_user(db, user)
     return user
 
@@ -23,6 +24,7 @@ async def register(user: schemas.UserCreate,
 @router.post('/user/login', response_model=schemas.Token)
 async def login(form_data: OAuth2PasswordRequestForm = Depends(),
                 db: Session = Depends(get_db)):
+    # TODO: 屏蔽同 IP 重复的接口访问
     token = user_service.login(db, form_data.username, form_data.password)
     if token is None:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
@@ -30,11 +32,13 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(),
 
 
 @router.get('/user/me', response_model=schemas.User)
+@cache(expire=60)
 async def get_my_info(user: entities.User = Depends(user_service.get_current_user)):
     return user
 
 
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
+@cache(expire=60)
 async def get_play_records(username: str,
                            export_type: str | None = Query(default=None, alias='export-type'),
                            best: bool = True, underflow: int = 0,

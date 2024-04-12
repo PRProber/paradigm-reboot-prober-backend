@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, AliasChoices
 from datetime import datetime
 
 
@@ -110,7 +110,7 @@ class SongLevelInfoSimple(BaseModel):
     song_id: int
     song_level_id: int
     difficulty_id: int
-    difficulty: str | None = None
+    difficulty: str
     level: float
     fitting_level: float | None = None
 
