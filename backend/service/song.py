@@ -17,7 +17,7 @@ def song_to_levels(song: entities.Song) -> List[util.SongLevelInfo]:
     song_levels = []
     for level in song.song_levels:
         song_level = util.SongLevelInfo(level)
-        song_level.difficulty_name = level.difficulty.name
+        song_level.difficulty = level.difficulty.name
         song_levels.append(song_level)
 
     return song_levels

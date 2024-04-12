@@ -52,7 +52,7 @@ class SongLevelInfo(SongBase):
     song_id: int
     song_level_id: int
     difficulty_id: int
-    difficulty_name: str | None = None
+    difficulty: str | None = None
     level: float
     fitting_level: float | None = None
     level_design: str | None = None
@@ -105,7 +105,7 @@ class SongLevelInfoSimple(BaseModel):
     song_id: int
     song_level_id: int
     difficulty_id: int
-    difficulty_name: str | None = None
+    difficulty: str | None = None
     level: float
     fitting_level: float | None = None
 
