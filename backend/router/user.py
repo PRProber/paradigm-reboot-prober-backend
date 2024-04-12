@@ -65,7 +65,7 @@ async def get_play_records(username: str | None,
     return {"b35": b35, "b15": b15}
 
 
-@router.post('/records/{username}/{song_level_id}')
+@router.get('/records/{username}/{song_level_id}')
 async def get_single_play_records(username: str, song_level_id: int, scope: str | None = 'month'):
     # TODO: Get play records of a single song
     # scope 意味着获取 record 的周期
