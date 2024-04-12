@@ -98,12 +98,29 @@ class PlayRecordCreate(PlayRecordBase):
     pass
 
 
+class SongLevelInfoSimple(BaseModel):
+    title: str | None = None
+    version: str | None = None
+    b15: bool | None = False
+    song_id: int
+    song_level_id: int
+    difficulty_id: int
+    difficulty_name: str | None = None
+    level: float
+    fitting_level: float | None = None
+
+
 class PlayRecordInfo(BaseModel):
     play_record_id: int
     record_time: datetime
     score: int
     rating: float
-    song_level: SongLevelInfo
+    song_level: SongLevelInfoSimple
+
+
+class PlayRecordResponse(BaseModel):
+    b35: list[PlayRecordInfo]
+    b15: list[PlayRecordInfo]
 
 
 class Token(BaseModel):

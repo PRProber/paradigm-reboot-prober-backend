@@ -34,10 +34,14 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
     return user
 
 
-@router.get('/records/{username}')
+@router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
 async def get_play_records(username: str | None,
                            export_type: str | None = Query(default=None, alias='export-type'),
                            best: bool = True, underflow: int = 0,
+                           page_size: int | None = Query(default=None, alias='page-size'),
+                           page_index: int | None = Query(default=None, alias='page-index'),
+                           sort_by: str | None = Query(default=None, alias='sort-by'),
+                           order: str | None = Query(default=None, alias='order'),
                            current_user: entities.User = Depends(user_service.get_current_user),
                            db: Session = Depends(get_db)):
 
@@ -48,14 +52,25 @@ async def get_play_records(username: str | None,
         raise HTTPException(status_code=400, detail="Anonymous probes are not allowed")
 
     if best is True:
-        play_records = user_service.get_best_records(db, username, underflow)
+        if underflow <= 15:
+            b35, b15 = user_service.get_best_records(db, username, underflow)
+        else:
+            raise HTTPException(status_code=400, detail="# of underflow records out of range")
     else:
-        play_records = user_service.get_all_records(db, username)
+        b35, b15 = user_service.get_all_records(db, username)
     # if export_type == "csv":
     #     return json2csv(play_records)
     # if export_type == "img":
     #     return json2img(play_records)
-    return play_records
+    return {"b35": b35, "b15": b15}
+
+
+@router.post('/records/{username}/{song_level_id}')
+async def get_single_play_records(username: str, song_level_id: int, scope: str | None = 'month'):
+    # TODO: Get play records of a single song
+    # scope 意味着获取 record 的周期
+    # month/season/year 代表获取过去一个月/三个月/一年的相关单曲记录
+    pass
 
 
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
