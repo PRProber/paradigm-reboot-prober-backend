@@ -14,7 +14,7 @@ def json2csv(play_records: Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]
     pass
 
 
-def csv2json(play_records: Tuple[List[Type[PlayRecord]], List[Type[PlayRecord]]]):
+def csv2json(username: str):
     # TODO: .csv file to json
     pass
 

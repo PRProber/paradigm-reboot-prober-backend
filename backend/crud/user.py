@@ -40,9 +40,10 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
     return db_user
 
 
-def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bool = False) -> PlayRecord:
+def create_record(db: Session, record: schemas.PlayRecordCreate, username: str,  is_replaced: bool = False) -> PlayRecord:
     """Record
     Create a play record.
+    :param username:
     :param db: SQLAlchemy.orm Session
     :param record: record details
     :param is_replaced: whether to replace the best record or not
@@ -57,7 +58,7 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bo
     db_record = PlayRecord(
         song_level_id=record.song_level_id,
         record_time=datetime.now(),
-        username=record.username,
+        username=username,
         score=record.score,
         rating=rating.single_rating(db_song_level.level, record.score),
     )

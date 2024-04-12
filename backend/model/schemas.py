@@ -29,12 +29,12 @@ class UserBase(BaseModel):
 
 
 class PlayRecordBase(BaseModel):
-    username: str
     song_level_id: int
     score: int
 
 
 class PlayRecord(PlayRecordBase):
+    username: str
     play_record_id: int
     record_time: datetime
     rating: float
@@ -96,6 +96,11 @@ class UserCreate(UserBase):
 
 class PlayRecordCreate(PlayRecordBase):
     pass
+
+
+class BatchPlayRecordCreate(BaseModel):
+    upload_token: str | None = None
+    play_records: list[PlayRecordCreate]
 
 
 class SongLevelInfoSimple(BaseModel):

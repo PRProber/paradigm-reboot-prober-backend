@@ -31,6 +31,16 @@ def login(db: Session, username: str, plain_password: str) -> Union[str, None]:
     return None
 
 
+async def get_current_user_or_none(db: Session = Depends(database.get_db),
+                                   token: str = Depends(security.oauth2_scheme)) -> User | None:
+    try:
+        username = security.extract_username(token)
+        user = get_user(db, username)
+        return user and user.is_active
+    except security.bad_credential_exception:
+        return None
+
+
 async def get_current_user(db: Session = Depends(database.get_db),
                            token: str = Depends(security.oauth2_scheme)) -> User:
     """
@@ -75,11 +85,12 @@ def refresh_upload_token(db: Session, user: User) -> User:
     return user
 
 
-def create_record(db: Session, records: List[PlayRecordCreate], is_replaced: bool = False) -> List[PlayRecord]:
+def create_record(db: Session, username: str, records: list[PlayRecordCreate], is_replaced: bool = False) \
+        -> List[PlayRecord]:
     response_records = []
     try:
         for record in records:
-            response_records.append(crud.create_record(db, record, is_replaced))
+            response_records.append(crud.create_record(db, record, username, is_replaced))
     except RuntimeError as e:
         raise HTTPException(status_code=400, detail=e)
     except AmbiguousForeignKeysError:

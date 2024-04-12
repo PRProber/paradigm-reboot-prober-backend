@@ -35,7 +35,7 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
 
 
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
-async def get_play_records(username: str | None,
+async def get_play_records(username: str,
                            export_type: str | None = Query(default=None, alias='export-type'),
                            best: bool = True, underflow: int = 0,
                            page_size: int | None = Query(default=None, alias='page-size'),
@@ -44,7 +44,6 @@ async def get_play_records(username: str | None,
                            order: str | None = Query(default=None, alias='order'),
                            current_user: entities.User = Depends(user_service.get_current_user),
                            db: Session = Depends(get_db)):
-
     user = user_service.get_user(db, username)
     if user is None:
         raise HTTPException(status_code=400, detail="User not found")
@@ -74,15 +73,22 @@ async def get_single_play_records(username: str, song_level_id: int, scope: str 
 
 
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
-async def post_record(username: str | None,
-                      records: List[schemas.PlayRecordCreate],
-                      use_csv: str | None = Query(default=None, alias="use-csv"),
+async def post_record(username: str,
+                      records: schemas.BatchPlayRecordCreate,
+                      use_csv: bool | None = Query(default=False, alias="use-csv"),
+                      current_user: entities.User | None = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
-    if use_csv is None:
-        response_msg = user_service.create_record(db, records)
+    if not use_csv:
+        print(current_user.username)
+        if current_user and current_user.username == username:
+            response_msg = user_service.create_record(db, username, records.play_records)
+        elif records.upload_token and records.upload_token == user_service.get_user(db, username).upload_token:
+            response_msg = user_service.create_record(db, username, records.play_records)
+        else:
+            raise HTTPException(status_code=401, detail="Unauthorized")
     else:
         # TODO: upload a .csv file
-        response_msg = user_service.create_record(db, csv2json(username, use_csv))
+        response_msg = user_service.create_record(db, username, csv2json(username))
     user_service.update_b50_record(db, username)
     return response_msg
 
