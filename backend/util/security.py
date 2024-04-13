@@ -53,18 +53,14 @@ def extract_payloads(token: str):
     return payload
 
 
-def extract_username(token: str) -> str:
+def extract_username(token: str) -> str | None:
     """
-    Extract username from a JWT. If bad credential found (i.e. bad token or no corresponding field),
-    a 401 HTTP Exception will be raised.
+    Extract username from a JWT.
     :param token: JWT.
     :return: username: extracted username.
     """
     try:
         payload = extract_payloads(token)
-    except JWTError | TypeError:
-        raise bad_credential_exception
-    username: str = payload.get("sub")
-    if username is None:
-        raise bad_credential_exception
-    return username
+    except Exception as e:
+        return None
+    return payload.get("sub")
