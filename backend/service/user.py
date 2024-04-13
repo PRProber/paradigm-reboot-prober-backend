@@ -34,13 +34,11 @@ def login(db: Session, username: str, plain_password: str) -> Union[str, None]:
 
 async def get_current_user_or_none(db: Session = Depends(database.get_db),
                                    token: str = Depends(security.optional_oauth2_scheme)) -> User | None:
-    try:
-        username = security.extract_username(token)
-        user = get_user(db, username)
-        return user if user and user.is_active else None
-    finally:
+    username = security.extract_username(token)
+    if username is None:
         return None
-
+    user = get_user(db, username)
+    return user if user and user.is_active else None
 
 async def get_current_user(db: Session = Depends(database.get_db),
                            token: str = Depends(security.oauth2_scheme)) -> User:
@@ -137,25 +135,10 @@ def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
     return trends
 
 
-def allow_anonymous_probe(func):
-    """
-    检查是否允许匿名的业务逻辑。
-    这里 db, username, current_user 都是将要传给路径操作函数的。
-    :param func:
-    :return:
-    """
-    @wraps(func)
-    async def wrapper(*args, **kwargs):
-        db: Session = kwargs['db']
-        username: str = kwargs['username']
-        current_user: User | None = kwargs['current_user']
-
-        user = get_user(db, username)
-        if user is None:
-            raise HTTPException(status_code=404, detail="User not found")
-        # 不允许匿名查询，且未认证或者认证信息不匹配
-        elif user.anonymous_probe is False and (current_user is None or username != current_user.username):
-            raise HTTPException(status_code=401, detail="Anonymous probes are not allowed")
-        return await func(*args, **kwargs)
-
-    return wrapper
+def check_probe_authority(db: Session, username: str, current_user: User | None):
+    user = get_user(db, username)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    # 不允许匿名查询，且未认证或者认证信息不匹配
+    elif user.anonymous_probe is False and (current_user is None or username != current_user.username):
+        raise HTTPException(status_code=401, detail="Anonymous probes are not allowed")

@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from ..model import schemas, entities
 from ..util.database import get_db
 from ..service import user as user_service
-from ..service.user import allow_anonymous_probe
+from ..service.user import check_probe_authority
 from ..util.b50 import json2img, json2csv, csv2json
 
 router = APIRouter()
@@ -40,7 +40,6 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
 
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
 @cache(expire=60)
-@allow_anonymous_probe
 async def get_play_records(username: str,
                            export_type: str | None = Query(default=None, alias='export-type'),
                            best: bool = True, underflow: int = 0,
@@ -50,7 +49,7 @@ async def get_play_records(username: str,
                            order: str | None = Query(default=None, alias='order'),
                            current_user: entities.User = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
-
+    check_probe_authority(db, username, current_user)
     if best is True:
         if underflow <= 15:
             b35, b15 = user_service.get_best_records(db, username, underflow)
@@ -67,11 +66,14 @@ async def get_play_records(username: str,
 
 @router.get('/records/{username}/{song_level_id}')
 @cache(expire=60)
-@allow_anonymous_probe
-async def get_single_play_records(username: str, song_level_id: int, scope: str | None = 'month'):
+async def get_single_play_records(username: str, song_level_id: int, scope: str | None = 'month',
+                                  current_user: entities.User | None = Depends(user_service.get_current_user_or_none),
+                                  db: Session = Depends(get_db)):
     # TODO: Get play records of a single song
     # scope 意味着获取 record 的周期
     # month/season/year 代表获取过去一个月/三个月/一年的相关单曲记录
+    check_probe_authority(db, username, current_user)
+
     pass
 
 
@@ -97,10 +99,9 @@ async def post_record(username: str,
 
 @router.get('/statistics/{username}/b50')
 @cache(expire=60)
-@allow_anonymous_probe
 async def get_b50_trends(username: str,
                          current_user: entities.User = Depends(user_service.get_current_user_or_none),
                          db: Session = Depends(get_db)):
-
+    check_probe_authority(db, username, current_user)
     trends = user_service.get_b50_trends(db, username)
     return trends
