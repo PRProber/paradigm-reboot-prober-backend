@@ -46,13 +46,13 @@ async def get_play_records(username: str,
                            page_index: int | None = Query(default=None, alias='page-index'),
                            sort_by: str | None = Query(default=None, alias='sort-by'),
                            order: str | None = Query(default=None, alias='order'),
-                           current_user: entities.User = Depends(user_service.get_current_user),
+                           current_user: entities.User = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
     user = user_service.get_user(db, username)
     if user is None:
-        raise HTTPException(status_code=400, detail="User not found")
+        raise HTTPException(status_code=404, detail="User not found")
     if user.anonymous_probe is False and user != current_user:
-        raise HTTPException(status_code=400, detail="Anonymous probes are not allowed")
+        raise HTTPException(status_code=401, detail="Anonymous probes are not allowed")
 
     if best is True:
         if underflow <= 15:
@@ -69,6 +69,7 @@ async def get_play_records(username: str,
 
 
 @router.get('/records/{username}/{song_level_id}')
+@cache(expire=60)
 async def get_single_play_records(username: str, song_level_id: int, scope: str | None = 'month'):
     # TODO: Get play records of a single song
     # scope 意味着获取 record 的周期
@@ -96,7 +97,15 @@ async def post_record(username: str,
     return response_msg
 
 
-@router.get('/statistics/{username}')
-async def get_b50_trends(username: str, db: Session = Depends(get_db)):
+@router.get('/statistics/{username}/b50')
+@cache(expire=60)
+async def get_b50_trends(username: str,
+                         current_user: entities.User = Depends(user_service.get_current_user_or_none),
+                         db: Session = Depends(get_db)):
+    user = user_service.get_user(db, username)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    elif username != current_user.username and user.anonymous_probe is False:
+        raise HTTPException(status_code=401, detail="Anonymous probes are not allowed")
     trends = user_service.get_b50_trends(db, username)
     return trends
