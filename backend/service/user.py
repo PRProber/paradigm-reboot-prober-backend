@@ -1,17 +1,18 @@
 import secrets
+from functools import wraps
 from typing import Union, List, Tuple, Type
 
-from sqlalchemy import Row
-from sqlalchemy.orm import Session
-from sqlalchemy.exc import AmbiguousForeignKeysError
 from fastapi import HTTPException, Depends
+from sqlalchemy import Row
+from sqlalchemy.exc import AmbiguousForeignKeysError
+from sqlalchemy.orm import Session
 
+from .. import config
+from .. import util
 from ..crud import user as crud
-from ..model.entities import User, PlayRecord, Best50Trends, SongLevel, BestPlayRecord, Song
+from ..model.entities import User, PlayRecord, Best50Trends, BestPlayRecord
 from ..model.schemas import UserCreate, PlayRecordCreate
 from ..util import security, database
-from .. import util
-from .. import config
 
 
 def login(db: Session, username: str, plain_password: str) -> Union[str, None]:
@@ -32,12 +33,12 @@ def login(db: Session, username: str, plain_password: str) -> Union[str, None]:
 
 
 async def get_current_user_or_none(db: Session = Depends(database.get_db),
-                                   token: str = Depends(security.oauth2_scheme)) -> User | None:
+                                   token: str = Depends(security.optional_oauth2_scheme)) -> User | None:
     try:
         username = security.extract_username(token)
         user = get_user(db, username)
         return user if user and user.is_active else None
-    except security.bad_credential_exception:
+    finally:
         return None
 
 
@@ -134,3 +135,27 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
 def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
     trends: List[Type[Best50Trends]] = crud.get_b50_trends(db, username)
     return trends
+
+
+def allow_anonymous_probe(func):
+    """
+    检查是否允许匿名的业务逻辑。
+    这里 db, username, current_user 都是将要传给路径操作函数的。
+    :param func:
+    :return:
+    """
+    @wraps(func)
+    async def wrapper(*args, **kwargs):
+        db: Session = kwargs['db']
+        username: str = kwargs['username']
+        current_user: User | None = kwargs['current_user']
+
+        user = get_user(db, username)
+        if user is None:
+            raise HTTPException(status_code=404, detail="User not found")
+        # 不允许匿名查询，且未认证或者认证信息不匹配
+        elif user.anonymous_probe is False and (current_user is None or username != current_user.username):
+            raise HTTPException(status_code=401, detail="Anonymous probes are not allowed")
+        return await func(*args, **kwargs)
+
+    return wrapper
