@@ -44,6 +44,7 @@ async def get_play_records(username: str,
                            export_type: str | None = Query(default=None, alias='export-type'),
                            best: bool = True, underflow: int = 0,
                            page_size: int | None = Query(default=None, alias='page-size'),
+                           # 注意这里如果带上 index, 默认 size = 50
                            page_index: int | None = Query(default=None, alias='page-index'),
                            sort_by: str | None = Query(default=None, alias='sort-by'),
                            order: str | None = Query(default=None, alias='order'),
@@ -62,19 +63,6 @@ async def get_play_records(username: str,
     # if export_type == "img":
     #     return json2img(play_records)
     return {"b35": b35, "b15": b15}
-
-
-@router.get('/records/{username}/{song_level_id}')
-@cache(expire=60)
-async def get_single_play_records(username: str, song_level_id: int, scope: str | None = 'month',
-                                  current_user: entities.User | None = Depends(user_service.get_current_user_or_none),
-                                  db: Session = Depends(get_db)):
-    # TODO: Get play records of a single song
-    # scope 意味着获取 record 的周期
-    # month/season/year 代表获取过去一个月/三个月/一年的相关单曲记录
-    check_probe_authority(db, username, current_user)
-
-    pass
 
 
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
@@ -99,9 +87,12 @@ async def post_record(username: str,
 
 @router.get('/statistics/{username}/b50')
 @cache(expire=60)
-async def get_b50_trends(username: str,
+async def get_b50_trends(username: str, scope: str | None = 'month',
                          current_user: entities.User = Depends(user_service.get_current_user_or_none),
                          db: Session = Depends(get_db)):
+    # TODO: 适配 scope
+    # scope 意味着获取的周期
+    # month/season/year 代表获取过去一个月/三个月/一年的统计信息
     check_probe_authority(db, username, current_user)
     trends = user_service.get_b50_trends(db, username)
     return trends
