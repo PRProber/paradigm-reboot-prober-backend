@@ -130,8 +130,8 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
     return trends
 
 
-def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
-    trends: List[Type[Best50Trends]] = crud.get_b50_trends(db, username)
+def get_b50_trends(db: Session, username: str, scope: str | None) -> List[Type[Best50Trends]]:
+    trends: List[Type[Best50Trends]] = crud.get_b50_trends(db, username, scope)
     return trends
 
 

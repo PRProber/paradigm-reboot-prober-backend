@@ -90,9 +90,6 @@ async def post_record(username: str,
 async def get_b50_trends(username: str, scope: str | None = 'month',
                          current_user: entities.User = Depends(user_service.get_current_user_or_none),
                          db: Session = Depends(get_db)):
-    # TODO: 适配 scope
-    # scope 意味着获取的周期
-    # month/season/year 代表获取过去一个月/三个月/一年的统计信息
     check_probe_authority(db, username, current_user)
-    trends = user_service.get_b50_trends(db, username)
+    trends = user_service.get_b50_trends(db, username, scope)
     return trends
