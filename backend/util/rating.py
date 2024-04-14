@@ -24,5 +24,5 @@ def single_rating(level: float, score: int) -> float:
 
     rating = max(.0, rating)
 
-    int_rating: int = int(rating * 100)
+    int_rating: int = int(rating * 1000)
     return int_rating

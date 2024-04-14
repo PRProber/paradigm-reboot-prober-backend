@@ -1,0 +1,952 @@
+[
+  {
+    "play_record_id": 59,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:11:58.763065",
+    "score": 1003070,
+    "rating": 17004,
+    "song_level": {
+      "title": "Viyella's Melancholy",
+      "version": "1.5.0",
+      "b15": false,
+      "song_id": 50,
+      "song_level_id": 150,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.8,
+      "cover": "Viyella's Melancholy.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 14,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:57:03.974430",
+    "score": 1007798,
+    "rating": 16919,
+    "song_level": {
+      "title": "Secret Maneuvers",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 58,
+      "song_level_id": 174,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.4,
+      "cover": "Secret Maneuvers.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 54,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:08:47.642048",
+    "score": 1009000,
+    "rating": 16800,
+    "song_level": {
+      "title": "Indelible Scar",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 54,
+      "song_level_id": 162,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.2,
+      "cover": "Indelible Scar.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 11,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:56:27.086770",
+    "score": 1006800,
+    "rating": 16753,
+    "song_level": {
+      "title": "ほしぞらトラベル",
+      "version": "1.8.0",
+      "b15": false,
+      "song_id": 38,
+      "song_level_id": 114,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.3,
+      "cover": "ほしぞらトラベル.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 16,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:58:22.241310",
+    "score": 1002195,
+    "rating": 16646,
+    "song_level": {
+      "title": "Re：End of a Dream",
+      "version": "1.9.0",
+      "b15": false,
+      "song_id": 140,
+      "song_level_id": 420,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.5,
+      "cover": "Re：End of a Dream.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 21,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:59:24.826389",
+    "score": 1006290,
+    "rating": 16619,
+    "song_level": {
+      "title": "[NWAD]",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 15,
+      "song_level_id": 45,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.2,
+      "cover": "[NWAD].png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 15,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:57:59.890554",
+    "score": 1007670,
+    "rating": 16611,
+    "song_level": {
+      "title": "Rondo of the 3ND",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 9,
+      "song_level_id": 27,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.1,
+      "cover": "Rondo of the 3ND.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 19,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:58:56.539914",
+    "score": 1008899,
+    "rating": 16593,
+    "song_level": {
+      "title": "Equality of Equites",
+      "version": "1.2.0",
+      "b15": false,
+      "song_id": 62,
+      "song_level_id": 186,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16,
+      "cover": "Equality of Equites.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 6,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:54:37.205368",
+    "score": 997857,
+    "rating": 16546,
+    "song_level": {
+      "title": "Rrhar'il",
+      "version": "1.4.1",
+      "b15": false,
+      "song_id": 74,
+      "song_level_id": 222,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.7,
+      "cover": "Rrhar'il.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 10,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:56:16.615007",
+    "score": 1007774,
+    "rating": 16518,
+    "song_level": {
+      "title": "夏色の思い出",
+      "version": "1.7.0",
+      "b15": false,
+      "song_id": 46,
+      "song_level_id": 138,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16,
+      "cover": "夏色の思い出.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 13,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:56:48.997818",
+    "score": 1005532,
+    "rating": 16468,
+    "song_level": {
+      "title": "キミとボクへの葬送歌",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 129,
+      "song_level_id": 387,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.1,
+      "cover": "キミとボクへの葬送歌.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 38,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.920926",
+    "score": 1009500,
+    "rating": 16430,
+    "song_level": {
+      "title": "Verreta",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 8,
+      "song_level_id": 24,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.8,
+      "cover": "Verreta.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 36,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.897344",
+    "score": 1007200,
+    "rating": 16380,
+    "song_level": {
+      "title": "Ashes",
+      "version": "1.8.0",
+      "b15": false,
+      "song_id": 37,
+      "song_level_id": 111,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.9,
+      "cover": "Ashes.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 37,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.909289",
+    "score": 1008600,
+    "rating": 16370,
+    "song_level": {
+      "title": "Fracture Temporelle",
+      "version": "1.9.2",
+      "b15": false,
+      "song_id": 113,
+      "song_level_id": 339,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.8,
+      "cover": "Fracture Temporelle.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 40,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.938416",
+    "score": 1009600,
+    "rating": 16340,
+    "song_level": {
+      "title": "Unpredictable Nascent Invasion",
+      "version": "1.9.3",
+      "b15": false,
+      "song_id": 114,
+      "song_level_id": 342,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.7,
+      "cover": "Unpredictable Nascent Invasion.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 42,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.959654",
+    "score": 1009500,
+    "rating": 16230,
+    "song_level": {
+      "title": "Subterranean Blastoff",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 98,
+      "song_level_id": 294,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.6,
+      "cover": "Subterranean Blastoff.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 45,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.989469",
+    "score": 1009600,
+    "rating": 16230,
+    "song_level": {
+      "title": "[PRAW]",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 14,
+      "song_level_id": 42,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.6,
+      "cover": "[PRAW].png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 43,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.970474",
+    "score": 1009100,
+    "rating": 16200,
+    "song_level": {
+      "title": "Black：Magnam",
+      "version": "1.3.0",
+      "b15": false,
+      "song_id": 73,
+      "song_level_id": 219,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.6,
+      "cover": "Black：Magnam.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 41,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.949177",
+    "score": 1008700,
+    "rating": 16180,
+    "song_level": {
+      "title": "felys -final remix-",
+      "version": "1.9.0",
+      "b15": false,
+      "song_id": 111,
+      "song_level_id": 333,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.6,
+      "cover": "felys -final remix-.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 44,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.979565",
+    "score": 1008800,
+    "rating": 16180,
+    "song_level": {
+      "title": "REDRAVE",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 53,
+      "song_level_id": 159,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.6,
+      "cover": "REDRAVE.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 35,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:03.885357",
+    "score": 1003000,
+    "rating": 16100,
+    "song_level": {
+      "title": "Destr0yer",
+      "version": "1.6.0",
+      "b15": false,
+      "song_id": 137,
+      "song_level_id": 411,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.9,
+      "cover": "Destr0yer.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 47,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.011113",
+    "score": 1008900,
+    "rating": 16090,
+    "song_level": {
+      "title": "Yokyuumi",
+      "version": "1.5.0",
+      "b15": false,
+      "song_id": 49,
+      "song_level_id": 147,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.5,
+      "cover": "Yokyuumi.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 46,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.000186",
+    "score": 1008800,
+    "rating": 16080,
+    "song_level": {
+      "title": "BPM=RT",
+      "version": "1.4.1",
+      "b15": false,
+      "song_id": 78,
+      "song_level_id": 234,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.5,
+      "cover": "BPM=RT.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 48,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.020783",
+    "score": 1008800,
+    "rating": 16080,
+    "song_level": {
+      "title": "Forgotten Asteroid",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 10,
+      "song_level_id": 30,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.5,
+      "cover": "Forgotten Asteroid.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 50,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.042759",
+    "score": 1009700,
+    "rating": 16040,
+    "song_level": {
+      "title": "Marsh Winds",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 52,
+      "song_level_id": 156,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.4,
+      "cover": "Marsh Winds.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 52,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.064296",
+    "score": 1009700,
+    "rating": 15940,
+    "song_level": {
+      "title": "零號車輛",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 12,
+      "song_level_id": 36,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.3,
+      "cover": "零號車輛.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 51,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.054308",
+    "score": 1009500,
+    "rating": 15930,
+    "song_level": {
+      "title": "Rebooted Mind",
+      "version": "1.5.0",
+      "b15": false,
+      "song_id": 48,
+      "song_level_id": 144,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.3,
+      "cover": "Rebooted Mind.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 62,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:14:29.665332",
+    "score": 1009900,
+    "rating": 15860,
+    "song_level": {
+      "title": "REDASH",
+      "version": "1.9.0",
+      "b15": false,
+      "song_id": 80,
+      "song_level_id": 240,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.2,
+      "cover": "REDASH.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 49,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.030742",
+    "score": 1006600,
+    "rating": 15840,
+    "song_level": {
+      "title": "macro.wav",
+      "version": "1.4.1",
+      "b15": false,
+      "song_id": 65,
+      "song_level_id": 195,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.4,
+      "cover": "macro.wav.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 53,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:07:04.074381",
+    "score": 1009700,
+    "rating": 15840,
+    "song_level": {
+      "title": "c.s.q.n.",
+      "version": "1.6.0",
+      "b15": false,
+      "song_id": 138,
+      "song_level_id": 414,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.2,
+      "cover": "c.s.q.n..png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 61,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:14:29.657764",
+    "score": 1009500,
+    "rating": 15733,
+    "song_level": {
+      "title": "Chronostasis",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 135,
+      "song_level_id": 405,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.1,
+      "cover": "Chronostasis.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 60,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:14:29.633908",
+    "score": 1008700,
+    "rating": 15680,
+    "song_level": {
+      "title": "Cross†Ray",
+      "version": "1.6.0",
+      "b15": false,
+      "song_id": 130,
+      "song_level_id": 390,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.1,
+      "cover": "Cross†Ray.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 63,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:14:29.672780",
+    "score": 1007500,
+    "rating": 15500,
+    "song_level": {
+      "title": "Xenolith",
+      "version": "1.4.2",
+      "b15": false,
+      "song_id": 106,
+      "song_level_id": 318,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15,
+      "cover": "Xenolith.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 65,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:14:29.689242",
+    "score": 1007700,
+    "rating": 15413,
+    "song_level": {
+      "title": "Protection",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 56,
+      "song_level_id": 168,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 14.9,
+      "cover": "Protection.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 64,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:14:29.681246",
+    "score": 1006800,
+    "rating": 15353,
+    "song_level": {
+      "title": "IKAROS",
+      "version": "1.0.0",
+      "b15": false,
+      "song_id": 102,
+      "song_level_id": 306,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 14.9,
+      "cover": "IKAROS.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 12,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:56:37.540358",
+    "score": 1008135,
+    "rating": 17042,
+    "song_level": {
+      "title": "クリムゾン帝王",
+      "version": "2.2.0",
+      "b15": true,
+      "song_id": 34,
+      "song_level_id": 102,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.5,
+      "cover": "クリムゾン帝王.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 32,
+    "username": "icelocke",
+    "record_time": "2024-04-12T16:25:23.394337",
+    "score": 1008200,
+    "rating": 16946,
+    "song_level": {
+      "title": "Hemisphere",
+      "version": "2.1.0",
+      "b15": true,
+      "song_id": 42,
+      "song_level_id": 126,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.4,
+      "cover": "Hemisphere.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 33,
+    "username": "icelocke",
+    "record_time": "2024-04-12T16:25:23.407334",
+    "score": 1007100,
+    "rating": 16873,
+    "song_level": {
+      "title": "天使光輪",
+      "version": "2.2.0",
+      "b15": true,
+      "song_id": 30,
+      "song_level_id": 90,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.4,
+      "cover": "天使光輪.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 20,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:59:11.294794",
+    "score": 1008467,
+    "rating": 16864,
+    "song_level": {
+      "title": "Avantgarde",
+      "version": "2.2.0",
+      "b15": true,
+      "song_id": 89,
+      "song_level_id": 267,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.3,
+      "cover": "Avantgarde.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 8,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:55:18.390230",
+    "score": 1008636,
+    "rating": 16775,
+    "song_level": {
+      "title": "桜花怨雷",
+      "version": "2.3.0",
+      "b15": true,
+      "song_id": 26,
+      "song_level_id": 78,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.2,
+      "cover": "桜花怨雷.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 66,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:15:43.357054",
+    "score": 1008000,
+    "rating": 16433,
+    "song_level": {
+      "title": "ARTEMiS",
+      "version": "2.2.0",
+      "b15": true,
+      "song_id": 29,
+      "song_level_id": 87,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.9,
+      "cover": "ARTEMiS.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 22,
+    "username": "icelocke",
+    "record_time": "2024-04-12T15:14:01.713222",
+    "score": 1008700,
+    "rating": 16379,
+    "song_level": {
+      "title": "Echoes of the Forest",
+      "version": "2.0.0",
+      "b15": true,
+      "song_id": 21,
+      "song_level_id": 63,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.8,
+      "cover": "Echoes of the Forest.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 68,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:15:43.370525",
+    "score": 1009500,
+    "rating": 16333,
+    "song_level": {
+      "title": "Alexandrite",
+      "version": "2.3.1",
+      "b15": true,
+      "song_id": 121,
+      "song_level_id": 363,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.7,
+      "cover": "Alexandrite.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 69,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:15:43.378598",
+    "score": 1008000,
+    "rating": 16233,
+    "song_level": {
+      "title": "RE; Boot",
+      "version": "2.0.0",
+      "b15": true,
+      "song_id": 115,
+      "song_level_id": 345,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.7,
+      "cover": "RE; Boot.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 70,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:15:43.386105",
+    "score": 1008000,
+    "rating": 15933,
+    "song_level": {
+      "title": "The Grand F-STAR",
+      "version": "2.0.0",
+      "b15": true,
+      "song_id": 20,
+      "song_level_id": 60,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.4,
+      "cover": "The Grand F-STAR.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 71,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:15:43.393122",
+    "score": 1009500,
+    "rating": 15833,
+    "song_level": {
+      "title": "conflict",
+      "version": "2.2.0",
+      "b15": true,
+      "song_id": 87,
+      "song_level_id": 261,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.2,
+      "cover": "conflict.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 73,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:15:43.408199",
+    "score": 1009590,
+    "rating": 15739,
+    "song_level": {
+      "title": "WORLDCALL",
+      "version": "2.2.0",
+      "b15": true,
+      "song_id": 91,
+      "song_level_id": 273,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.1,
+      "cover": "WORLDCALL.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 72,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:15:43.400569",
+    "score": 1008000,
+    "rating": 15733,
+    "song_level": {
+      "title": "Chariot",
+      "version": "2.2.0",
+      "b15": true,
+      "song_id": 32,
+      "song_level_id": 96,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 15.2,
+      "cover": "Chariot.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 7,
+    "username": "icelocke",
+    "record_time": "2024-04-08T22:54:47.337501",
+    "score": 976153,
+    "rating": 15709,
+    "song_level": {
+      "title": "Cybernetic Vampire",
+      "version": "2.0.0",
+      "b15": true,
+      "song_id": 22,
+      "song_level_id": 66,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 16.6,
+      "cover": "Cybernetic Vampire.png",
+      "fitting_level": null
+    }
+  },
+  {
+    "play_record_id": 74,
+    "username": "icelocke",
+    "record_time": "2024-04-14T21:16:12.991969",
+    "score": 1009600,
+    "rating": 15040,
+    "song_level": {
+      "title": "Paradigm Shift",
+      "version": "2.0.0",
+      "b15": true,
+      "song_id": 84,
+      "song_level_id": 252,
+      "difficulty_id": 3,
+      "difficulty": "Massive",
+      "level": 14.4,
+      "cover": "Paradigm Shift.png",
+      "fitting_level": null
+    }
+  }
+]
