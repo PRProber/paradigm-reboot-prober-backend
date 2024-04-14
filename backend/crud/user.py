@@ -2,6 +2,7 @@ import secrets
 from typing import Type, Tuple, List
 from datetime import datetime
 
+from dateutil.relativedelta import relativedelta
 from sqlalchemy import Row, select
 from sqlalchemy.orm import Session
 
@@ -40,9 +41,10 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
     return db_user
 
 
-def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bool = False) -> PlayRecord:
+def create_record(db: Session, record: schemas.PlayRecordCreate, username: str,  is_replaced: bool = False) -> PlayRecord:
     """Record
     Create a play record.
+    :param username:
     :param db: SQLAlchemy.orm Session
     :param record: record details
     :param is_replaced: whether to replace the best record or not
@@ -57,7 +59,7 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bo
     db_record = PlayRecord(
         song_level_id=record.song_level_id,
         record_time=datetime.now(),
-        username=record.username,
+        username=username,
         score=record.score,
         rating=rating.single_rating(db_song_level.level, record.score),
     )
@@ -146,9 +148,21 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
     return db_b50_record
 
 
-def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
+def get_b50_trends(db: Session, username: str, scope: str | None = "month") -> List[Type[Best50Trends]]:
+    current_time: datetime = datetime.now()
+    limit_time: datetime = current_time
+    if scope == "month":
+        limit_time = current_time - relativedelta(months=1)
+    elif scope == "season":
+        limit_time = current_time - relativedelta(months=3)
+    elif scope == "year":
+        limit_time = current_time - relativedelta(years=1)
+
     trends: List[Type[Best50Trends]] = \
         (db.query(Best50Trends).
-         filter(Best50Trends.username == username, Best50Trends.is_valid == 1).
+         filter(Best50Trends.username == username,
+                Best50Trends.is_valid == 1,
+                Best50Trends.record_time <= current_time,
+                Best50Trends.record_time >= limit_time).
          order_by(Best50Trends.record_time).all())
     return trends

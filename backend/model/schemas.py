@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, AliasChoices
 from datetime import datetime
 
 
@@ -29,12 +29,12 @@ class UserBase(BaseModel):
 
 
 class PlayRecordBase(BaseModel):
-    username: str
     song_level_id: int
     score: int
 
 
 class PlayRecord(PlayRecordBase):
+    username: str
     play_record_id: int
     record_time: datetime
     rating: float
@@ -52,7 +52,7 @@ class SongLevelInfo(SongBase):
     song_id: int
     song_level_id: int
     difficulty_id: int
-    difficulty_name: str | None = None
+    difficulty: str | None = None
     level: float
     fitting_level: float | None = None
     level_design: str | None = None
@@ -98,12 +98,34 @@ class PlayRecordCreate(PlayRecordBase):
     pass
 
 
+class BatchPlayRecordCreate(BaseModel):
+    upload_token: str | None = None
+    play_records: list[PlayRecordCreate]
+
+
+class SongLevelInfoSimple(BaseModel):
+    title: str | None = None
+    version: str | None = None
+    b15: bool | None = False
+    song_id: int
+    song_level_id: int
+    difficulty_id: int
+    difficulty: str
+    level: float
+    fitting_level: float | None = None
+
+
 class PlayRecordInfo(BaseModel):
     play_record_id: int
     record_time: datetime
     score: int
     rating: float
-    song_level: SongLevelInfo
+    song_level: SongLevelInfoSimple
+
+
+class PlayRecordResponse(BaseModel):
+    b35: list[PlayRecordInfo]
+    b15: list[PlayRecordInfo]
 
 
 class Token(BaseModel):

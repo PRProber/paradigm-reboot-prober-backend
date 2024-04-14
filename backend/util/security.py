@@ -6,10 +6,10 @@ from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 
-from ..model.schemas import User
 from .. import config
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='user/login')
+optional_oauth2_scheme = OAuth2PasswordBearer(tokenUrl='user/login', auto_error=False)
 pwd_context = CryptContext(schemes=['bcrypt'])
 
 bad_credential_exception = HTTPException(
@@ -53,18 +53,14 @@ def extract_payloads(token: str):
     return payload
 
 
-def extract_username(token: str) -> str:
+def extract_username(token: str) -> str | None:
     """
-    Extract username from a JWT. If bad credential found (i.e. bad token or no corresponding field),
-    a 401 HTTP Exception will be raised.
+    Extract username from a JWT.
     :param token: JWT.
     :return: username: extracted username.
     """
     try:
         payload = extract_payloads(token)
-        username: str = payload.get("sub")
-        if username is None:
-            raise bad_credential_exception
-        return username
-    except JWTError:
-        raise bad_credential_exception
+    except Exception as e:
+        return None
+    return payload.get("sub")
