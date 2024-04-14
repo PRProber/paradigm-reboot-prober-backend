@@ -16,13 +16,13 @@ def single_rating(level: float, score: int) -> float:
     score = min(score, 1010000)
 
     if score >= 1000000:
-        rating = level + 2 * (score - 1000000) / 30000
+        rating = 10 * (level + 2 * (score - 1000000) / 30000)
     else:
         for bound, reward in zip(bounds, rewards):
             rating += reward if score >= bound else 0
-        rating += level * ((score / 1000000) ** 1.5) - 0.9
+        rating += 10 * (level * ((score / 1000000) ** 1.5) - 0.9)
 
     rating = max(.0, rating)
 
-    int_rating: int = int(rating * 1000)
+    int_rating: int = int(rating * 100)
     return int_rating
