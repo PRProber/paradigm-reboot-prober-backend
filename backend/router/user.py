@@ -1,9 +1,9 @@
 from typing import List
 
 from fastapi_cache.decorator import cache
-from fastapi import APIRouter,  Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 from fastapi import File, Form, UploadFile, Query
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
@@ -11,7 +11,8 @@ from ..model import schemas, entities
 from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
-from ..util.b50 import generate_b50_img, json2csv, csv2json
+from ..util.b50 import generate_b50_img, json2csv, csv2json, image_to_byte_array
+from ..util.encoder import PassthroughCoder
 
 router = APIRouter()
 
@@ -69,6 +70,20 @@ async def get_play_records(username: str,
     # if export_type == "img":
     #     return json2img(play_records)
     return records
+
+
+@router.get('/records/{username}/export/b50')
+@cache(expire=600, coder=PassthroughCoder)
+async def get_b50_img(username: str,
+                      current_user: entities.User = Depends(user_service.get_current_user),
+                      db: Session = Depends(get_db)):
+    if current_user.username == username:
+        records = user_service.get_best50_records(db, username)
+        b50_img = generate_b50_img(records)
+        b50_img = image_to_byte_array(b50_img)
+        return Response(content=b50_img, media_type="image/png")
+    else:
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
 
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
