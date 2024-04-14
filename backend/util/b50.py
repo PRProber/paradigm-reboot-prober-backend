@@ -1,10 +1,18 @@
 # TODO: Implement b50 table generation functions
 import json
+import io
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter
 
 from typing import List, Type, Tuple
 from ..model.schemas import PlayRecordInfo
+
+
+def image_to_byte_array(image: Image) -> bytes:
+    imgByteArr = io.BytesIO()
+    image.save(imgByteArr, format="png")
+    imgByteArr = imgByteArr.getvalue()
+    return imgByteArr
 
 
 def draw_single_text(draw: ImageDraw, font: ImageFont, config, content):
@@ -24,7 +32,7 @@ def draw_single_text_border(draw: ImageDraw, font: ImageFont, config, content):
     draw.multiline_text((config['x'], config['y'] + 1),
                         text=content, font=df, fill=(0, 0, 0, 0))
     draw.multiline_text((config['x'], config['y'] - 1),
-                        text=content,font=df, fill=(0, 0, 0, 0))
+                        text=content, font=df, fill=(0, 0, 0, 0))
 
 
 def generate_b50_img(play_records: list[PlayRecordInfo],
@@ -76,7 +84,7 @@ def generate_b50_img(play_records: list[PlayRecordInfo],
     x_padding, y_padding = config['padding']['x'], config['padding']['y']
     for i, record in enumerate(b35):
         single = generate_single(config, font, title_font, record)
-        template.paste(single, (x_offset, y_offset))
+        template.alpha_composite(single, (x_offset, y_offset))
         x_offset += config['single']['width'] + x_padding
         if (i + 1) % 5 == 0:
             x_offset = config['b35_offset']['x']
@@ -85,12 +93,13 @@ def generate_b50_img(play_records: list[PlayRecordInfo],
     x_offset, y_offset = config['b15_offset']['x'], config['b15_offset']['y']
     for i, record in enumerate(b15):
         single = generate_single(config, font, title_font, record)
-        template.paste(single, (x_offset, y_offset))
+        template.alpha_composite(single, (x_offset, y_offset))
         x_offset += config['single']['width'] + x_padding
         if (i + 1) % 5 == 0:
             x_offset = config['b15_offset']['x']
             y_offset += config['single']['height'] + y_padding
-    template.convert("RGB").save("template.jpg")
+
+    return template
 
 
 def generate_single(config, font, title_font, record):
@@ -121,8 +130,8 @@ def generate_single(config, font, title_font, record):
     draw_single_text_border(single_draw, font, config['single']['score'], str(record.score))
     draw_single_text(single_draw, font, config['single']['score'], str(record.score))
     # Draw single rating
-    draw_single_text_border(single_draw, font, config['single']['rating'], "->%.4f" % (record.rating / 100))
-    draw_single_text(single_draw, font, config['single']['rating'], "->%.4f" % (record.rating / 100))
+    draw_single_text_border(single_draw, font, config['single']['rating'], "->%.2f" % (record.rating / 100))
+    draw_single_text(single_draw, font, config['single']['rating'], "->%.2f" % (record.rating / 100))
     # Paste to template
     return single
 
