@@ -1,7 +1,9 @@
-from typing import List
+from typing import List, Union
 
 from fastapi_cache.decorator import cache
-from fastapi import APIRouter, File, Form, UploadFile, Depends, HTTPException, Query
+from fastapi import APIRouter,  Depends, HTTPException
+from fastapi import File, Form, UploadFile, Query
+from fastapi.responses import FileResponse
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
@@ -9,7 +11,7 @@ from ..model import schemas, entities
 from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
-from ..util.b50 import json2img, json2csv, csv2json
+from ..util.b50 import generate_img, json2csv, csv2json
 
 router = APIRouter()
 
@@ -38,11 +40,11 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
     return user
 
 
-@router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
+@router.get('/records/{username}', response_model=List[schemas.PlayRecordInfo])
 @cache(expire=60)
 async def get_play_records(username: str,
                            export_type: str | None = Query(default=None, alias='export-type'),
-                           best: bool = True, underflow: int = 0,
+                           scope: str = "b50", underflow: int = 0,
                            page_size: int | None = Query(default=None, alias='page-size'),
                            # 注意这里如果带上 index, 默认 size = 50
                            page_index: int | None = Query(default=None, alias='page-index'),
@@ -51,18 +53,22 @@ async def get_play_records(username: str,
                            current_user: entities.User = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
     check_probe_authority(db, username, current_user)
-    if best is True:
-        if underflow <= 15:
-            b35, b15 = user_service.get_best_records(db, username, underflow)
-        else:
-            raise HTTPException(status_code=400, detail="# of underflow records out of range")
+    records = None
+    if scope == "b50":
+        records = user_service.get_best50_records(db, username, underflow)
+    elif scope == "best":
+        # TODO 分页查找
+        pass
+    elif scope == "all":
+        # TODO: 分页查找
+        records = user_service.get_all_records(db, username)
     else:
-        b35, b15 = user_service.get_all_records(db, username)
+        raise HTTPException(status_code=400, detail='Invalid scope parameter')
     # if export_type == "csv":
     #     return json2csv(play_records)
     # if export_type == "img":
     #     return json2img(play_records)
-    return {"b35": b35, "b15": b15}
+    return records
 
 
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
@@ -91,6 +97,7 @@ async def get_b50_trends(username: str, scope: str | None = 'month',
                          current_user: entities.User = Depends(user_service.get_current_user_or_none),
                          db: Session = Depends(get_db)):
     # TODO: 适配 scope
+
     # scope 意味着获取的周期
     # month/season/year 代表获取过去一个月/三个月/一年的统计信息
     check_probe_authority(db, username, current_user)

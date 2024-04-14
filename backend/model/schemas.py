@@ -112,20 +112,17 @@ class SongLevelInfoSimple(BaseModel):
     difficulty_id: int
     difficulty: str
     level: float
+    cover: str | None = None
     fitting_level: float | None = None
 
 
 class PlayRecordInfo(BaseModel):
     play_record_id: int
+    username: str
     record_time: datetime
     score: int
     rating: float
     song_level: SongLevelInfoSimple
-
-
-class PlayRecordResponse(BaseModel):
-    b35: list[PlayRecordInfo]
-    b15: list[PlayRecordInfo]
 
 
 class Token(BaseModel):

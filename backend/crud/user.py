@@ -95,7 +95,7 @@ def get_all_records(db: Session, username: str) -> List[Type[PlayRecord]]:
     return records
 
 
-def get_best_records(db: Session, username: str, underflow: int = 0):
+def get_best50_records(db: Session, username: str, underflow: int = 0):
     """
     Get best play records of a user. Returns a tuple. The first element is the list of records of old version (b35),
     and the second element is the list of records of new version (b15).
@@ -125,7 +125,7 @@ def remove_b50_record(db: Session, record: Best50Trends):
 
 
 def update_b50_record(db: Session, username: str) -> Best50Trends:
-    b35, b15 = get_best_records(db, username)
+    b35, b15 = get_best50_records(db, username)
 
     b50rating: float = 0
     for record in b35:
