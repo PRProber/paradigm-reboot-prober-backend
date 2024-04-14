@@ -2,6 +2,7 @@ import secrets
 from typing import Type, Tuple, List
 from datetime import datetime
 
+from dateutil.relativedelta import relativedelta
 from sqlalchemy import Row, select
 from sqlalchemy.orm import Session
 
@@ -147,9 +148,21 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
     return db_b50_record
 
 
-def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
+def get_b50_trends(db: Session, username: str, scope: str | None = "month") -> List[Type[Best50Trends]]:
+    current_time: datetime = datetime.now()
+    limit_time: datetime = current_time
+    if scope == "month":
+        limit_time = current_time - relativedelta(months=1)
+    elif scope == "season":
+        limit_time = current_time - relativedelta(months=3)
+    elif scope == "year":
+        limit_time = current_time - relativedelta(years=1)
+
     trends: List[Type[Best50Trends]] = \
         (db.query(Best50Trends).
-         filter(Best50Trends.username == username, Best50Trends.is_valid == 1).
+         filter(Best50Trends.username == username,
+                Best50Trends.is_valid == 1,
+                Best50Trends.record_time <= current_time,
+                Best50Trends.record_time >= limit_time).
          order_by(Best50Trends.record_time).all())
     return trends

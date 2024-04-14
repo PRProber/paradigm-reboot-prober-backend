@@ -1,5 +1,5 @@
 bounds = [900000, 930000, 950000, 970000, 980000, 990000]
-rewards = [0.06, 0.02, 0.02, 0.02, 0.02, 0.02]
+rewards = [3, 1, 1, 1, 1, 1]
 
 
 def single_rating(level: float, score: int) -> float:
@@ -16,18 +16,13 @@ def single_rating(level: float, score: int) -> float:
     score = min(score, 1010000)
 
     if score >= 1000000:
-        rating = 0.2 * (level + 2 * (score - 1000000) / 30000)
+        rating = level + 2 * (score - 1000000) / 30000
     else:
         for bound, reward in zip(bounds, rewards):
             rating += reward if score >= bound else 0
-        rating += 0.2 * (level * ((score / 1000000) ** 1.5) - 0.9)
+        rating += level * ((score / 1000000) ** 1.5) - 0.9
 
     rating = max(.0, rating)
 
-    int_rating: int = int(rating * 10000)
-    if int_rating % 2 != 0:
-        int_rating -= 1
-
-    rating = int_rating / 10000
-
-    return rating
+    int_rating: int = int(rating * 100)
+    return int_rating
