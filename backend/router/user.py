@@ -11,7 +11,7 @@ from ..model import schemas, entities
 from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
-from ..util.b50 import generate_img, json2csv, csv2json
+from ..util.b50 import generate_b50_img, json2csv, csv2json
 
 router = APIRouter()
 
