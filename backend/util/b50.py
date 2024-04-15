@@ -1,11 +1,18 @@
 # TODO: Implement b50 table generation functions
+import csv
 import json
 import io
+from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter
 
 from typing import List, Type, Tuple
-from ..model.schemas import PlayRecordInfo
+
+from pydantic import ValidationError
+
+import backend.util.database
+from ..model.schemas import PlayRecordInfo, SongLevelInfo, PlayRecordCreate, SongLevelCsv
+from ..service import song as song_service
 
 
 def image_to_byte_array(image: Image) -> bytes:
@@ -141,11 +148,28 @@ def json2csv(play_records: list[PlayRecordInfo]):
     pass
 
 
-def csv2json(username: str):
-    # TODO: .csv file to json
-    pass
+def get_records_from_csv(filename: str = "default.csv") -> List[PlayRecordCreate]:
+    records: List[PlayRecordCreate] = []
+    with open(Path(__file__).parent.parent / 'upload' / 'b50csv' / filename, 'r', encoding='utf-8-sig') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            try:
+                record = PlayRecordCreate(**row)
+                records.append(record)
+            except ValidationError as e:
+                pass
+    return records
 
 
-def generate_empty_csv():
-    # TODO: generate an empty .csv file
-    pass
+def generate_empty_csv(file_path: Path, song_levels: List[SongLevelInfo]):
+    with open(file_path / 'default.csv', 'w', encoding='utf-8-sig', newline="") as f:
+        writer = csv.writer(f)
+        headers = ['song_level_id', 'title', 'version', 'difficulty', 'level', 'score']
+        writer.writerow(headers)
+        for level in song_levels:
+            writer.writerow([level['song_level_id'],
+                             level['title'],
+                             level['version'],
+                             level['difficulty'],
+                             level['level']])
+        f.close()

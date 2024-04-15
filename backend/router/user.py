@@ -1,3 +1,5 @@
+import secrets
+from pathlib import Path
 from typing import List
 
 from fastapi_cache.decorator import cache
@@ -11,7 +13,7 @@ from ..model import schemas, entities
 from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
-from ..util.b50 import generate_b50_img, json2csv, csv2json, image_to_byte_array
+from ..util.b50 import generate_b50_img, image_to_byte_array, get_records_from_csv
 from ..util.encoder import PassthroughCoder
 
 router = APIRouter()
@@ -42,7 +44,7 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
 
 
 @router.get('/records/{username}', response_model=List[schemas.PlayRecordInfo])
-# @cache(expire=60)
+@cache(expire=60)
 async def get_play_records(username: str,
                            export_type: str | None = None,
                            scope: str = "b50", underflow: int = 0,
@@ -53,7 +55,6 @@ async def get_play_records(username: str,
                            current_user: entities.User = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
     check_probe_authority(db, username, current_user)
-    records = None
     if sort_by not in schemas.PlayRecordInfo.model_fields.keys():
         raise HTTPException(status_code=400, detail='Invalid sort_by parameter')
     if order != "desc" and order != "asce":
@@ -64,7 +65,6 @@ async def get_play_records(username: str,
     elif scope == "best":
         records = user_service.get_best_records(db, username, page_size, page_index, sort_by, order)
     elif scope == "all":
-        # TODO: 分页查找
         records = user_service.get_all_records(db, username, page_size, page_index, sort_by, order)
     else:
         raise HTTPException(status_code=400, detail='Invalid scope parameter')
@@ -90,7 +90,7 @@ async def get_b50_img(username: str,
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
 async def post_record(username: str,
                       records: schemas.BatchPlayRecordCreate,
-                      use_csv: bool = False,
+                      use_csv: bool = False, csv_filename: str | None = None,
                       current_user: entities.User | None = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
     if not use_csv:
@@ -101,8 +101,7 @@ async def post_record(username: str,
         else:
             raise HTTPException(status_code=401, detail="Unauthorized")
     else:
-        # TODO: upload a .csv file
-        response_msg = user_service.create_record(db, username, csv2json(username))
+        response_msg = user_service.create_record(db, username, get_records_from_csv(csv_filename), is_replaced=True)
     user_service.update_b50_record(db, username)
     return response_msg
 
@@ -115,3 +114,20 @@ async def get_b50_trends(username: str, scope: str | None = 'month',
     check_probe_authority(db, username, current_user)
     trends = user_service.get_b50_trends(db, username, scope)
     return trends
+
+
+@router.post('/upload/csv')
+async def upload_csv(csv_file: UploadFile,
+                     current_user: entities.User = Depends(user_service.get_current_user_or_none)):
+    if current_user is None:
+        raise HTTPException(status_code=401, detail='Unauthorized')
+    if not csv_file:
+        raise HTTPException(status_code=400, detail='No file is provided')
+    content = await csv_file.read()
+    filename = current_user.username + secrets.token_hex(24) + '.csv'
+
+    with open(Path(__file__).parent.parent / 'upload' / 'b50csv' / filename, 'wb') as f:
+        f.write(content)
+        f.close()
+
+    return filename
