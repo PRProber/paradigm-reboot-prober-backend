@@ -2,6 +2,7 @@ import secrets
 from typing import Type, Tuple, List
 from datetime import datetime
 
+from dateutil.relativedelta import relativedelta
 from sqlalchemy import Row, select
 from sqlalchemy.orm import Session
 
@@ -22,6 +23,7 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
 
     db_user = User(
         username=user.username,
+        nickname=user.username if user.nickname is None else user.username,
         encoded_password=security.encode_password(user.password),
         email=user.email,
         qq_number=user.qq_number,
@@ -40,9 +42,10 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
     return db_user
 
 
-def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bool = False) -> PlayRecord:
+def create_record(db: Session, record: schemas.PlayRecordCreate, username: str,  is_replaced: bool = False) -> PlayRecord:
     """Record
     Create a play record.
+    :param username:
     :param db: SQLAlchemy.orm Session
     :param record: record details
     :param is_replaced: whether to replace the best record or not
@@ -57,7 +60,7 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bo
     db_record = PlayRecord(
         song_level_id=record.song_level_id,
         record_time=datetime.now(),
-        username=record.username,
+        username=username,
         score=record.score,
         rating=rating.single_rating(db_song_level.level, record.score),
     )
@@ -88,13 +91,18 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, is_replaced: bo
     return db_record
 
 
-def get_all_records(db: Session, username: str) -> List[Type[PlayRecord]]:
-    records: List[Type[PlayRecord]] \
-        = db.query(PlayRecord).filter(PlayRecord.username == username).all()
+def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool):
+    statement = \
+        (select(PlayRecord).
+         filter(PlayRecord.username == username).
+         order_by(getattr(PlayRecord, sort_by).desc() if order else getattr(PlayRecord, sort_by).asc()).
+         offset(page_size * (page_index - 1)).
+         limit(page_size))
+    records = db.execute(statement).all()
     return records
 
 
-def get_best_records(db: Session, username: str, underflow: int = 0):
+def get_best50_records(db: Session, username: str, underflow: int = 0):
     """
     Get best play records of a user. Returns a tuple. The first element is the list of records of old version (b35),
     and the second element is the list of records of new version (b15).
@@ -103,7 +111,6 @@ def get_best_records(db: Session, username: str, underflow: int = 0):
     :param underflow: underflow records threshold
     :return: (list, list) like tuple
     """
-
     statement = \
         (select(BestPlayRecord, PlayRecord).
          join(BestPlayRecord.play_record).
@@ -119,18 +126,31 @@ def get_best_records(db: Session, username: str, underflow: int = 0):
     return b35, b15
 
 
+def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool):
+    statement = \
+        (select(BestPlayRecord, PlayRecord).
+         join(BestPlayRecord.play_record).
+         filter(PlayRecord.username == username).
+         order_by(getattr(PlayRecord, sort_by).desc() if order else getattr(PlayRecord, sort_by).asc()).
+         offset(page_size * (page_index - 1)).
+         limit(page_size))
+    records = db.execute(statement).all()
+    return records
+
+
 def remove_b50_record(db: Session, record: Best50Trends):
     pass
 
 
 def update_b50_record(db: Session, username: str) -> Best50Trends:
-    b35, b15 = get_best_records(db, username)
+    b35, b15 = get_best50_records(db, username)
 
     b50rating: float = 0
     for record in b35:
         b50rating += record[1].rating
     for record in b15:
         b50rating += record[1].rating
+    b50rating /= 5000
 
     db_b50_record: Best50Trends = Best50Trends(
         username=username,
@@ -146,9 +166,20 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
     return db_b50_record
 
 
-def get_b50_trends(db: Session, username: str) -> List[Type[Best50Trends]]:
+def get_b50_trends(db: Session, username: str, scope: str | None = "month") -> List[Type[Best50Trends]]:
+    current_time: datetime = datetime.now()
+    limit_time: datetime = current_time
+    if scope == "month":
+        limit_time = current_time - relativedelta(months=1)
+    elif scope == "season":
+        limit_time = current_time - relativedelta(months=3)
+    elif scope == "year":
+        limit_time = current_time - relativedelta(years=1)
+
     trends: List[Type[Best50Trends]] = \
         (db.query(Best50Trends).
-         filter(Best50Trends.username == username, Best50Trends.is_valid == 1).
+         filter(Best50Trends.username == username,
+                Best50Trends.is_valid == 1,
+                Best50Trends.record_time >= limit_time).
          order_by(Best50Trends.record_time).all())
     return trends

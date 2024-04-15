@@ -25,7 +25,9 @@ class PlayRecordInfo:
                 setattr(self, key, getattr(record, key))
             else:
                 setattr(self, key, None)
-        setattr(self, 'song_level', SongLevelInfo(record.song_level))
+        song_level = SongLevelInfo(record.song_level)
+        song_level.difficulty = song_level.difficulty.name
+        setattr(self, 'song_level', song_level)
 
 
 class SongInfo:
