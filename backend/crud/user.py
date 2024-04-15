@@ -90,9 +90,14 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, username: str, 
     return db_record
 
 
-def get_all_records(db: Session, username: str) -> List[Type[PlayRecord]]:
-    records: List[Type[PlayRecord]] \
-        = db.query(PlayRecord).filter(PlayRecord.username == username).all()
+def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool):
+    statement = \
+        (select(PlayRecord).
+         filter(PlayRecord.username == username).
+         order_by(getattr(PlayRecord, sort_by).desc() if order else getattr(PlayRecord, sort_by).asc()).
+         offset(page_size * (page_index - 1)).
+         limit(page_size))
+    records = db.execute(statement).all()
     return records
 
 
@@ -121,6 +126,18 @@ def get_best50_records(db: Session, username: str, underflow: int = 0):
     return b35, b15
 
 
+def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool):
+    statement = \
+        (select(BestPlayRecord, PlayRecord).
+         join(BestPlayRecord.play_record).
+         filter(PlayRecord.username == username).
+         order_by(getattr(PlayRecord, sort_by).desc() if order else getattr(PlayRecord, sort_by).asc()).
+         offset(page_size * (page_index - 1)).
+         limit(page_size))
+    records = db.execute(statement).all()
+    return records
+
+
 def remove_b50_record(db: Session, record: Best50Trends):
     pass
 
@@ -133,6 +150,7 @@ def update_b50_record(db: Session, username: str) -> Best50Trends:
         b50rating += record[1].rating
     for record in b15:
         b50rating += record[1].rating
+    b50rating /= 5000
 
     db_b50_record: Best50Trends = Best50Trends(
         username=username,

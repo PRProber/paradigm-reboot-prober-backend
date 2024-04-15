@@ -42,33 +42,34 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
 
 
 @router.get('/records/{username}', response_model=List[schemas.PlayRecordInfo])
-@cache(expire=60)
+# @cache(expire=60)
 async def get_play_records(username: str,
-                           export_type: str | None = Query(default=None, alias='export-type'),
+                           export_type: str | None = None,
                            scope: str = "b50", underflow: int = 0,
-                           page_size: int | None = Query(default=None, alias='page-size'),
-                           # 注意这里如果带上 index, 默认 size = 50
-                           page_index: int | None = Query(default=None, alias='page-index'),
-                           sort_by: str | None = Query(default=None, alias='sort-by'),
-                           order: str | None = Query(default=None, alias='order'),
+                           page_size: int = 50,
+                           page_index: int = 1,
+                           sort_by: str = "rating",
+                           order: str = "desc",
                            current_user: entities.User = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
     check_probe_authority(db, username, current_user)
     records = None
+    if sort_by not in schemas.PlayRecordInfo.model_fields.keys():
+        raise HTTPException(status_code=400, detail='Invalid sort_by parameter')
+    if order != "desc" and order != "asce":
+        raise HTTPException(status_code=400, detail='Invalid order parameter')
+
     if scope == "b50":
         records = user_service.get_best50_records(db, username, underflow)
     elif scope == "best":
-        # TODO 分页查找
-        pass
+        records = user_service.get_best_records(db, username, page_size, page_index, sort_by, order)
     elif scope == "all":
         # TODO: 分页查找
-        records = user_service.get_all_records(db, username)
+        records = user_service.get_all_records(db, username, page_size, page_index, sort_by, order)
     else:
         raise HTTPException(status_code=400, detail='Invalid scope parameter')
     # if export_type == "csv":
     #     return json2csv(play_records)
-    # if export_type == "img":
-    #     return json2img(play_records)
     return records
 
 
@@ -89,7 +90,7 @@ async def get_b50_img(username: str,
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
 async def post_record(username: str,
                       records: schemas.BatchPlayRecordCreate,
-                      use_csv: bool | None = Query(default=False, alias="use-csv"),
+                      use_csv: bool = False,
                       current_user: entities.User | None = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
     if not use_csv:
