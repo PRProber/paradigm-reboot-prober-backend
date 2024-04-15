@@ -23,6 +23,7 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
 
     db_user = User(
         username=user.username,
+        nickname=user.username if user.nickname is None else user.username,
         encoded_password=security.encode_password(user.password),
         email=user.email,
         qq_number=user.qq_number,
@@ -110,7 +111,6 @@ def get_best50_records(db: Session, username: str, underflow: int = 0):
     :param underflow: underflow records threshold
     :return: (list, list) like tuple
     """
-
     statement = \
         (select(BestPlayRecord, PlayRecord).
          join(BestPlayRecord.play_record).
@@ -180,7 +180,6 @@ def get_b50_trends(db: Session, username: str, scope: str | None = "month") -> L
         (db.query(Best50Trends).
          filter(Best50Trends.username == username,
                 Best50Trends.is_valid == 1,
-                Best50Trends.record_time <= current_time,
                 Best50Trends.record_time >= limit_time).
          order_by(Best50Trends.record_time).all())
     return trends

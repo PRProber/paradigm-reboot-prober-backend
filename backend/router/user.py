@@ -41,7 +41,7 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
     return user
 
 
-@router.get('/records/{username}', response_model=List[schemas.PlayRecordInfo])
+@router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
 # @cache(expire=60)
 async def get_play_records(username: str,
                            export_type: str | None = None,
@@ -53,7 +53,6 @@ async def get_play_records(username: str,
                            current_user: entities.User = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
     check_probe_authority(db, username, current_user)
-    records = None
     if sort_by not in schemas.PlayRecordInfo.model_fields.keys():
         raise HTTPException(status_code=400, detail='Invalid sort_by parameter')
     if order != "desc" and order != "asce":
@@ -64,13 +63,12 @@ async def get_play_records(username: str,
     elif scope == "best":
         records = user_service.get_best_records(db, username, page_size, page_index, sort_by, order)
     elif scope == "all":
-        # TODO: 分页查找
         records = user_service.get_all_records(db, username, page_size, page_index, sort_by, order)
     else:
         raise HTTPException(status_code=400, detail='Invalid scope parameter')
     # if export_type == "csv":
     #     return json2csv(play_records)
-    return records
+    return {"username": username, "records": records}
 
 
 @router.get('/records/{username}/export/b50')
@@ -80,7 +78,7 @@ async def get_b50_img(username: str,
                       db: Session = Depends(get_db)):
     if current_user.username == username:
         records = user_service.get_best50_records(db, username)
-        b50_img = generate_b50_img(records)
+        b50_img = generate_b50_img(records, current_user.nickname)
         b50_img = image_to_byte_array(b50_img)
         return Response(content=b50_img, media_type="image/png")
     else:

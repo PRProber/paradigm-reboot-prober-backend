@@ -18,6 +18,7 @@ class SongBase(BaseModel):
 class UserBase(BaseModel):
     username: str
     email: str
+    nickname: str | None = None
     qq_number: int | None = None
     account: str | None = None
     account_number: int | None = None
@@ -118,11 +119,15 @@ class SongLevelInfoSimple(BaseModel):
 
 class PlayRecordInfo(BaseModel):
     play_record_id: int
-    username: str
     record_time: datetime
     score: int
     rating: float
     song_level: SongLevelInfoSimple
+
+
+class PlayRecordResponse(BaseModel):
+    username: str
+    records: list[PlayRecordInfo]
 
 
 class Token(BaseModel):

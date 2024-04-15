@@ -11,7 +11,7 @@ class MyTestCase(unittest.TestCase):
         with open('b50image/data.json', 'r', encoding='utf-8') as f:
             data = json.load(f)
         records = [PlayRecordInfo.model_validate(record) for record in data]
-        b50.generate_b50_img(records)
+        b50.generate_b50_img(records, None)
         self.assertEqual(True, True)  # add assertion here
 
 
