@@ -95,7 +95,7 @@ class SongCreate(SongBase):
 
 class SongUpdate(SongBase):
     song_id: int
-    song_levels: list[LevelInfo]
+    song_levels: list[LevelInfo] | None = None
 
 
 class UserCreate(UserBase):

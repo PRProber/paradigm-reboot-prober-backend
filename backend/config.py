@@ -10,7 +10,7 @@ JWT_ENCODE_ALGORITHM = 'HS256'
 TOKEN_EXPIRE_MINUTES = timedelta(minutes=1800)
 
 UPLOAD_CSV_PATH = 'temp/upload/b50csv/'
-UPLOAD_IMG_PATH = 'temp/upload/cover/'
+UPLOAD_COVER_PATH = 'temp/upload/cover/'
 RESOURCE_COVER_PATH = 'resources/image/cover/'
 RESOURCE_COVER_STATIC_PATH = 'resources/static/cover/'
 

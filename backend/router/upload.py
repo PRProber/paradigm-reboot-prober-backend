@@ -41,7 +41,7 @@ async def upload_img(img_file: UploadFile,
     content = await img_file.read()
     filename = img_file.filename
 
-    with open(config.UPLOAD_IMG_PATH + filename, 'wb') as f:
+    with open(config.UPLOAD_COVER_PATH + filename, 'wb') as f:
         f.write(content)
         f.close()
 
