@@ -1,8 +1,8 @@
 import secrets
-from functools import wraps
 from typing import Union, List, Tuple, Type
 
 from fastapi import HTTPException, Depends
+from fastapi_cache.decorator import cache
 from sqlalchemy import Row
 from sqlalchemy.exc import AmbiguousForeignKeysError
 from sqlalchemy.orm import Session
@@ -11,8 +11,9 @@ from .. import config
 from .. import util
 from ..crud import user as crud
 from ..model.entities import User, PlayRecord, Best50Trends, BestPlayRecord
-from ..model.schemas import UserCreate, PlayRecordCreate
+from ..model.schemas import UserInDB, UserCreate, PlayRecordCreate
 from ..util import security, database
+from ..util.cache import UserInDBCoder
 
 
 def login(db: Session, username: str, plain_password: str) -> Union[str, None]:
@@ -33,15 +34,16 @@ def login(db: Session, username: str, plain_password: str) -> Union[str, None]:
 
 
 async def get_current_user_or_none(db: Session = Depends(database.get_db),
-                                   token: str = Depends(security.optional_oauth2_scheme)) -> User | None:
+                                   token: str = Depends(security.optional_oauth2_scheme)) -> UserInDB | None:
     username = security.extract_username(token)
     if username is None:
         return None
-    user = get_user(db, username)
+    user = await get_user(db, username)
     return user if user and user.is_active else None
 
+
 async def get_current_user(db: Session = Depends(database.get_db),
-                           token: str = Depends(security.oauth2_scheme)) -> User:
+                           token: str = Depends(security.oauth2_scheme)) -> UserInDB:
     """
     For view functions to get current authorized user.
     :param db: SQLAlchemy.Session
@@ -49,22 +51,24 @@ async def get_current_user(db: Session = Depends(database.get_db),
     :return:
     """
     username = security.extract_username(token)
-    return get_active_user(db, username)
+    return await get_active_user(db, username)
 
 
-def get_active_user(db: Session, username: str) -> Union[User, None]:
+@cache(expire=5, coder=UserInDBCoder)
+async def get_active_user(db: Session, username: str) -> Union[UserInDB, None]:
     user: User = crud.get_user(db, username)
     if user:
         if not user.is_active:
             raise HTTPException(status_code=400, detail="Inactivated user")
     else:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
-    return user
+    return UserInDB.model_validate(user) if user else None
 
 
-def get_user(db: Session, username: str) -> Union[User, None]:
+@cache(expire=5, coder=UserInDBCoder)
+async def get_user(db: Session, username: str) -> Union[UserInDB, None]:
     user: User = crud.get_user(db, username)
-    return user
+    return UserInDB.model_validate(user) if user else None
 
 
 def create_user(db: Session, user: UserCreate) -> User:
@@ -145,8 +149,8 @@ def get_b50_trends(db: Session, username: str, scope: str | None) -> List[Type[B
     return trends
 
 
-def check_probe_authority(db: Session, username: str, current_user: User | None):
-    user = get_user(db, username)
+async def check_probe_authority(db: Session, username: str, current_user: UserInDB | None):
+    user = await get_user(db, username)
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
     # 不允许匿名查询，且未认证或者认证信息不匹配

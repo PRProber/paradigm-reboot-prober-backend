@@ -49,6 +49,13 @@ class User(UserBase):
         from_attributes = True
 
 
+class UserInDB(UserBase):
+    encoded_password: str
+
+    class Config:
+        from_attributes = True
+
+
 class SongLevelInfo(SongBase):
     song_id: int
     song_level_id: int
@@ -133,3 +140,16 @@ class PlayRecordResponse(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+
+class SongLevelCsv(BaseModel):
+    song_level_id: int
+    title: str
+    version: str
+    difficulty: str
+    level: float
+    score: int | None = None
+
+
+class UploadFileResponse(BaseModel):
+    filename: str
