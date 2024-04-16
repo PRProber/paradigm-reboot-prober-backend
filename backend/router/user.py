@@ -78,9 +78,13 @@ async def get_b50_img(username: str,
                       db: Session = Depends(get_db)):
     if current_user.username == username:
         records = user_service.get_best50_records(db, username)
-        b50_img = generate_b50_img(records, current_user.nickname)
-        b50_img = image_to_byte_array(b50_img)
-        return Response(content=b50_img, media_type="image/png")
+        try:
+            b50_img = generate_b50_img(records, current_user.nickname)
+            b50_img = image_to_byte_array(b50_img)
+            return Response(content=b50_img, media_type="image/png")
+        except Exception:
+            raise HTTPException(status_code=500,
+                                detail="Error occurs while generating Best 50 image, please contact admin")
     else:
         raise HTTPException(status_code=401, detail="Unauthorized")
 

@@ -81,10 +81,9 @@ def generate_b50_img(play_records: list[PlayRecordInfo], nickname,
 
     # Draw single
     x_offset, y_offset = config['b35_offset']['x'], config['b35_offset']['y']
-    print(x_offset, y_offset)
     x_padding, y_padding = config['padding']['x'], config['padding']['y']
     for i, record in enumerate(b35):
-        single = generate_single(config, font, title_font, record)
+        single = generate_single(config, font, title_font, record, i + 1)
         template.alpha_composite(single, (x_offset, y_offset))
         x_offset += config['single']['width'] + x_padding
         if (i + 1) % 5 == 0:
@@ -93,7 +92,7 @@ def generate_b50_img(play_records: list[PlayRecordInfo], nickname,
 
     x_offset, y_offset = config['b15_offset']['x'], config['b15_offset']['y']
     for i, record in enumerate(b15):
-        single = generate_single(config, font, title_font, record)
+        single = generate_single(config, font, title_font, record, i + 1)
         template.alpha_composite(single, (x_offset, y_offset))
         x_offset += config['single']['width'] + x_padding
         if (i + 1) % 5 == 0:
@@ -104,7 +103,7 @@ def generate_b50_img(play_records: list[PlayRecordInfo], nickname,
     return template
 
 
-def generate_single(config, font, title_font, record):
+def generate_single(config, font: ImageFont, title_font: ImageFont, record: PlayRecordInfo, index: int):
     cover_path = 'resources/image/cover/' + record.song_level.cover
     cover = Image.open(cover_path).convert("RGBA")
     cover = ImageOps.fit(cover, (config['single']['width'], config['single']['height']))
@@ -113,6 +112,9 @@ def generate_single(config, font, title_font, record):
     # Draw single title
     draw_single_text_border(single_draw, title_font, config['single']['title'], record.song_level.title)
     draw_single_text(single_draw, title_font, config['single']['title'], record.song_level.title)
+    # Draw index
+    draw_single_text_border(single_draw, title_font, config['single']['index'], f'#{index}')
+    draw_single_text(single_draw, title_font, config['single']['index'], f'#{index}')
     # Draw single difficulty
     draw_single_text_border(single_draw, font, config['single']['difficulty'],
                             record.song_level.difficulty + f" {record.song_level.level}")
