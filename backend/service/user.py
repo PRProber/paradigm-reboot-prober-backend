@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from .. import config
 from ..crud import user as crud
 from ..model.entities import User
-from ..model.schemas import UserInDB, UserCreate
+from ..model.schemas import UserInDB, UserCreate, UserUpdate
 from ..util import security, database
 from ..util.cache import UserInDBCoder
 
@@ -92,3 +92,7 @@ async def check_probe_authority(db: Session, username: str, current_user: UserIn
     # 不允许匿名查询，且未认证或者认证信息不匹配
     elif user.anonymous_probe is False and (current_user is None or username != current_user.username):
         raise HTTPException(status_code=401, detail="Anonymous probes are not allowed")
+
+
+def update_user(db: Session, user: UserInDB, update_info: UserUpdate):
+    return crud.update_user(db, user.username, update_info)

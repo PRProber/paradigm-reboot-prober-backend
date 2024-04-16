@@ -35,7 +35,11 @@ async def get_my_info(user: UserInDB = Depends(user_service.get_current_user)):
     return user
 
 
-@router.patch('user/update', response_model=schemas.User)
-async def update_user(user: UserInDB = Depends(user_service.get_current_user_or_none),
+@router.patch('/user/me', response_model=schemas.User)
+async def update_user(update_info: schemas.UserUpdate,
+                      user: UserInDB = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
-    pass
+    if user is None:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+    user = user_service.update_user(db, user, update_info)
+    return user

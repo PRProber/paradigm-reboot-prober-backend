@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 
 from ..model import schemas
 from ..model.entities import User
+from ..model.schemas import UserUpdate
 from ..util import security
 
 
@@ -35,4 +36,14 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
     db.commit()
     db.refresh(db_user)
 
+    return db_user
+
+
+def update_user(db: Session, username: str, update_info: UserUpdate):
+    db_user: User | None = db.query(User).filter(User.username == username).one_or_none()
+    for attr in UserUpdate.model_fields.keys():
+        if getattr(update_info, attr) is not None:
+            setattr(db_user, attr, getattr(update_info, attr))
+    db.commit()
+    db.refresh(db_user)
     return db_user

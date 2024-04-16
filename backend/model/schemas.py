@@ -102,8 +102,13 @@ class UserCreate(UserBase):
     password: str
 
 
-class UserUpdate(UserBase):
-    password: str
+class UserUpdate(BaseModel):
+    nickname: str | None = None
+    qq_number: int | None = None
+    account: str | None = None
+    account_number: int | None = None
+    uuid: str | None = None
+    anonymous_probe: bool | None = False
 
 
 class PlayRecordCreate(PlayRecordBase):
