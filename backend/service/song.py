@@ -2,6 +2,7 @@ from typing import List
 
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
+from fastapi_cache.decorator import cache
 
 from ..model import schemas, entities
 from ..crud import song as crud
@@ -23,7 +24,8 @@ def song_to_levels(song: entities.Song) -> List[util.SongLevelInfo]:
     return song_levels
 
 
-def get_all_song_levels(db: Session):
+@cache(expire=60)
+async def get_all_song_levels(db: Session):
     songs: List[entities.Song] = crud.get_all_songs(db)
     song_levels: List[util.SongLevelInfo] = []
 
@@ -33,7 +35,8 @@ def get_all_song_levels(db: Session):
     return song_levels
 
 
-def get_single_song_by_id(db: Session, song_id: int):
+@cache(expire=60)
+async def get_single_song_by_id(db: Session, song_id: int):
     song = crud.get_single_song_by_id(db, song_id)
     if song is None:
         raise HTTPException(status_code=404, detail="Song doesn't exist")

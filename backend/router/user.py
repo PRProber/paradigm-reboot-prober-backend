@@ -135,7 +135,7 @@ async def upload_csv(csv_file: UploadFile,
     content = await csv_file.read()
     filename = current_user.username + secrets.token_hex(24) + '.csv'
 
-    with open(Path(__file__).parent.parent / 'upload' / 'b50csv' / filename, 'wb') as f:
+    with open(f'temp/upload/b50csv/{filename}' , 'wb') as f:
         f.write(content)
         f.close()
 
