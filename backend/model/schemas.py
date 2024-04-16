@@ -149,3 +149,7 @@ class SongLevelCsv(BaseModel):
     difficulty: str
     level: float
     score: int | None = None
+
+
+class UploadFileResponse(BaseModel):
+    filename: str
