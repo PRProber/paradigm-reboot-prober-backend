@@ -78,18 +78,19 @@ async def get_play_records(username: str,
 @cache(expire=300,
        coder=PNGImageResponseCoder,
        key_builder=best50image_key_builder)
-async def get_b50_img(username: str,
+async def get_b50_img(username: str, character: str = 'Para_Young_Awaken',
                       current_user: UserInDB = Depends(user_service.get_current_user),
                       db: Session = Depends(get_db)):
     if current_user.username == username:
         records = user_service.get_best50_records(db, username)
         try:
-            b50_img = await generate_b50_img(records, current_user.nickname)
+            b50_img = await generate_b50_img(records, current_user.nickname,
+                                             character=character, height=1440)
             b50_img = image_to_byte_array(b50_img)
             return Response(content=b50_img, media_type="image/png")
-        except Exception:
+        except Exception as e:
             raise HTTPException(status_code=500,
-                                detail="Error occurs while generating Best 50 image, please contact admin")
+                                detail=f"Error occurs while generating best 50 image, please contact admin. {e}")
     else:
         raise HTTPException(status_code=401, detail="Unauthorized")
 

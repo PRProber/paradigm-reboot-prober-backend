@@ -11,3 +11,11 @@ TOKEN_EXPIRE_MINUTES = timedelta(minutes=1800)
 
 UPLOAD_CSV_PATH = 'temp/upload/b50csv/'
 RESOURCE_COVER_PATH = 'resources/image/cover/'
+
+CHARACTERS = {
+    "Para_Summer": 'resources/image/character/para_summer.png',
+    "Para_Young_Awaken": 'resources/image/character/para_young_awaken.png',
+    "Yun_Summer": 'resources/image/character/yun_summer.png',
+    "Eden": 'resources/image/character/eden.png',
+    "Geopelia": 'resources/image/character/geopelia.png'
+}

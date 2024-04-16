@@ -1,5 +1,5 @@
 import secrets
-from typing import Type, Tuple, List
+from typing import Type, Tuple, List, Sequence
 from datetime import datetime
 
 from dateutil.relativedelta import relativedelta
@@ -42,7 +42,8 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
     return db_user
 
 
-def create_record(db: Session, record: schemas.PlayRecordCreate, username: str,  is_replaced: bool = False) -> PlayRecord:
+def create_record(db: Session, record: schemas.PlayRecordCreate, username: str,  is_replaced: bool = False) \
+        -> PlayRecord:
     """Record
     Create a play record.
     :param username:
@@ -91,7 +92,8 @@ def create_record(db: Session, record: schemas.PlayRecordCreate, username: str, 
     return db_record
 
 
-def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool):
+def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool)\
+        -> Sequence[Row[tuple[PlayRecord]]]:
     statement = \
         (select(PlayRecord).
          filter(PlayRecord.username == username).
