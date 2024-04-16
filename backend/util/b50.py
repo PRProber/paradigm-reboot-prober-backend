@@ -120,7 +120,7 @@ def generate_single(config, font: ImageFont, title_font: ImageFont, score_font: 
     single.paste(cover, (radius, radius))
     single = single.filter(ImageFilter.GaussianBlur(radius=radius))
     enhancer = ImageEnhance.Brightness(single)
-    single = enhancer.enhance(0.75)
+    single = enhancer.enhance(0.7)
     single_draw = ImageDraw.Draw(single)
     # Draw single title
     if len(record.song_level.title) > 18:

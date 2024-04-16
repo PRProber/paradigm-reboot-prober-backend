@@ -85,7 +85,7 @@ async def get_b50_img(username: str, character: str = 'Para_Young_Awaken',
         records = user_service.get_best50_records(db, username)
         try:
             b50_img = await generate_b50_img(records, current_user.nickname,
-                                             character=character, height=1440)
+                                             character=character, height=1100)
             b50_img = image_to_byte_array(b50_img)
             return Response(content=b50_img, media_type="image/png")
         except Exception as e:
