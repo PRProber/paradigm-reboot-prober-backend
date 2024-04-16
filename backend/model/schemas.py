@@ -140,3 +140,12 @@ class PlayRecordResponse(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+
+class SongLevelCsv(BaseModel):
+    song_level_id: int
+    title: str
+    version: str
+    difficulty: str
+    level: float
+    score: int | None = None

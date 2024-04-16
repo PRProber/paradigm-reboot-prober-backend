@@ -1,3 +1,5 @@
+import secrets
+from pathlib import Path
 from typing import List
 
 from fastapi_cache.decorator import cache
@@ -12,8 +14,9 @@ from ..model.schemas import UserInDB
 from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
-from ..util.b50 import generate_b50_img, json2csv, csv2json, image_to_byte_array
+from ..util.b50 import generate_b50_img, get_records_from_csv, image_to_byte_array
 from ..util.cache import PNGImageResponseCoder, best50image_key_builder
+from ..util.b50 import generate_b50_img, image_to_byte_array, get_records_from_csv
 
 router = APIRouter()
 
@@ -107,8 +110,7 @@ async def post_record(username: str,
             else:
                 raise HTTPException(status_code=401, detail="Unauthorized")
     else:
-        # TODO: upload a .csv file
-        response_msg = user_service.create_record(db, username, csv2json(username))
+        response_msg = user_service.create_record(db, username, get_records_from_csv(csv_filename), is_replaced=True)
     user_service.update_b50_record(db, username)
     return response_msg
 
@@ -121,3 +123,20 @@ async def get_b50_trends(username: str, scope: str | None = 'month',
     await check_probe_authority(db, username, current_user)
     trends = user_service.get_b50_trends(db, username, scope)
     return trends
+
+
+@router.post('/upload/csv')
+async def upload_csv(csv_file: UploadFile,
+                     current_user: entities.User = Depends(user_service.get_current_user_or_none)):
+    if current_user is None:
+        raise HTTPException(status_code=401, detail='Unauthorized')
+    if not csv_file:
+        raise HTTPException(status_code=400, detail='No file is provided')
+    content = await csv_file.read()
+    filename = current_user.username + secrets.token_hex(24) + '.csv'
+
+    with open(Path(__file__).parent.parent / 'upload' / 'b50csv' / filename, 'wb') as f:
+        f.write(content)
+        f.close()
+
+    return filename
