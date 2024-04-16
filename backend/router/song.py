@@ -44,3 +44,4 @@ async def update_song(song: schemas.SongUpdate, db: Session = Depends(get_db),
         return song_levels
     else:
         raise HTTPException(status_code=403, detail="You are not admin")
+

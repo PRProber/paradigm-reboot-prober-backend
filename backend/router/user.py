@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 
 from .. import config
 from ..model import schemas, entities
-from ..model.schemas import UserInDB
+from ..model.schemas import UserInDB, UserUpdate
 from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
@@ -45,6 +45,12 @@ async def get_my_info(user: UserInDB = Depends(user_service.get_current_user)):
     return user
 
 
+@router.patch('user/update', response_model=schemas.User)
+async def update_user(user: UserInDB = Depends(user_service.get_current_user_or_none),
+                      db: Session = Depends(get_db)):
+    pass
+
+
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
 @cache(expire=60)
 async def get_play_records(username: str,
@@ -69,8 +75,6 @@ async def get_play_records(username: str,
         records = user_service.get_all_records(db, username, page_size, page_index, sort_by, order)
     else:
         raise HTTPException(status_code=400, detail='Invalid scope parameter')
-    # if export_type == "csv":
-    #     return json2csv(play_records)
     return {"username": username, "records": records}
 
 
@@ -134,6 +138,8 @@ async def upload_csv(csv_file: UploadFile,
         raise HTTPException(status_code=401, detail='Unauthorized')
     if not csv_file:
         raise HTTPException(status_code=400, detail='No file is provided')
+    if csv_file.content_type != 'text/csv':
+        raise HTTPException(status_code=400, detail='Upload only CSV files')
     content = await csv_file.read()
     filename = '_'.join([current_user.username, 'b50', str(secrets.token_hex(6))]) + '.csv'
 
@@ -141,4 +147,25 @@ async def upload_csv(csv_file: UploadFile,
         f.write(content)
         f.close()
 
-    return { 'filename': filename }
+    return {'filename': filename}
+
+
+@router.post('/upload/img', response_model=schemas.UploadFileResponse)
+async def upload_img(img_file: UploadFile,
+                     current_user: entities.User = Depends(user_service.get_current_user_or_none)):
+    if current_user is None:
+        raise HTTPException(status_code=401, detail='Unauthorized')
+    if current_user.is_admin is False:
+        raise HTTPException(status_code=401, detail='You are not admin')
+    if not img_file:
+        raise HTTPException(status_code=400, detail='No file is provided')
+    if img_file.content_type not in ['image/jpg', 'image/jpeg', 'image/png']:
+        raise HTTPException(status_code=400, detail='Upload only pictures')
+    content = await img_file.read()
+    filename = img_file.filename
+
+    with open(config.UPLOAD_IMG_PATH + filename, 'wb') as f:
+        f.write(content)
+        f.close()
+
+    return {'filename': filename}

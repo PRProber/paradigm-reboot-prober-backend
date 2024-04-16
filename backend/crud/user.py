@@ -23,7 +23,7 @@ def create_user(db: Session, user: schemas.UserCreate) -> User | None:
 
     db_user = User(
         username=user.username,
-        nickname=user.username if user.nickname is None else user.username,
+        nickname=user.username if user.nickname is None else user.nickname,
         encoded_password=security.encode_password(user.password),
         email=user.email,
         qq_number=user.qq_number,
