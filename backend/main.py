@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 
-from .router import song, user
+from .router import song, user, record, upload
 
 # from .util import database
 # database.init_db()
@@ -20,6 +20,8 @@ app.add_middleware(
 
 app.include_router(song.router)
 app.include_router(user.router)
+app.include_router(record.router)
+app.include_router(upload.router)
 
 app.mount('/cover', StaticFiles(directory='resources/static/cover'), name='cover')
 
