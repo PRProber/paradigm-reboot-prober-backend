@@ -149,7 +149,7 @@ def get_b50_trends(db: Session, username: str, scope: str | None) -> List[Type[B
     return trends
 
 
-async def check_probe_authority(db: Session, username: str, current_user: User | None):
+async def check_probe_authority(db: Session, username: str, current_user: UserInDB | None):
     user = await get_user(db, username)
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")

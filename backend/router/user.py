@@ -8,6 +8,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
 from ..model import schemas, entities
+from ..model.schemas import UserInDB
 from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
@@ -37,20 +38,19 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(),
 
 @router.get('/user/me', response_model=schemas.User)
 @cache(expire=60)
-async def get_my_info(user: entities.User = Depends(user_service.get_current_user)):
+async def get_my_info(user: UserInDB = Depends(user_service.get_current_user)):
     return user
 
 
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
 @cache(expire=60)
 async def get_play_records(username: str,
-                           export_type: str | None = None,
                            scope: str = "b50", underflow: int = 0,
                            page_size: int = 50,
                            page_index: int = 1,
                            sort_by: str = "rating",
                            order: str = "desc",
-                           current_user: entities.User = Depends(user_service.get_current_user_or_none),
+                           current_user: UserInDB = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
     await check_probe_authority(db, username, current_user)
     if sort_by not in schemas.PlayRecordInfo.model_fields.keys():
@@ -76,9 +76,8 @@ async def get_play_records(username: str,
        coder=PNGImageResponseCoder,
        key_builder=best50image_key_builder)
 async def get_b50_img(username: str,
-                      current_user: entities.User = Depends(user_service.get_current_user),
+                      current_user: UserInDB = Depends(user_service.get_current_user),
                       db: Session = Depends(get_db)):
-    print("Not cached")
     if current_user.username == username:
         records = user_service.get_best50_records(db, username)
         try:
@@ -96,7 +95,7 @@ async def get_b50_img(username: str,
 async def post_record(username: str,
                       records: schemas.BatchPlayRecordCreate,
                       use_csv: bool = False,
-                      current_user: entities.User | None = Depends(user_service.get_current_user_or_none),
+                      current_user: UserInDB = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
     if not use_csv:
         if current_user and current_user.username == username:
@@ -117,7 +116,7 @@ async def post_record(username: str,
 @router.get('/statistics/{username}/b50')
 @cache(expire=60)
 async def get_b50_trends(username: str, scope: str | None = 'month',
-                         current_user: entities.User = Depends(user_service.get_current_user_or_none),
+                         current_user: UserInDB = Depends(user_service.get_current_user_or_none),
                          db: Session = Depends(get_db)):
     await check_probe_authority(db, username, current_user)
     trends = user_service.get_b50_trends(db, username, scope)
