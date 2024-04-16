@@ -12,7 +12,7 @@ from ..util.database import get_db
 from ..service import user as user_service
 from ..service.user import check_probe_authority
 from ..util.b50 import generate_b50_img, json2csv, csv2json, image_to_byte_array
-from ..util.encoder import PassthroughCoder
+from ..util.cache import PNGImageResponseCoder, best50image_key_builder
 
 router = APIRouter()
 
@@ -72,7 +72,9 @@ async def get_play_records(username: str,
 
 
 @router.get('/records/{username}/export/b50')
-@cache(expire=600, coder=PassthroughCoder)
+@cache(expire=300,
+       coder=PNGImageResponseCoder,
+       key_builder=best50image_key_builder)
 async def get_b50_img(username: str,
                       current_user: entities.User = Depends(user_service.get_current_user),
                       db: Session = Depends(get_db)):
@@ -80,7 +82,7 @@ async def get_b50_img(username: str,
     if current_user.username == username:
         records = user_service.get_best50_records(db, username)
         try:
-            b50_img = generate_b50_img(records, current_user.nickname)
+            b50_img = await generate_b50_img(records, current_user.nickname)
             b50_img = image_to_byte_array(b50_img)
             return Response(content=b50_img, media_type="image/png")
         except Exception:

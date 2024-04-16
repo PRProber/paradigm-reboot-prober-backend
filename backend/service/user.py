@@ -13,7 +13,7 @@ from ..crud import user as crud
 from ..model.entities import User, PlayRecord, Best50Trends, BestPlayRecord
 from ..model.schemas import UserInDB, UserCreate, PlayRecordCreate
 from ..util import security, database
-from ..util.encoder import UserInDBCoder
+from ..util.cache import UserInDBCoder
 
 
 def login(db: Session, username: str, plain_password: str) -> Union[str, None]:
