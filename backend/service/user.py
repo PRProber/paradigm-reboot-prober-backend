@@ -62,13 +62,13 @@ async def get_active_user(db: Session, username: str) -> Union[UserInDB, None]:
             raise HTTPException(status_code=400, detail="Inactivated user")
     else:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
-    return user
+    return UserInDB.model_validate(user) if user else None
 
 
 @cache(expire=5, coder=UserInDBCoder)
 async def get_user(db: Session, username: str) -> Union[UserInDB, None]:
     user: User = crud.get_user(db, username)
-    return UserInDB.model_validate(user)
+    return UserInDB.model_validate(user) if user else None
 
 
 def create_user(db: Session, user: UserCreate) -> User:
