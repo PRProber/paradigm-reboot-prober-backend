@@ -1,5 +1,4 @@
 import secrets
-from pathlib import Path
 from typing import List
 
 from fastapi_cache.decorator import cache
@@ -9,6 +8,7 @@ from fastapi.responses import FileResponse, Response
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
+from .. import config
 from ..model import schemas, entities
 from ..model.schemas import UserInDB
 from ..util.database import get_db
@@ -96,11 +96,13 @@ async def get_b50_img(username: str,
 
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
 async def post_record(username: str,
-                      records: schemas.BatchPlayRecordCreate,
-                      use_csv: bool = False,
+                      records: schemas.BatchPlayRecordCreate | None = None,
+                      csv_filename: str | None = None,
                       current_user: UserInDB = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
-    if not use_csv:
+    if (records is None) == (csv_filename is None):
+        raise HTTPException(status_code=400, detail='Ambiguous data')
+    if records is not None:
         if current_user and current_user.username == username:
             response_msg = user_service.create_record(db, username, records.play_records)
         else:
@@ -125,7 +127,7 @@ async def get_b50_trends(username: str, scope: str | None = 'month',
     return trends
 
 
-@router.post('/upload/csv')
+@router.post('/upload/csv', response_model=schemas.UploadFileResponse)
 async def upload_csv(csv_file: UploadFile,
                      current_user: entities.User = Depends(user_service.get_current_user_or_none)):
     if current_user is None:
@@ -133,10 +135,10 @@ async def upload_csv(csv_file: UploadFile,
     if not csv_file:
         raise HTTPException(status_code=400, detail='No file is provided')
     content = await csv_file.read()
-    filename = current_user.username + secrets.token_hex(24) + '.csv'
+    filename = '_'.join([current_user.username, 'b50', str(secrets.token_hex(6))]) + '.csv'
 
-    with open(f'temp/upload/b50csv/{filename}' , 'wb') as f:
+    with open(config.UPLOAD_CSV_PATH + filename, 'wb') as f:
         f.write(content)
         f.close()
 
-    return filename
+    return { 'filename': filename }
