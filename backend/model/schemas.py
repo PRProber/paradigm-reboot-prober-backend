@@ -49,6 +49,13 @@ class User(UserBase):
         from_attributes = True
 
 
+class UserInDB(UserBase):
+    encoded_password: str
+
+    class Config:
+        from_attributes = True
+
+
 class SongLevelInfo(SongBase):
     song_id: int
     song_level_id: int

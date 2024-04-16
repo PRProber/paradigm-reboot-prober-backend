@@ -42,7 +42,7 @@ async def get_my_info(user: entities.User = Depends(user_service.get_current_use
 
 
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
-# @cache(expire=60)
+@cache(expire=60)
 async def get_play_records(username: str,
                            export_type: str | None = None,
                            scope: str = "b50", underflow: int = 0,
@@ -52,7 +52,7 @@ async def get_play_records(username: str,
                            order: str = "desc",
                            current_user: entities.User = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
-    check_probe_authority(db, username, current_user)
+    await check_probe_authority(db, username, current_user)
     if sort_by not in schemas.PlayRecordInfo.model_fields.keys():
         raise HTTPException(status_code=400, detail='Invalid sort_by parameter')
     if order != "desc" and order != "asce":
@@ -76,6 +76,7 @@ async def get_play_records(username: str,
 async def get_b50_img(username: str,
                       current_user: entities.User = Depends(user_service.get_current_user),
                       db: Session = Depends(get_db)):
+    print("Not cached")
     if current_user.username == username:
         records = user_service.get_best50_records(db, username)
         try:
@@ -98,10 +99,12 @@ async def post_record(username: str,
     if not use_csv:
         if current_user and current_user.username == username:
             response_msg = user_service.create_record(db, username, records.play_records)
-        elif records.upload_token and records.upload_token == user_service.get_user(db, username).upload_token:
-            response_msg = user_service.create_record(db, username, records.play_records)
         else:
-            raise HTTPException(status_code=401, detail="Unauthorized")
+            user = await user_service.get_user(db, username)
+            if records.upload_token and records.upload_token == user.upload_token:
+                response_msg = user_service.create_record(db, username, records.play_records)
+            else:
+                raise HTTPException(status_code=401, detail="Unauthorized")
     else:
         # TODO: upload a .csv file
         response_msg = user_service.create_record(db, username, csv2json(username))
@@ -114,6 +117,6 @@ async def post_record(username: str,
 async def get_b50_trends(username: str, scope: str | None = 'month',
                          current_user: entities.User = Depends(user_service.get_current_user_or_none),
                          db: Session = Depends(get_db)):
-    check_probe_authority(db, username, current_user)
+    await check_probe_authority(db, username, current_user)
     trends = user_service.get_b50_trends(db, username, scope)
     return trends
