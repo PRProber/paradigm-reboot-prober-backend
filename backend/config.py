@@ -13,3 +13,11 @@ UPLOAD_CSV_PATH = 'temp/upload/b50csv/'
 UPLOAD_IMG_PATH = 'temp/upload/cover/'
 RESOURCE_COVER_PATH = 'resources/image/cover/'
 RESOURCE_COVER_STATIC_PATH = 'resources/static/cover/'
+
+CHARACTERS = {
+    "Para_Summer": 'resources/image/character/para_summer.png',
+    "Para_Young_Awaken": 'resources/image/character/para_young_awaken.png',
+    "Yun_Summer": 'resources/image/character/yun_summer.png',
+    "Eden": 'resources/image/character/eden.png',
+    "Geopelia": 'resources/image/character/geopelia.png'
+}
