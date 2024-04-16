@@ -1,16 +1,15 @@
 # TODO: Implement b50 table generation functions
 from pathlib import Path
-from typing import List, Type, Tuple
-import csv
+from typing import List
 import json
+import csv
 import io
+import os
 
-from fastapi_cache.decorator import cache
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter
 from pydantic import ValidationError
 
-from ..model.schemas import PlayRecordInfo
-import backend.util.database
+from .. import config as backend_config
 from ..model.schemas import PlayRecordInfo, SongLevelInfo, PlayRecordCreate, SongLevelCsv
 from ..service import song as song_service
 
@@ -110,18 +109,24 @@ async def generate_b50_img(play_records: list[PlayRecordInfo], nickname,
     return template
 
 
-def generate_single(config, font: ImageFont, title_font: ImageFont, record: PlayRecordInfo, index: int):
-    cover_path = 'resources/image/cover/' + record.song_level.cover
+def generate_single(config, font: ImageFont, title_font: ImageFont, record: PlayRecordInfo, index: int, radius=3):
+    cover_path = backend_config.RESOURCE_COVER_PATH + record.song_level.cover
+    if not os.path.exists(cover_path):
+        cover_path = backend_config.RESOURCE_COVER_PATH + 'default.png'
     cover = Image.open(cover_path).convert("RGBA")
-    cover = ImageOps.fit(cover, (config['single']['width'], config['single']['height']))
-    single = cover.filter(ImageFilter.GaussianBlur(radius=5))
+    cover = ImageOps.fit(cover, (config['single']['width'] - radius * 2, config['single']['height'] - radius * 2))
+    single = Image.new("RGBA", (config['single']['width'], config['single']['width']), (0, 0, 0, 0))
+    single.paste(cover, (radius, radius))
+    single = single.filter(ImageFilter.GaussianBlur(radius=radius))
     single_draw = ImageDraw.Draw(single)
     # Draw single title
+    if len(record.song_level.title) > 18:
+        record.song_level.title = record.song_level.title[:15] + '...'
     draw_single_text_border(single_draw, title_font, config['single']['title'], record.song_level.title)
     draw_single_text(single_draw, title_font, config['single']['title'], record.song_level.title)
     # Draw index
-    draw_single_text_border(single_draw, title_font, config['single']['index'], f'#{index}')
-    draw_single_text(single_draw, title_font, config['single']['index'], f'#{index}')
+    draw_single_text_border(single_draw, font, config['single']['index'], f'#{index}')
+    draw_single_text(single_draw, font, config['single']['index'], f'#{index}')
     # Draw single difficulty
     draw_single_text_border(single_draw, font, config['single']['difficulty'],
                             record.song_level.difficulty + f" {record.song_level.level}")
@@ -154,7 +159,7 @@ def json2csv(play_records: list[PlayRecordInfo]):
 
 def get_records_from_csv(filename: str = "default.csv") -> List[PlayRecordCreate]:
     records: List[PlayRecordCreate] = []
-    with open(Path(__file__).parent.parent / 'upload' / 'b50csv' / filename, 'r', encoding='utf-8-sig') as f:
+    with open(backend_config.UPLOAD_CSV_PATH + filename, 'r', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
         for row in reader:
             try:
