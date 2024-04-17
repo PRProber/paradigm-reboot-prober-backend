@@ -11,7 +11,8 @@ from backend.router.user import router
 from backend.service import user as user_service
 from backend.service import record as record_service
 from backend.service.user import check_probe_authority
-from backend.util.b50 import generate_b50_img, image_to_byte_array, get_records_from_csv
+from backend.util.b50.img import generate_b50_img, image_to_byte_array
+from backend.util.b50.csv import generate_csv, get_records_from_csv
 from backend.util.cache import PNGImageResponseCoder, best50image_key_builder
 from backend.util.database import get_db
 
@@ -59,6 +60,18 @@ async def get_b50_img(username: str,
         except Exception:
             raise HTTPException(status_code=500,
                                 detail="Error occurs while generating Best 50 image, please contact admin")
+    else:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+
+@router.get('/records/{username}/export/csv')
+def export_csv(username: str,
+               current_user: UserInDB = Depends(user_service.get_current_user),
+               db: Session = Depends(get_db)):
+    if current_user.username == username:
+        records = record_service.get_best_records(db, username, 1000000000, 1, "rating", "desc")
+        b50_csv = generate_csv(records)
+        return Response(content=b50_csv, media_type="text/csv")
     else:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
