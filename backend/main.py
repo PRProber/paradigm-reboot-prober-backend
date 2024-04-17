@@ -22,6 +22,7 @@ app.include_router(user.router)
 app.include_router(record.router)
 app.include_router(upload.router)
 
+
 @app.on_event("startup")
 async def startup():
     FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")

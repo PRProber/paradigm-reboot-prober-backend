@@ -57,6 +57,14 @@ def get_best_records(db: Session, username: str, page_size: int, page_index: int
     return records
 
 
+def count_best_records(db: Session, username: str) -> int:
+    return crud.count_best_records(db, username)
+
+
+def count_all_records(db: Session, username: str) -> int:
+    return crud.count_all_records(db, username)
+
+
 def remove_b50_record(db: Session, record: Best50Trends):
     # TODO: remove a b50 record
     pass

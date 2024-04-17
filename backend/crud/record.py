@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import List, Type
 
 from dateutil.relativedelta import relativedelta
-from sqlalchemy import select
+from sqlalchemy import select, func
 from sqlalchemy.orm import Session
 
 from backend.model.schemas import PlayRecordCreate
@@ -10,7 +10,7 @@ from backend.model.entities import PlayRecord, SongLevel, BestPlayRecord, Song, 
 from backend.util import rating
 
 
-def create_record(db: Session, record: PlayRecordCreate, username: str,  is_replaced: bool = False) -> PlayRecord:
+def create_record(db: Session, record: PlayRecordCreate, username: str, is_replaced: bool = False) -> PlayRecord:
     """Record
     Create a play record.
     :param username:
@@ -151,3 +151,14 @@ def get_b50_trends(db: Session, username: str, scope: str | None = "month") -> L
                 Best50Trends.record_time >= limit_time).
          order_by(Best50Trends.record_time).all())
     return trends
+
+
+def count_best_records(db: Session, username: str) -> int:
+    count = int(db.query(func.count(BestPlayRecord.best_record_id))
+                .join(PlayRecord).filter(PlayRecord.username == username).one()[0])
+    return count
+
+
+def count_all_records(db: Session, username: str) -> int:
+    count = int(db.query(func.count(PlayRecord.best_record_id)).filter(PlayRecord.username == username).one()[0])
+    return count

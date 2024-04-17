@@ -40,7 +40,12 @@ async def get_play_records(username: str,
         records = record_service.get_all_records(db, username, page_size, page_index, sort_by, order)
     else:
         raise HTTPException(status_code=400, detail='Invalid scope parameter')
-    return {"username": username, "records": records}
+    response = {"username": username, "records": records}
+    if scope == "best":
+        response["total"] = record_service.count_best_records(db, username)
+    if scope == "all":
+        response["total"] = record_service.count_all_records(db, username)
+    return response
 
 
 @router.get('/records/{username}/export/b50')

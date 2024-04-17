@@ -143,6 +143,7 @@ class PlayRecordInfo(BaseModel):
 
 class PlayRecordResponse(BaseModel):
     username: str
+    total: int | None = None
     records: list[PlayRecordInfo]
 
 
