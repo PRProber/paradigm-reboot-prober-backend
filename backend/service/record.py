@@ -26,7 +26,7 @@ def create_record(db: Session, username: str, records: list[PlayRecordCreate], i
     return response_records
 
 
-def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: str):
+def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: (str, int), order: str):
     unwrapped_records = crud.get_all_records(db, username, page_size, page_index, sort_by, order == "desc")
     records: List[util.PlayRecordInfo] = []
     for record in unwrapped_records:
@@ -49,7 +49,7 @@ def get_best50_records(db: Session, username: str, underflow: int = 0):
     return records
 
 
-def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: str):
+def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: (str, int), order: str):
     unwrapped_records = crud.get_best_records(db, username, page_size, page_index, sort_by, order == "desc")
     records: List[util.PlayRecordInfo] = []
     for record in unwrapped_records:

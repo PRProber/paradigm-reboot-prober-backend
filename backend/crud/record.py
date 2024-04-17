@@ -61,17 +61,6 @@ def create_record(db: Session, record: PlayRecordCreate, username: str, is_repla
     return db_record
 
 
-def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool):
-    statement = \
-        (select(PlayRecord).
-         filter(PlayRecord.username == username).
-         order_by(getattr(PlayRecord, sort_by).desc() if order else getattr(PlayRecord, sort_by).asc()).
-         offset(page_size * (page_index - 1)).
-         limit(page_size))
-    records = db.execute(statement).all()
-    return records
-
-
 def get_best50_records(db: Session, username: str, underflow: int = 0):
     """
     Get best play records of a user. Returns a tuple. The first element is the list of records of old version (b35),
@@ -96,14 +85,49 @@ def get_best50_records(db: Session, username: str, underflow: int = 0):
     return b35, b15
 
 
-def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: bool):
-    statement = \
+def get_statement(statement_base, page_size: int, page_index: int, sort_by: (str, int), order: bool):
+    (key, belong) = sort_by
+    if belong == 1:
+        statement = \
+            (statement_base.
+             order_by(getattr(PlayRecord, key).desc() if order else getattr(PlayRecord, key).asc()).
+             offset(page_size * (page_index - 1)).
+             limit(page_size))
+    elif belong == 2:
+        statement = \
+            (statement_base.
+             join(PlayRecord.song_level).
+             order_by(getattr(SongLevel, key).desc() if order else getattr(SongLevel, key).asc()).
+             offset(page_size * (page_index - 1)).
+             limit(page_size))
+    elif belong == 3:
+        statement = \
+            (statement_base.
+             join(PlayRecord.song_level).
+             join(SongLevel.song).
+             order_by(getattr(Song, key).desc() if order else getattr(Song, key).asc()).
+             offset(page_size * (page_index - 1)).
+             limit(page_size))
+    else:
+        raise Exception('Unexpected belong')
+    return statement
+
+
+def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: (str, int), order: bool):
+    statement_base = \
+        (select(PlayRecord).
+         filter(PlayRecord.username == username))
+    statement = get_statement(statement_base, page_size, page_index, sort_by, order)
+    records = db.execute(statement).all()
+    return records
+
+
+def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: (str, int), order: bool):
+    statement_base = \
         (select(BestPlayRecord, PlayRecord).
          join(BestPlayRecord.play_record).
-         filter(PlayRecord.username == username).
-         order_by(getattr(PlayRecord, sort_by).desc() if order else getattr(PlayRecord, sort_by).asc()).
-         offset(page_size * (page_index - 1)).
-         limit(page_size))
+         filter(PlayRecord.username == username))
+    statement = get_statement(statement_base, page_size, page_index, sort_by, order)
     records = db.execute(statement).all()
     return records
 

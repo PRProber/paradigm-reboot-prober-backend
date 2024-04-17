@@ -17,6 +17,10 @@ from backend.util.b50.csv import generate_csv, get_records_from_csv
 from backend.util.cache import PNGImageResponseCoder, best50image_key_builder
 from backend.util.database import get_db
 
+SORT_BY_RECORD = ['rating', 'score', 'record_time']
+SORT_BY_LEVEL = ['level', 'fitting_level']
+SORT_BY_SONG = ['song_id', 'title', 'version', 'bpm']
+
 
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
 @cache(expire=60)
@@ -29,17 +33,25 @@ async def get_play_records(username: str,
                            current_user: UserInDB = Depends(user_service.get_current_user_or_none),
                            db: Session = Depends(get_db)):
     await check_probe_authority(db, username, current_user)
-    if sort_by not in schemas.PlayRecordInfo.model_fields.keys():
+    if sort_by not in SORT_BY_RECORD + SORT_BY_LEVEL + SORT_BY_SONG:
         raise HTTPException(status_code=400, detail='Invalid sort_by parameter')
     if order != "desc" and order != "asce":
         raise HTTPException(status_code=400, detail='Invalid order parameter')
 
+    sort_type = 0
+    if sort_by in SORT_BY_RECORD:
+        sort_type = 1
+    elif sort_by in SORT_BY_LEVEL:
+        sort_type = 2
+    elif sort_by in SORT_BY_SONG:
+        sort_type = 3
+
     if scope == "b50":
         records = record_service.get_best50_records(db, username, underflow)
     elif scope == "best":
-        records = record_service.get_best_records(db, username, page_size, page_index, sort_by, order)
+        records = record_service.get_best_records(db, username, page_size, page_index, (sort_by, sort_type), order)
     elif scope == "all":
-        records = record_service.get_all_records(db, username, page_size, page_index, sort_by, order)
+        records = record_service.get_all_records(db, username, page_size, page_index, (sort_by, sort_type), order)
     else:
         raise HTTPException(status_code=400, detail='Invalid scope parameter')
     return {"username": username, "records": records}
