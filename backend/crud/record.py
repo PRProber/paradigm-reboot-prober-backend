@@ -5,9 +5,9 @@ from dateutil.relativedelta import relativedelta
 from sqlalchemy import select, func, and_, or_
 from sqlalchemy.orm import Session
 
-from backend.model.schemas import PlayRecordCreate
-from backend.model.entities import PlayRecord, SongLevel, BestPlayRecord, Song, Best50Trends
-from backend.util import rating
+from ..model.schemas import PlayRecordCreate
+from ..model.entities import PlayRecord, SongLevel, BestPlayRecord, Song, Best50Trends
+from ..util import rating
 
 
 def create_record(db: Session, record: PlayRecordCreate, username: str, is_replaced: bool = False) -> PlayRecord:

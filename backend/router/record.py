@@ -86,7 +86,7 @@ def export_csv(username: str,
                db: Session = Depends(get_db)):
     if current_user.username == username:
         records = record_service.get_all_levels_with_best_scores(db, username)
-        b50_csv = generate_csv(records)
+        b50_csv = generate_csv(records).encode('utf-8-sig')
         return Response(content=b50_csv, media_type="text/csv")
     else:
         raise HTTPException(status_code=401, detail="Unauthorized")
@@ -94,13 +94,12 @@ def export_csv(username: str,
 
 @router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
 async def post_record(username: str,
-                      records: schemas.BatchPlayRecordCreate | None = None,
-                      csv_filename: str | None = None,
+                      records: schemas.BatchPlayRecordCreate,
                       current_user: UserInDB = Depends(user_service.get_current_user_or_none),
                       db: Session = Depends(get_db)):
-    if (records is None) == (csv_filename is None):
+    if (records.play_records is None) == (records.csv_filename is None):
         raise HTTPException(status_code=400, detail='Ambiguous data')
-    if records is not None:
+    if records.play_records is not None:
         if current_user and current_user.username == username:
             response_msg = record_service.create_record(db, username, records.play_records)
         else:
@@ -110,7 +109,8 @@ async def post_record(username: str,
             else:
                 raise HTTPException(status_code=401, detail="Unauthorized")
     else:
-        response_msg = record_service.create_record(db, username, get_records_from_csv(csv_filename), is_replaced=True)
+        response_msg = record_service.create_record(db, username, get_records_from_csv(records.csv_filename),
+                                                    is_replaced=True)
     record_service.update_b50_record(db, username)
     return response_msg
 

@@ -6,9 +6,9 @@ from sqlalchemy.exc import AmbiguousForeignKeysError
 from sqlalchemy.orm import Session
 
 from ..crud import record as crud
-from backend import util
-from backend.model.entities import PlayRecord, BestPlayRecord, Best50Trends
-from backend.model.schemas import PlayRecordCreate
+from .. import util
+from ..model.entities import PlayRecord, BestPlayRecord, Best50Trends
+from ..model.schemas import PlayRecordCreate
 
 
 def create_record(db: Session, username: str, records: list[PlayRecordCreate], is_replaced: bool = False) \

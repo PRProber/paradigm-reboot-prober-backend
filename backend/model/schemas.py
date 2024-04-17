@@ -120,7 +120,8 @@ class PlayRecordCreate(PlayRecordBase):
 
 class BatchPlayRecordCreate(BaseModel):
     upload_token: str | None = None
-    play_records: list[PlayRecordCreate]
+    csv_filename: str | None = None
+    play_records: list[PlayRecordCreate] | None = None
 
 
 class SongLevelInfoSimple(BaseModel):

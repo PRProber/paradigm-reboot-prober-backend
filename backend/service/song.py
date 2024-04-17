@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from fastapi_cache.decorator import cache
 
-from backend import config
+from .. import config
 from ..model import schemas, entities
 from ..crud import song as crud
 from .. import util
