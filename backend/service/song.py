@@ -1,9 +1,13 @@
+import os
+import shutil
+
 from typing import List
 
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from fastapi_cache.decorator import cache
 
+from .. import config
 from ..model import schemas, entities
 from ..crud import song as crud
 from .. import util
@@ -57,3 +61,9 @@ def create_song(db: Session, song: schemas.SongCreate):
 
 def update_song(db: Session, song: schemas.SongUpdate):
     return song_to_levels(crud.update_song(db, song))
+
+
+def get_cover(filename: str):
+    if os.path.isfile(config.UPLOAD_COVER_PATH + filename):
+        shutil.copyfile(config.UPLOAD_COVER_PATH + filename, config.RESOURCE_COVER_PATH + filename)
+        shutil.copyfile(config.UPLOAD_COVER_PATH + filename, config.RESOURCE_COVER_STATIC_PATH + filename)

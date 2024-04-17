@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, AliasChoices
+from pydantic import BaseModel, Field, EmailStr
 from datetime import datetime
 
 
@@ -95,11 +95,23 @@ class SongCreate(SongBase):
 
 class SongUpdate(SongBase):
     song_id: int
-    song_levels: list[LevelInfo]
+    song_levels: list[LevelInfo] | None = None
 
 
-class UserCreate(UserBase):
+class UserCreate(BaseModel):
+    username: str = Field(pattern=r'^[A-Za-z][A-Za-z0-9_]{6,12}$')
+    email: EmailStr
+    # TODO: 适配 Pydantic 的 Rust-style regex 校验
     password: str
+
+
+class UserUpdate(BaseModel):
+    nickname: str | None = None
+    qq_number: int | None = None
+    account: str | None = None
+    account_number: int | None = None
+    uuid: str | None = None
+    anonymous_probe: bool | None = False
 
 
 class PlayRecordCreate(PlayRecordBase):
@@ -108,7 +120,8 @@ class PlayRecordCreate(PlayRecordBase):
 
 class BatchPlayRecordCreate(BaseModel):
     upload_token: str | None = None
-    play_records: list[PlayRecordCreate]
+    csv_filename: str | None = None
+    play_records: list[PlayRecordCreate] | None = None
 
 
 class SongLevelInfoSimple(BaseModel):
@@ -134,12 +147,17 @@ class PlayRecordInfo(BaseModel):
 
 class PlayRecordResponse(BaseModel):
     username: str
+    total: int | None = None
     records: list[PlayRecordInfo]
 
 
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+
+class UploadToken(BaseModel):
+    upload_token: str
 
 
 class SongLevelCsv(BaseModel):

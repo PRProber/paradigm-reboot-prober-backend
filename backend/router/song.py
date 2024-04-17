@@ -30,6 +30,7 @@ async def get_single_song_info(song_id: int, db: Session = Depends(get_db)):
 async def create_song(song: schemas.SongCreate, db: Session = Depends(get_db),
                       user: entities.User = Depends(user_service.get_current_user)):
     if user.is_admin:
+        song_service.get_cover(song.cover)
         song_levels = song_service.create_song(db, song)
         return song_levels
     else:
@@ -40,6 +41,7 @@ async def create_song(song: schemas.SongCreate, db: Session = Depends(get_db),
 async def update_song(song: schemas.SongUpdate, db: Session = Depends(get_db),
                       user: entities.User = Depends(user_service.get_current_user)):
     if user.is_admin:
+        song_service.get_cover(song.cover)
         song_levels = song_service.update_song(db, song)
         return song_levels
     else:
