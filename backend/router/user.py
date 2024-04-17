@@ -1,7 +1,10 @@
 from fastapi_cache.decorator import cache
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
+
+from slowapi import Limiter
+from slowapi.util import get_remote_address
 
 from ..model import schemas
 from ..model.schemas import UserInDB
@@ -9,20 +12,23 @@ from ..util.database import get_db
 from ..service import user as user_service
 
 router = APIRouter()
+limiter = Limiter(key_func=get_remote_address)
 
 
 @router.post('/user/register', response_model=schemas.User)
-async def register(user: schemas.UserCreate,
+@limiter.limit("10/10minutes")
+async def register(request: Request,
+                   user: schemas.UserCreate,
                    db: Session = Depends(get_db)):
-    # TODO: 过滤同 IP 重复的成功注册
     user = user_service.create_user(db, user)
     return user
 
 
 @router.post('/user/login', response_model=schemas.Token)
-async def login(form_data: OAuth2PasswordRequestForm = Depends(),
+@limiter.limit("10/minute")
+async def login(request: Request,
+                form_data: OAuth2PasswordRequestForm = Depends(),
                 db: Session = Depends(get_db)):
-    # TODO: 屏蔽同 IP 重复的接口访问
     token = user_service.login(db, form_data.username, form_data.password)
     if token is None:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
