@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
@@ -22,9 +21,6 @@ app.include_router(song.router)
 app.include_router(user.router)
 app.include_router(record.router)
 app.include_router(upload.router)
-
-app.mount('/cover', StaticFiles(directory='resources/static/cover'), name='cover')
-
 
 @app.on_event("startup")
 async def startup():

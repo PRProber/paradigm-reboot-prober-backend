@@ -1,9 +1,8 @@
 from typing import List
 
-from fastapi import Depends, HTTPException
+from fastapi import Depends, HTTPException, Response
 from fastapi_cache.decorator import cache
 from sqlalchemy.orm import Session
-from starlette.responses import Response
 
 from backend.model import schemas
 from backend.model.schemas import UserInDB
@@ -11,7 +10,8 @@ from backend.router.user import router
 from backend.service import user as user_service
 from backend.service import record as record_service
 from backend.service.user import check_probe_authority
-from backend.util.b50 import generate_b50_img, image_to_byte_array, get_records_from_csv
+from backend.util.b50.img import generate_b50_img, image_to_byte_array
+from backend.util.b50.csv import get_records_from_csv
 from backend.util.cache import PNGImageResponseCoder, best50image_key_builder
 from backend.util.database import get_db
 
