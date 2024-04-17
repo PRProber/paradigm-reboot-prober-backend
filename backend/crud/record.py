@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import List, Type
 
 from dateutil.relativedelta import relativedelta
-from sqlalchemy import select
+from sqlalchemy import select, and_, or_
 from sqlalchemy.orm import Session
 
 from backend.model.schemas import PlayRecordCreate
@@ -10,7 +10,7 @@ from backend.model.entities import PlayRecord, SongLevel, BestPlayRecord, Song, 
 from backend.util import rating
 
 
-def create_record(db: Session, record: PlayRecordCreate, username: str,  is_replaced: bool = False) -> PlayRecord:
+def create_record(db: Session, record: PlayRecordCreate, username: str, is_replaced: bool = False) -> PlayRecord:
     """Record
     Create a play record.
     :param username:
@@ -38,8 +38,10 @@ def create_record(db: Session, record: PlayRecordCreate, username: str,  is_repl
     db.refresh(db_record)
 
     db_best_record: BestPlayRecord | None \
-        = (db.query(BestPlayRecord)
-           .join(PlayRecord).filter(PlayRecord.song_level_id == record.song_level_id).one_or_none())
+        = (db.query(BestPlayRecord).
+           join(PlayRecord).
+           filter(PlayRecord.song_level_id == record.song_level_id).
+           filter(PlayRecord.username == username).one_or_none())
     if db_best_record:
         best_record: PlayRecord = db_best_record.play_record
         if is_replaced or db_record.score > best_record.score:
@@ -151,3 +153,14 @@ def get_b50_trends(db: Session, username: str, scope: str | None = "month") -> L
                 Best50Trends.record_time >= limit_time).
          order_by(Best50Trends.record_time).all())
     return trends
+
+
+def get_all_levels_with_best_scores(db: Session, username: str):
+    statement = \
+        (select(SongLevel, PlayRecord.score, BestPlayRecord.best_record_id).
+         outerjoin(PlayRecord,
+                   and_(PlayRecord.song_level_id == SongLevel.song_level_id, PlayRecord.username == username)).
+         outerjoin(BestPlayRecord, BestPlayRecord.play_record_id == PlayRecord.play_record_id).
+         order_by(SongLevel.level.desc()))
+    records = db.execute(statement).all()
+    return records

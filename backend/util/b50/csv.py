@@ -9,9 +9,13 @@ from backend import config as backend_config
 from backend.model.schemas import PlayRecordInfo, PlayRecordCreate, SongLevelInfo, SongLevelCsv
 
 
-def generate_csv(records: List[PlayRecordInfo]):
-    # TODO: generate .csv
-    pass
+def generate_csv(records: List[SongLevelCsv]):
+    csv_bytes = io.StringIO()
+    writer = csv.DictWriter(csv_bytes, fieldnames=['song_level_id', 'title', 'version', 'difficulty', 'level', 'score'])
+    writer.writeheader()
+    for level in records:
+        writer.writerow(vars(level))
+    return csv_bytes.getvalue()
 
 
 def get_records_from_csv(filename: str = "default.csv") -> List[PlayRecordCreate]:

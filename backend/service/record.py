@@ -57,6 +57,15 @@ def get_best_records(db: Session, username: str, page_size: int, page_index: int
     return records
 
 
+def get_all_levels_with_best_scores(db: Session, username: str):
+    unwrapped_records = crud.get_all_levels_with_best_scores(db, username)
+    records:  List[util.SongLevelCsv] = []
+    for record in unwrapped_records:
+        if record[1] is None or record[2] is not None:
+            records.append(util.SongLevelCsv(record[0], record[1]))
+    return records
+
+
 def remove_b50_record(db: Session, record: Best50Trends):
     # TODO: remove a b50 record
     pass

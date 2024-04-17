@@ -40,3 +40,16 @@ class SongInfo:
                 setattr(self, key, getattr(song, key))
             else:
                 setattr(self, key, None)
+
+
+class SongLevelCsv:
+    def __init__(self, level: entities.SongLevel, score: int | None):
+        for key in schemas.SongLevelCsv.model_fields.keys():
+            if hasattr(level.song, key):
+                setattr(self, key, getattr(level.song, key))
+            elif hasattr(level, key):
+                setattr(self, key, getattr(level, key))
+            else:
+                setattr(self, key, None)
+            setattr(self, 'difficulty', level.difficulty.name)
+            setattr(self, 'score', score)

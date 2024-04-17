@@ -10,6 +10,7 @@ from backend.model.schemas import UserInDB
 from backend.router.user import router
 from backend.service import user as user_service
 from backend.service import record as record_service
+from backend.service import song as song_service
 from backend.service.user import check_probe_authority
 from backend.util.b50.img import generate_b50_img, image_to_byte_array
 from backend.util.b50.csv import generate_csv, get_records_from_csv
@@ -69,7 +70,7 @@ def export_csv(username: str,
                current_user: UserInDB = Depends(user_service.get_current_user),
                db: Session = Depends(get_db)):
     if current_user.username == username:
-        records = record_service.get_best_records(db, username, 1000000000, 1, "rating", "desc")
+        records = record_service.get_all_levels_with_best_scores(db, username)
         b50_csv = generate_csv(records)
         return Response(content=b50_csv, media_type="text/csv")
     else:
