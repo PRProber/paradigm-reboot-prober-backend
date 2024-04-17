@@ -1,5 +1,5 @@
 import secrets
-from typing import Union
+from typing import Union, Type
 
 from fastapi import HTTPException, Depends
 from fastapi_cache.decorator import cache
@@ -75,14 +75,13 @@ def create_user(db: Session, user: UserCreate) -> User:
     return user
 
 
-def refresh_upload_token(db: Session, user: User) -> User:
-    if user is None:
-        raise HTTPException(status_code=400, detail="User doesn't exist")
+def refresh_upload_token(db: Session, username: str) -> str:
+    user: Type[User] = db.query(User).filter(User.username == username).one()
     user.upload_token = secrets.token_hex(32)
     db.commit()
     db.refresh(user)
 
-    return user
+    return user.upload_token
 
 
 async def check_probe_authority(db: Session, username: str, current_user: UserInDB | None):

@@ -35,6 +35,12 @@ async def login(request: Request,
     return schemas.Token(access_token=token, token_type="bearer")
 
 
+@router.post('/user/me/upload-token', response_model=schemas.UploadToken)
+async def login(current_user: UserInDB = Depends(user_service.get_current_user), db: Session = Depends(get_db)):
+    token = user_service.refresh_upload_token(db, current_user.username)
+    return {'upload_token': token}
+
+
 @router.get('/user/me', response_model=schemas.User)
 @cache(expire=60)
 async def get_my_info(user: UserInDB = Depends(user_service.get_current_user)):

@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, AliasChoices
+from pydantic import BaseModel, Field, EmailStr
 from datetime import datetime
 
 
@@ -98,7 +98,10 @@ class SongUpdate(SongBase):
     song_levels: list[LevelInfo] | None = None
 
 
-class UserCreate(UserBase):
+class UserCreate(BaseModel):
+    username: str = Field(pattern=r'^[A-Za-z][A-Za-z0-9_]{6,12}$')
+    email: EmailStr
+    # TODO: 适配 Pydantic 的 Rust-style regex 校验
     password: str
 
 
@@ -150,6 +153,10 @@ class PlayRecordResponse(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+
+class UploadToken(BaseModel):
+    upload_token: str
 
 
 class SongLevelCsv(BaseModel):

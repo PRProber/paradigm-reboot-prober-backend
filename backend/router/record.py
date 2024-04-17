@@ -7,14 +7,11 @@ from sqlalchemy.orm import Session
 from backend.model import schemas
 from backend.model.schemas import UserInDB
 from backend.router.user import router
-from backend.service import user as user_service
 from backend.service import record as record_service
-from backend.service import song as song_service
+from backend.service import user as user_service
 from backend.service.user import check_probe_authority
-from backend.util.b50.img import generate_b50_img, image_to_byte_array
-from backend.util.b50.csv import get_records_from_csv
-from backend.util.b50.img import generate_b50_img, image_to_byte_array
 from backend.util.b50.csv import generate_csv, get_records_from_csv
+from backend.util.b50.img import generate_b50_img, image_to_byte_array
 from backend.util.cache import PNGImageResponseCoder, best50image_key_builder
 from backend.util.database import get_db
 

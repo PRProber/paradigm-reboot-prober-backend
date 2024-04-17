@@ -186,7 +186,7 @@ def count_best_records(db: Session, username: str) -> int:
 
 
 def count_all_records(db: Session, username: str) -> int:
-    count = int(db.query(func.count(PlayRecord.best_record_id)).filter(PlayRecord.username == username).one()[0])
+    count = int(db.query(func.count(PlayRecord.play_record_id)).filter(PlayRecord.username == username).one()[0])
     return count
 
 
