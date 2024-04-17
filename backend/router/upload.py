@@ -37,7 +37,7 @@ async def upload_img(img_file: UploadFile,
     if not img_file:
         raise HTTPException(status_code=400, detail='No file is provided')
     if img_file.content_type not in ['image/jpg', 'image/jpeg', 'image/png']:
-        raise HTTPException(status_code=400, detail='Upload only pictures')
+        raise HTTPException(status_code=400, detail='Upload only *.jpg, *.jpeg, *.png files')
     content = await img_file.read()
     filename = img_file.filename
 
