@@ -26,7 +26,7 @@ def create_record(db: Session, username: str, records: list[PlayRecordCreate], i
     return response_records
 
 
-def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: str):
+def get_all_records(db: Session, username: str, page_size: int, page_index: int, sort_by: (str, int), order: str):
     unwrapped_records = crud.get_all_records(db, username, page_size, page_index, sort_by, order == "desc")
     records: List[util.PlayRecordInfo] = []
     for record in unwrapped_records:
@@ -49,11 +49,20 @@ def get_best50_records(db: Session, username: str, underflow: int = 0):
     return records
 
 
-def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: str, order: str):
+def get_best_records(db: Session, username: str, page_size: int, page_index: int, sort_by: (str, int), order: str):
     unwrapped_records = crud.get_best_records(db, username, page_size, page_index, sort_by, order == "desc")
     records: List[util.PlayRecordInfo] = []
     for record in unwrapped_records:
         records.append(wrap_record(record))
+    return records
+
+
+def get_all_levels_with_best_scores(db: Session, username: str):
+    unwrapped_records = crud.get_all_levels_with_best_scores(db, username)
+    records:  List[util.SongLevelCsv] = []
+    for record in unwrapped_records:
+        if record[1] is None or record[2] is not None:
+            records.append(util.SongLevelCsv(record[0], record[1]))
     return records
 
 

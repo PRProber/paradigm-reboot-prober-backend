@@ -1,12 +1,9 @@
-import json
-from operator import itemgetter
-
-import backend.util.b50 as b50
-from pathlib import Path
+import backend.util.b50.img as b50
+import backend.util.b50.csv
 
 
 def test_something():
-    print(b50.get_records_from_csv())
+    print(backend.util.b50.csv.get_records_from_csv())
 
 
 if __name__ == '__main__':
