@@ -7,7 +7,6 @@ from fastapi_cache.backends.inmemory import InMemoryBackend
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 
-import middleware
 from .router import song, user, record, upload
 
 # from .util import database
