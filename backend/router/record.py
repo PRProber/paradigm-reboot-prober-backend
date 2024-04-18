@@ -73,9 +73,9 @@ async def get_b50_img(username: str,
             b50_img = await generate_b50_img(records, current_user.nickname)
             b50_img = image_to_byte_array(b50_img)
             return Response(content=b50_img, media_type="image/png")
-        except Exception:
+        except Exception as e:
             raise HTTPException(status_code=500,
-                                detail="Error occurs while generating Best 50 image, please contact admin")
+                                detail=f"Error occurs while generating Best 50 image, please contact admin. {e}")
     else:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
