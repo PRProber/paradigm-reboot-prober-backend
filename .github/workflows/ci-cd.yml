@@ -3,7 +3,7 @@ name: CI/CD Pipeline for FastAPI
 on:
   push:
     branches:
-      - main  # 触发部署的分支
+      - master
 
 jobs:
   deploy:
