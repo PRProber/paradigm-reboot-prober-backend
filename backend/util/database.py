@@ -11,10 +11,10 @@ from ..crud.song import create_song
 
 def init_db():
     database.Base.metadata.create_all(bind=database.engine)
-
-    with Session(database.engine) as db:
-        init_difficulties(db)
-        init_songs(db)
+    #
+    # with Session(database.engine) as db:
+    #     init_difficulties(db)
+    #     init_songs(db)
 
 
 def init_difficulties(db: Session):
