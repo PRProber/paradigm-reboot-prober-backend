@@ -14,6 +14,10 @@ from backend.util.b50.csv import generate_csv, get_records_from_csv
 from backend.util.b50.img import generate_b50_img, image_to_byte_array
 from backend.util.cache import PNGImageResponseCoder, best50image_key_builder
 from backend.util.database import get_db
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 SORT_BY_RECORD = ['rating', 'score', 'record_time']
 SORT_BY_LEVEL = ['level', 'fitting_level']
@@ -74,8 +78,9 @@ async def get_b50_img(username: str,
             b50_img = image_to_byte_array(b50_img)
             return Response(content=b50_img, media_type="image/png")
         except Exception as e:
+            logger.error(f"Error occurs while generating Best 50 image for user {username}: {e}", exc_info=True)
             raise HTTPException(status_code=500,
-                                detail=f"Error occurs while generating Best 50 image, please contact admin. {e}")
+                                detail=f"Error occurs while generating Best 50 image, please contact admin.")
     else:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
