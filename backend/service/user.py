@@ -51,7 +51,7 @@ async def get_current_user(db: Session = Depends(database.get_db),
     return await get_active_user(db, username)
 
 
-@cache(expire=5, coder=UserInDBCoder)
+@cache(expire=2, coder=UserInDBCoder)
 async def get_active_user(db: Session, username: str) -> Union[UserInDB, None]:
     user: User = crud.get_user(db, username)
     if user:
@@ -62,7 +62,7 @@ async def get_active_user(db: Session, username: str) -> Union[UserInDB, None]:
     return UserInDB.model_validate(user) if user else None
 
 
-@cache(expire=5, coder=UserInDBCoder)
+@cache(expire=2, coder=UserInDBCoder)
 async def get_user(db: Session, username: str) -> Union[UserInDB, None]:
     user: User = crud.get_user(db, username)
     return UserInDB.model_validate(user) if user else None

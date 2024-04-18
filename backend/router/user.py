@@ -44,7 +44,6 @@ async def login(current_user: UserInDB = Depends(user_service.get_current_user),
 
 
 @router.get('/user/me', response_model=schemas.User)
-@cache(expire=60)
 async def get_my_info(user: UserInDB = Depends(user_service.get_current_user)):
     return user
 
