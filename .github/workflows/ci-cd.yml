@@ -20,5 +20,8 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /home/ubuntu/paradigm-reboot-prober-backend 
+          git reset --hard
+          git clean -fd
+          git fetch
           git pull
           sudo systemctl daemon-reload
