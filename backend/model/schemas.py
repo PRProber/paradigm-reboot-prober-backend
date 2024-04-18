@@ -98,7 +98,7 @@ class SongUpdate(SongBase):
     song_levels: list[LevelInfo] | None = None
 
 
-class UserCreate(BaseModel):
+class UserCreate(UserBase):
     username: str = Field(pattern=r'^[A-Za-z][A-Za-z0-9_]{6,12}$')
     email: EmailStr
     # TODO: 适配 Pydantic 的 Rust-style regex 校验

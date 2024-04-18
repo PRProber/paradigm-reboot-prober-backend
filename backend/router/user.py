@@ -20,6 +20,7 @@ limiter = Limiter(key_func=get_remote_address)
 async def register(request: Request,
                    user: schemas.UserCreate,
                    db: Session = Depends(get_db)):
+    user.username = user.username.lower()
     user = user_service.create_user(db, user)
     return user
 
@@ -29,6 +30,7 @@ async def register(request: Request,
 async def login(request: Request,
                 form_data: OAuth2PasswordRequestForm = Depends(),
                 db: Session = Depends(get_db)):
+    form_data.username = form_data.username.lower()
     token = user_service.login(db, form_data.username, form_data.password)
     if token is None:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
