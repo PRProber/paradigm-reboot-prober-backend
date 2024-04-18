@@ -80,7 +80,7 @@ async def get_b50_img(username: str,
         except Exception as e:
             logger.error(f"Error occurs while generating Best 50 image for user {username}: {e}", exc_info=True)
             raise HTTPException(status_code=500,
-                                detail="Error occurs while generating Best 50 image, please contact admin")
+                                detail=f"Error occurs while generating Best 50 image, please contact admin.")
     else:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
