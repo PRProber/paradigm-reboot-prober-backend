@@ -18,3 +18,4 @@ python-dateutil~=2.9.0.post0
 paddleocr~=2.7.3
 slowapi~=0.1.9
 psycopg2-binary
+logging
