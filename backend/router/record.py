@@ -25,7 +25,7 @@ SORT_BY_SONG = ['song_id', 'title', 'version', 'bpm']
 
 
 @router.get('/records/{username}', response_model=schemas.PlayRecordResponse)
-@cache(expire=60)
+@cache(expire=30)
 async def get_play_records(username: str,
                            scope: str = "b50", underflow: int = 0,
                            page_size: int = 50,
@@ -106,11 +106,11 @@ async def post_record(username: str,
         raise HTTPException(status_code=400, detail='Ambiguous data')
     if records.play_records is not None:
         if current_user and current_user.username == username:
-            response_msg = record_service.create_record(db, username, records.play_records)
+            response_msg = record_service.create_record(db, username, records.play_records, records.is_replace)
         else:
             user = await user_service.get_user(db, username)
             if records.upload_token and records.upload_token == user.upload_token:
-                response_msg = record_service.create_record(db, username, records.play_records)
+                response_msg = record_service.create_record(db, username, records.play_records, records.is_replace)
             else:
                 raise HTTPException(status_code=401, detail="Unauthorized")
     else:
@@ -121,7 +121,7 @@ async def post_record(username: str,
 
 
 @router.get('/statistics/{username}/b50')
-@cache(expire=60)
+@cache(expire=30)
 async def get_b50_trends(username: str, scope: str | None = 'month',
                          current_user: UserInDB = Depends(user_service.get_current_user_or_none),
                          db: Session = Depends(get_db)):

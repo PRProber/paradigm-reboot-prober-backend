@@ -121,6 +121,7 @@ class PlayRecordCreate(PlayRecordBase):
 class BatchPlayRecordCreate(BaseModel):
     upload_token: str | None = None
     csv_filename: str | None = None
+    is_replace: bool | None = False
     play_records: list[PlayRecordCreate] | None = None
 
 
