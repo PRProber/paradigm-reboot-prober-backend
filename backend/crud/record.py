@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import List, Type
 
 from dateutil.relativedelta import relativedelta
-from sqlalchemy import select, func, and_, or_
+from sqlalchemy import select, func, and_, or_, not_
 from sqlalchemy.orm import Session
 
 from ..model.schemas import PlayRecordCreate
@@ -77,9 +77,9 @@ def get_best50_records(db: Session, username: str, underflow: int = 0):
          join(SongLevel.song).
          filter(PlayRecord.username == username))
 
-    b35_statement = statement.filter(Song.b15 == 0).order_by(PlayRecord.rating.desc()).limit(35 + underflow)
+    b35_statement = statement.filter(not_(Song.b15)).order_by(PlayRecord.rating.desc()).limit(35 + underflow)
     b35 = db.execute(b35_statement).all()
-    b15_statement = statement.filter(Song.b15 == 1).order_by(PlayRecord.rating.desc()).limit(15 + underflow)
+    b15_statement = statement.filter(Song.b15).order_by(PlayRecord.rating.desc()).limit(15 + underflow)
     b15 = db.execute(b15_statement).all()
 
     return b35, b15
@@ -173,7 +173,7 @@ def get_b50_trends(db: Session, username: str, scope: str | None = "month") -> L
     trends: List[Type[Best50Trends]] = \
         (db.query(Best50Trends).
          filter(Best50Trends.username == username,
-                Best50Trends.is_valid == 1,
+                Best50Trends.is_valid,
                 Best50Trends.record_time >= limit_time).
          order_by(Best50Trends.record_time).all())
     return trends
