@@ -86,7 +86,7 @@ Restart=always
 KillSignal=SIGTERM
 TimeoutStopSec=5
 PrivateTmp=true
-Environment="PRP_DATABASE_URL=postgresql://postgres:prpP0stgreSql@localhost/prp"
+Environment="PRP_DATABASE_URL=postgresql://postgres:<你的密码>@localhost/prp"
 Environment="PRP_SECRETE_KEY=xxxx"   // 一个hex32的key, 具体内容请进入Server查看
 
 [Install]
