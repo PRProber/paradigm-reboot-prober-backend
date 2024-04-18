@@ -8,8 +8,8 @@ from slowapi.errors import RateLimitExceeded
 
 from .router import song, user, record, upload
 
-from .util import database
-database.init_db()
+# from .util import database
+# database.init_db()
 
 app = FastAPI(root_path="/api/v1")
 app.state.limiter = user.limiter
