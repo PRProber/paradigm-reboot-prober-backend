@@ -24,4 +24,5 @@ jobs:
           git clean -fd
           git fetch
           git pull
-          sudo systemctl daemon-reload
+          pip install -r requirements.txt
+          sudo systemctl restart uvicorn.service
