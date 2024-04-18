@@ -26,4 +26,6 @@ jobs:
           git pull
           source venv/bin/activate
           pip install -r requirements.txt
+          sudo systemctl daemon-reload
           sudo systemctl restart uvicorn.service
+          sudo systemctl status uvicorn.service
