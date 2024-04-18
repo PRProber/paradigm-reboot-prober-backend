@@ -1,11 +1,11 @@
 # TODO: Use hierarchical toml file to store configs
 from datetime import timedelta
+import os
 
-
-DATABASE_URL = 'sqlite:///resources/sql.db'
+DATABASE_URL = os.environ.get('PRP_DATABASE_URL')
 
 # Security Settings
-SECRETE_KEY = 'edf16f010d14b78f86cf432884d8a2123b3b272d3ec9a96d4669a98732efb34e'
+SECRETE_KEY = os.environ.get('PRP_SECRETE_KEY')
 JWT_ENCODE_ALGORITHM = 'HS256'
 TOKEN_EXPIRE_MINUTES = timedelta(minutes=1800)
 
