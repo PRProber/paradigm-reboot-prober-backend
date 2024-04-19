@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
                 b15 += record['rating']
             else:
                 b35 += record['rating']
-        print((b35 + b15)/5000, (b35)/3500, (b15)/1500)
+        print((b35 + b15) / 5000, b35 / 3500, b15 / 1500)
         self.assertEqual(True, True)  # add assertion here
 
 

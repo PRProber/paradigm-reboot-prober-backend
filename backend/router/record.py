@@ -109,6 +109,8 @@ async def post_record(username: str,
             response_msg = record_service.create_record(db, username, records.play_records, records.is_replace)
         else:
             user = await user_service.get_user(db, username)
+            if user is None:
+                raise HTTPException(status_code=401, detail="Cannot find user")
             if records.upload_token and records.upload_token == user.upload_token:
                 response_msg = record_service.create_record(db, username, records.play_records, records.is_replace)
             else:
