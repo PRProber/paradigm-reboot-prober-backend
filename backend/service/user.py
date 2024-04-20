@@ -88,10 +88,10 @@ async def check_probe_authority(db: Session, username: str, current_user: UserIn
     user = await get_user(db, username)
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")
-    # 不允许匿名查询，且未认证或者认证信息不匹配
-    elif (user.anonymous_probe is False and
-          (current_user is None or username != current_user.username) and
-          not current_user.is_admin):
+    # 不允许匿名查询 & (未认证 | 认证信息不匹配) & (认证 & 是管理员)
+    elif (not user.anonymous_probe and
+          (current_user is None or current_user.username != user.username) and
+          (current_user and current_user.is_admin)):
         raise HTTPException(status_code=401, detail="Anonymous probes are not allowed")
 
 

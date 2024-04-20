@@ -99,7 +99,7 @@ class SongUpdate(SongBase):
 
 
 class UserCreate(UserBase):
-    username: str = Field(pattern=r'^[A-Za-z][A-Za-z0-9_]{5,11}$')
+    username: str = Field(pattern=r'^[A-Za-z][A-Za-z0-9_]{5,15}$')
     email: EmailStr
     # TODO: 适配 Pydantic 的 Rust-style regex 校验
     password: str
