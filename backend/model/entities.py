@@ -80,10 +80,27 @@ class PlayRecord(Base):
     record_time: Mapped[datetime] = mapped_column()
     username: Mapped[str] = mapped_column(ForeignKey('prober_users.username'))
     score: Mapped[int] = mapped_column()
+    decrypted_plus: Mapped[int] = mapped_column()
+    decrypted: Mapped[int] = mapped_column()
+    received: Mapped[int] = mapped_column()
+    lost: Mapped[int] = mapped_column()
+    combo: Mapped[int] = mapped_column()
     rating: Mapped[float] = mapped_column()  # 便于查询 b50
 
     user: Mapped["User"] = relationship(back_populates='play_records')
     song_level: Mapped["SongLevel"] = relationship()
+
+
+class PlayStatistics(Base):
+    __tablename__ = 'play_statistics'
+
+    play_statistics_id: Mapped[int] = mapped_column(primary_key=True)
+    song_level_id: Mapped[int] = mapped_column(ForeignKey('song_levels.song_level_id'))
+    decrypted: Mapped[int] = mapped_column()
+    received: Mapped[int] = mapped_column()
+    lost: Mapped[int] = mapped_column()
+    max_combo: Mapped[int] = mapped_column()
+    play_times: Mapped[int] = mapped_column()
 
 
 class BestPlayRecord(Base):

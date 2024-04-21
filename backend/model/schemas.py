@@ -32,13 +32,27 @@ class UserBase(BaseModel):
 class PlayRecordBase(BaseModel):
     song_level_id: int
     score: int
+    decrypted_plus: int | None = None
+    decrypted: int | None = None
+    received_: int | None = None
+    lost: int | None = None
+    combo: int | None = None
 
 
 class PlayRecord(PlayRecordBase):
     username: str
     play_record_id: int
     record_time: datetime
-    rating: float
+    rating: int
+
+    class Config:
+        from_attributes = True
+
+
+class PlayRecordSimple(PlayRecordBase):
+    play_record_id: int
+    record_time: datetime
+    rating: int
 
     class Config:
         from_attributes = True
@@ -114,8 +128,16 @@ class UserUpdate(BaseModel):
     anonymous_probe: bool | None = False
 
 
+class PlayStatistics(BaseModel):
+    decrypted: int | None = None
+    received: int | None = None
+    lost: int | None = None
+    max_combo: int | None = None
+    play_times: int | None = None
+
+
 class PlayRecordCreate(PlayRecordBase):
-    pass
+    play_statistics: PlayStatistics | None = None
 
 
 class BatchPlayRecordCreate(BaseModel):

@@ -97,7 +97,7 @@ def export_csv(username: str,
         raise HTTPException(status_code=401, detail="Unauthorized")
 
 
-@router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecord])
+@router.post('/records/{username}', status_code=201, response_model=List[schemas.PlayRecordSimple])
 async def post_record(username: str,
                       records: schemas.BatchPlayRecordCreate,
                       current_user: UserInDB = Depends(user_service.get_current_user_or_none),
