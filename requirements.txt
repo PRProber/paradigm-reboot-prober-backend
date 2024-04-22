@@ -5,7 +5,7 @@ fastapi==0.110.1
 fastapi-cache2==0.2.1
 fastjsonschema==2.19.1
 passlib==1.7.4
-pillow==10.2.0
+pillow==10.3.0
 pycryptodome==3.20.0
 pydantic==2.5.3
 pydantic_core==2.14.6
