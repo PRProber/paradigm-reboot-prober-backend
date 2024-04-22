@@ -1,4 +1,3 @@
-from fastapi_cache.decorator import cache
 from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session

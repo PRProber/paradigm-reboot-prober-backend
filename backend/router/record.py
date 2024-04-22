@@ -3,6 +3,9 @@ from typing import List
 from fastapi import Depends, HTTPException, Response
 from fastapi_cache.decorator import cache
 from sqlalchemy.orm import Session
+from slowapi import Limiter
+from slowapi.util import get_remote_address
+
 
 from backend.model import schemas
 from backend.model.schemas import UserInDB
@@ -16,6 +19,7 @@ from backend.util.cache import PNGImageResponseCoder, best50image_key_builder
 from backend.util.database import get_db
 import logging
 
+limiter = Limiter(key_func=get_remote_address)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -65,7 +69,8 @@ async def get_play_records(username: str,
 
 
 @router.get('/records/{username}/export/b50')
-@cache(expire=300,
+@limiter.limit('3/5minutes')
+@cache(expire=60,
        coder=PNGImageResponseCoder,
        key_builder=best50image_key_builder)
 async def get_b50_img(username: str,
