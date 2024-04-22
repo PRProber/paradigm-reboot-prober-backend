@@ -1,8 +1,6 @@
 # 范式：起源 查分器
 
-[English](https://github.com/PRProber/paradigm-reboot-prober-backend/docs/README_en.md)
-
-[Frontend](https://github.com/PRProber/paradigm-reboot-prober-frontend)
+[English](https://github.com/PRProber/paradigm-reboot-prober-backend/docs/README_en.md) [Frontend](https://github.com/PRProber/paradigm-reboot-prober-frontend)
 
 ## 声明
 
