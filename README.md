@@ -64,7 +64,7 @@
 ├─util
    │  cache.py      <-- 序列化 Response 的 encoder / decoder
    │  database.py   
-   │  ocr.py        <-- 暂未实装的自动导入功能
+   │  ocr.py       
    │  rating.py     <-- 提供 rating 的计算
    │  security.py   <-- 提供 authorization / authentication 的工具类
    │
