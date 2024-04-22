@@ -1,6 +1,8 @@
 # 范式：起源 查分器
 
-[English](https://github.com/PRProber/paradigm-reboot-prober-backend/docs/README_en.md) [Frontend](https://github.com/PRProber/paradigm-reboot-prober-frontend)
+**中文** | [English](https://github.com/PRProber/paradigm-reboot-prober-backend/blob/master/docs/README_en.md)
+
+[前端](https://github.com/PRProber/paradigm-reboot-prober-frontend)
 
 ## 声明
 
@@ -28,7 +30,7 @@
 
 ### 本地部署
 
-请参考 [部署](https://github.com/PRProber/paradigm-reboot-prober-backend/docs/deployment.md)。
+请参考 [部署指南](https://github.com/PRProber/paradigm-reboot-prober-backend/blob/master/docs/deployment.md)。
 
 ### 项目结构
 
