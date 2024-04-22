@@ -16,7 +16,7 @@
 
 ### 手动导入 / 导出
 
-### 下载 Best 50 图
+#### 下载 Best 50 图
 
 ### 其他导入方式
 
@@ -26,9 +26,52 @@
 
 ### API Docs
 
+请访问 [FastAPI SwaggerUI](https://api.prp.icel.site/docs) 进行 API 的文档的查阅。
+
 ### 本地部署
 
+请参考 [部署](https://github.com/PRProber/paradigm-reboot-prober-backend/docs/deployment.md)。
+
 ### 项目结构
+
+源代码均在 `backend` 软件包下。
+
+```
+│  config.py        <-- API 相关配置
+│  main.py          <-- Uvicorn 入口
+│
+├─crud              <-- DAO 层实现
+│  │  record.py     
+│  │  song.py
+│  │  user.py
+│
+├─model             <-- 实体/schema 定义
+│  │  database.py
+│  │  entities.py
+│  │  schemas.py
+│
+├─router            <-- Controller 层实现
+│  │  record.py
+│  │  song.py
+│  │  upload.py
+│  │  user.py
+│ 
+├─service           <-- Service 层实现
+│  │  record.py
+│  │  song.py
+│  │  user.py
+│
+├─util
+   │  cache.py      <-- 序列化 Response 的 encoder / decoder
+   │  database.py   
+   │  ocr.py        <-- 暂未实装的自动导入功能
+   │  rating.py     <-- 提供 rating 的计算
+   │  security.py   <-- 提供 authorization / authentication 的工具类
+   │
+   ├─b50
+      │  csv.py     <-- 提供 csv -> schemas.PlayRecordCreate 的转换
+      │  img.py     <-- 提供 best 50 图像的生成
+```
 
 ## 数据来源及计算方式参考
 
@@ -37,6 +80,3 @@
 3. [@クロネコ](https://space.bilibili.com/390198606), 范式：起源 (Paradigm: Reboot) 定数表
 4. [Paradigm: Reboot Wiki*](https://wikiwiki.jp/paradigm_/), 歌曲详情及曲绘
 5. [Fandom Paradigm: Reboot Wiki](https://paradigmreboot.fandom.com/wiki/Paradigm:_Reboot_Wiki), 歌曲详情及 Logo 等资源
-
-
-
