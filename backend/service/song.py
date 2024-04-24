@@ -64,6 +64,6 @@ def update_song(db: Session, song: schemas.SongUpdate):
 
 
 def get_cover(filename: str):
-    if os.path.isfile(config.UPLOAD_COVER_PATH + filename):
+    if filename is not None and os.path.isfile(config.UPLOAD_COVER_PATH + filename):
         shutil.copyfile(config.UPLOAD_COVER_PATH + filename, config.RESOURCE_COVER_PATH + filename)
         shutil.copyfile(config.UPLOAD_COVER_PATH + filename, config.RESOURCE_COVER_STATIC_PATH + filename)
