@@ -1,8 +1,8 @@
 # 范式：起源 查分器
 
-[English](https://github.com/PRProber/paradigm-reboot-prober-backend/docs/README_en.md)
+**中文** | [English](https://github.com/PRProber/paradigm-reboot-prober-backend/blob/master/docs/README_en.md)
 
-[Frontend](https://github.com/PRProber/paradigm-reboot-prober-frontend)
+[前端](https://github.com/PRProber/paradigm-reboot-prober-frontend)
 
 ## 声明
 
@@ -30,7 +30,7 @@
 
 ### 本地部署
 
-请参考 [部署](https://github.com/PRProber/paradigm-reboot-prober-backend/docs/deployment.md)。
+请参考 [部署指南](https://github.com/PRProber/paradigm-reboot-prober-backend/blob/master/docs/deployment.md)。
 
 ### 项目结构
 
@@ -64,7 +64,7 @@
 ├─util
    │  cache.py      <-- 序列化 Response 的 encoder / decoder
    │  database.py   
-   │  ocr.py        <-- 暂未实装的自动导入功能
+   │  ocr.py       
    │  rating.py     <-- 提供 rating 的计算
    │  security.py   <-- 提供 authorization / authentication 的工具类
    │
