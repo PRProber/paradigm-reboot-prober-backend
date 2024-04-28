@@ -44,7 +44,7 @@ def create_record(db: Session, record: PlayRecordCreate, username: str, is_repla
            filter(PlayRecord.username == username).one_or_none())
     if db_best_record:
         best_record: PlayRecord = db_best_record.play_record
-        if is_replaced or db_record.score >= best_record.score:
+        if is_replaced or db_record.score > best_record.score:
             setattr(db_best_record, "play_record", db_record)
             setattr(db_best_record, "play_record_id", db_record.play_record_id)
             db.commit()
