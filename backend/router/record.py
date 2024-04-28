@@ -69,7 +69,7 @@ async def get_play_records(username: str,
 
 
 @router.get('/records/{username}/export/b50')
-@limiter.limit('3/5minutes')
+@limiter.limit('10/10minutes')
 @cache(expire=60,
        coder=PNGImageResponseCoder,
        key_builder=best50image_key_builder)
