@@ -123,7 +123,8 @@ async def post_record(username: str,
     else:
         response_msg = record_service.create_record(db, username, get_records_from_csv(records.csv_filename),
                                                     is_replaced=True)
-    record_service.update_b50_record(db, username)
+    if len(records.play_records) > 0:
+        record_service.update_b50_record(db, username)
     return response_msg
 
 
