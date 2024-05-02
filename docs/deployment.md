@@ -296,6 +296,8 @@ jobs:
           git pull
           source venv/bin/activate
           pip install -r requirements.txt
+          pyarmor gen -O ../paradigm-reboot-prober-backend -r -i @filelist.txt
+          deactivate
           sudo systemctl daemon-reload
           sudo systemctl restart uvicorn.service
           sudo systemctl status uvicorn.service

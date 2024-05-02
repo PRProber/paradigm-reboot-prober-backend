@@ -19,3 +19,4 @@ paddleocr~=2.7.3
 slowapi~=0.1.9
 psycopg2-binary
 pydantic[email]
+pyarmor
