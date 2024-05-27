@@ -11,7 +11,7 @@ pydantic==2.5.3
 pydantic_core==2.14.6
 python-jose==3.3.0
 python-multipart==0.0.7
-requests==2.31.0
+requests==2.32.2
 SQLAlchemy==2.0.25
 thefuzz==0.22.1
 python-dateutil~=2.9.0.post0

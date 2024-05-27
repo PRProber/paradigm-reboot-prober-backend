@@ -1,6 +1,8 @@
 bounds = [900000, 930000, 950000, 970000, 980000, 990000]
 rewards = [3, 1, 1, 1, 1, 1]
 
+EPS = 0.00002
+
 
 def single_rating(level: float, score: int) -> float:
     """
@@ -24,5 +26,5 @@ def single_rating(level: float, score: int) -> float:
 
     rating = max(.0, rating)
 
-    int_rating: int = int(rating * 100)
+    int_rating: int = int(rating * 100 + EPS)
     return int_rating
