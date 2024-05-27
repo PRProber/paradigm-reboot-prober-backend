@@ -121,9 +121,9 @@ async def post_record(username: str,
             else:
                 raise HTTPException(status_code=401, detail="Unauthorized")
     else:
-        response_msg = record_service.create_record(db, username, get_records_from_csv(records.csv_filename),
-                                                    is_replaced=True)
-    if len(records.play_records) > 0:
+        records = get_records_from_csv(records.csv_filename)
+        response_msg = record_service.create_record(db, username, records, is_replaced=True)
+    if records and len(records.play_records) > 0:
         record_service.update_b50_record(db, username)
     return response_msg
 
