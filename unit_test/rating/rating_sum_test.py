@@ -4,7 +4,8 @@ from backend.util.rating import single_rating
 
 
 class MyTestCase(unittest.TestCase):
-    def test_something(self):
+    @staticmethod
+    def test_something():
         with open('rating/data.csv', 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for record in reader:
