@@ -46,3 +46,7 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+def get_db_sync():
+    return SessionLocal()
