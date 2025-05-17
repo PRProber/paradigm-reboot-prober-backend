@@ -6,9 +6,10 @@ from fastapi_cache.backends.inmemory import InMemoryBackend
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 
-from .router import song, user, record, upload
+from backend.prprober.router import record
+from backend.prprober.router import user, upload, song
 
-# from .util import database
+# from backend.prprober.util import database
 # database.init_db()
 
 app = FastAPI(root_path="/api/v1")

@@ -6,7 +6,7 @@ from typing import List
 from pydantic import ValidationError
 
 from backend import config as backend_config
-from backend.model.schemas import PlayRecordInfo, PlayRecordCreate, SongLevelInfo, SongLevelCsv
+from backend.prprober.model.schemas import PlayRecordCreate, SongLevelInfo, SongLevelCsv
 
 
 def generate_csv(records: List[SongLevelCsv]):

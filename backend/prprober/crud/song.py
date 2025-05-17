@@ -4,7 +4,7 @@ from ..model.entities import Song, SongLevel
 
 
 REPLACEABLE_ATTRIBUTES = [
-    'title', 'artist', 'cover', 'illustrator', 'bpm', 'b15', 'album'
+    'title', 'artist', 'cover', 'illustrator', 'bpm', 'b15', 'album', 'wiki_id'
 ]
 
 

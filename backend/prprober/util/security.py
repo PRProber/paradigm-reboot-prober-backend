@@ -6,7 +6,7 @@ from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 
-from .. import config
+from backend import config
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='user/login')
 optional_oauth2_scheme = OAuth2PasswordBearer(tokenUrl='user/login', auto_error=False)

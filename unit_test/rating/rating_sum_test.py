@@ -1,6 +1,6 @@
 import unittest
 import csv
-from backend.util.rating import single_rating
+from backend.prprober.util import single_rating
 
 
 class MyTestCase(unittest.TestCase):

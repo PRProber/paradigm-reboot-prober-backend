@@ -1,6 +1,6 @@
 import json
-from backend.util.database import get_db_sync
-from backend.crud.song import get_all_songs
+from backend.prprober.util.database import get_db_sync
+from backend.prprober.crud.song import get_all_songs
 
 if __name__ == '__main__':
 

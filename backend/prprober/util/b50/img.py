@@ -5,7 +5,7 @@ import os
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter, ImageEnhance
 
-from ... import config as backend_config
+from backend import config as backend_config
 from ...model.schemas import PlayRecordInfo
 
 

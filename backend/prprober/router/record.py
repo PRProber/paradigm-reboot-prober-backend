@@ -6,17 +6,16 @@ from sqlalchemy.orm import Session
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
-
-from backend.model import schemas
-from backend.model.schemas import UserInDB
-from backend.router.user import router
-from backend.service import record as record_service
-from backend.service import user as user_service
-from backend.service.user import check_probe_authority
-from backend.util.b50.csv import generate_csv, get_records_from_csv
-from backend.util.b50.img import generate_b50_img, image_to_byte_array
-from backend.util.cache import PNGImageResponseCoder, best50image_key_builder
-from backend.util.database import get_db
+from backend.prprober.model import schemas
+from backend.prprober.model.schemas import UserInDB
+from backend.prprober.router.user import router
+from backend.prprober.service import record as record_service
+from backend.prprober.service import user as user_service
+from backend.prprober.service.user import check_probe_authority
+from backend.prprober.util.b50.csv import generate_csv, get_records_from_csv
+from backend.prprober.util.b50.img import generate_b50_img, image_to_byte_array
+from backend.prprober.util.cache import PNGImageResponseCoder, best50image_key_builder
+from backend.prprober.util.database import get_db
 import logging
 
 limiter = Limiter(key_func=get_remote_address)

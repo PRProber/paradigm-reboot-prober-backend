@@ -5,9 +5,9 @@ from sqlalchemy.orm import Session
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
-from backend.model import schemas
-from backend.model.schemas import UserInDB
-from backend.util.database import get_db
+from ..model import schemas
+from backend.prprober.model.schemas import UserInDB
+from backend.prprober.util.database import get_db
 from ..service import user as user_service
 
 router = APIRouter()

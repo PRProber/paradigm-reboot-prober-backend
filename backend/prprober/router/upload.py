@@ -2,10 +2,10 @@ import secrets
 
 from fastapi import UploadFile, Depends, HTTPException
 
-from .. import config
-from ..model import schemas, entities
-from ..router.user import router
-from ..service import user as user_service
+from backend import config
+from backend.prprober.model import schemas, entities
+from backend.prprober.router.user import router
+from backend.prprober.service import user as user_service
 
 
 @router.post('/upload/csv', response_model=schemas.UploadFileResponse)
