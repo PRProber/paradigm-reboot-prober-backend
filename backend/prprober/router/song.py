@@ -14,7 +14,7 @@ router = APIRouter()
 @cache(expire=600)
 async def get_all_song_levels(db: Session = Depends(get_db)):
     song_levels = await song_service.get_all_song_levels(db)
-    return song_levels
+    return sorted(song_levels, key=lambda x: x.song_level_id, reverse=True)
 
 
 @router.get('/songs/{song_id}', response_model=schemas.Song)
