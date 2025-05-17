@@ -13,6 +13,7 @@ class SongBase(BaseModel):
     album: str | None = None
     bpm: str | None = None
     length: str | None = None
+    wiki_id: str | None = None
 
 
 class UserBase(BaseModel):
@@ -57,7 +58,6 @@ class UserInDB(UserBase):
 
 
 class SongLevelInfo(SongBase):
-    wiki_id: str | None = None
     song_id: int
     song_level_id: int
     difficulty_id: int
@@ -83,7 +83,6 @@ class LevelInfo(BaseModel):
 
 
 class Song(SongBase):
-    wiki_id: str | None = None
     song_id: int
     song_levels: list[LevelInfo]
 
@@ -97,7 +96,6 @@ class SongCreate(SongBase):
 
 class SongUpdate(SongBase):
     song_id: int
-    wiki_id: str | None = None
     song_levels: list[LevelInfo] | None = None
 
 

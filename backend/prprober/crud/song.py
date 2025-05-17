@@ -32,6 +32,7 @@ def create_song(db: Session, song: schemas.SongCreate):
         album=song.album,
         bpm=song.bpm,
         length=song.length,
+        wiki_id=song.wiki_id
     )
     db.add(db_song)
     db.commit()
