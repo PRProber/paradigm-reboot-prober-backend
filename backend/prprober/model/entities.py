@@ -13,6 +13,7 @@ class Song(Base):
     __tablename__ = 'songs'
 
     song_id: Mapped[int] = mapped_column(primary_key=True)
+    wiki_id: Mapped[str] = mapped_column(unique=True)
     title: Mapped[str] = mapped_column()
     artist: Mapped[str] = mapped_column()
     genre: Mapped[str] = mapped_column()

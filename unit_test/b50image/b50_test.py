@@ -1,8 +1,8 @@
 import unittest
 import json
 
-from backend.model.schemas import PlayRecordInfo
-import backend.util.b50.img as b50
+from backend.prprober.model import PlayRecordInfo
+import backend.prprober.util.b50.img as b50
 
 
 class MyTestCase(unittest.TestCase):

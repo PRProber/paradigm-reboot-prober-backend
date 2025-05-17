@@ -1,7 +1,7 @@
 import unittest
 import os
 
-import backend.util.ocr as ocr
+import backend.prprober.util.ocr as ocr
 
 
 class OCRSimpleTestCase(unittest.TestCase):

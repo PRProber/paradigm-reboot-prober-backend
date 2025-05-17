@@ -5,7 +5,7 @@ from fastapi import HTTPException, Depends
 from fastapi_cache.decorator import cache
 from sqlalchemy.orm import Session
 
-from .. import config
+from backend import config
 from ..crud import user as crud
 from ..model.entities import User
 from ..model.schemas import UserInDB, UserCreate, UserUpdate

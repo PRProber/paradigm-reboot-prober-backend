@@ -4,7 +4,7 @@ from ..model.entities import Song, SongLevel
 
 
 REPLACEABLE_ATTRIBUTES = [
-    'title', 'artist', 'cover', 'illustrator', 'bpm', 'b15', 'album'
+    'title', 'artist', 'cover', 'illustrator', 'bpm', 'b15', 'album', 'wiki_id'
 ]
 
 
@@ -14,6 +14,10 @@ def get_all_songs(db: Session):
 
 def get_single_song_by_id(db: Session, song_id: int):
     return db.query(Song).filter(Song.song_id == song_id).one_or_none()
+
+
+def get_single_song_by_wiki_id(db: Session, song_id: str):
+    return db.query(Song).filter(Song.wiki_id == song_id).one_or_none()
 
 
 def create_song(db: Session, song: schemas.SongCreate):

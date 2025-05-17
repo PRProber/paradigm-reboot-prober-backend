@@ -1,7 +1,7 @@
 import json
-from backend.model.schemas import SongCreate, LevelInfo
-from backend.util.database import get_db_sync
-from backend.crud.song import create_song
+from backend.prprober.model.schemas import SongCreate, LevelInfo
+from backend.prprober.util.database import get_db_sync
+from backend.prprober.crud.song import create_song
 
 
 def get_diff_str(diff_id: int):
@@ -11,6 +11,7 @@ def get_diff_str(diff_id: int):
         return 'invaded'
     elif diff_id == 3:
         return 'massive'
+    return None
 
 
 if __name__ == '__main__':

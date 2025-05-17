@@ -1,4 +1,5 @@
-from backend.model import entities, schemas
+from backend.prprober.model import entities
+from backend.prprober.model import schemas
 
 
 class SongLevelInfo:

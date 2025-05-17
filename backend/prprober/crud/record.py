@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import List, Type
 
 from dateutil.relativedelta import relativedelta
-from sqlalchemy import select, func, and_, or_, not_
+from sqlalchemy import select, func, and_, not_
 from sqlalchemy.orm import Session
 
 from ..model.schemas import PlayRecordCreate

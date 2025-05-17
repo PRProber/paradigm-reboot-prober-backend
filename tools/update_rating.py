@@ -1,6 +1,6 @@
-from backend.util.rating import single_rating
-from backend.util.database import get_db_sync
-from backend.model.entities import BestPlayRecord, PlayRecord
+from backend.prprober.util.rating import single_rating
+from backend.prprober.util.database import get_db_sync
+from backend.prprober.model.entities import PlayRecord
 
 if __name__ == '__main__':
     db = get_db_sync()
