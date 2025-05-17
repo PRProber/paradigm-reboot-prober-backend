@@ -16,6 +16,10 @@ def get_single_song_by_id(db: Session, song_id: int):
     return db.query(Song).filter(Song.song_id == song_id).one_or_none()
 
 
+def get_single_song_by_wiki_id(db: Session, song_id: str):
+    return db.query(Song).filter(Song.wiki_id == song_id).one_or_none()
+
+
 def create_song(db: Session, song: schemas.SongCreate):
     db_song = Song(
         title=song.title,

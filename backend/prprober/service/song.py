@@ -40,8 +40,13 @@ async def get_all_song_levels(db: Session):
 
 
 @cache(expire=60)
-async def get_single_song_by_id(db: Session, song_id: int):
-    song = crud.get_single_song_by_id(db, song_id)
+async def get_single_by_id(db: Session, song_id: str, src: str):
+    if src == 'prp':
+        song = crud.get_single_song_by_id(db, int(song_id))
+    elif src == 'wiki':
+        song = crud.get_single_song_by_wiki_id(db, song_id)
+    else:
+        song = None
     if song is None:
         raise HTTPException(status_code=404, detail="Song doesn't exist")
     wrapped_song = util.SongInfo(song)

@@ -14,15 +14,17 @@ router = APIRouter()
 @cache(expire=600)
 async def get_all_song_levels(db: Session = Depends(get_db)):
     song_levels = await song_service.get_all_song_levels(db)
-
     return song_levels
 
 
 @router.get('/songs/{song_id}', response_model=schemas.Song)
 @cache(expire=600)
-async def get_single_song_info(song_id: int, db: Session = Depends(get_db)):
-    song = await song_service.get_single_song_by_id(db, song_id)
-
+async def get_single_song_info(song_id: str,
+                               src: str = 'prp',
+                               db: Session = Depends(get_db)):
+    if src not in ('prp', 'wiki'):
+        raise HTTPException(status_code=404, detail="Source doesn't exist")
+    song = await song_service.get_single_by_id(db, song_id, src)
     return song
 
 
