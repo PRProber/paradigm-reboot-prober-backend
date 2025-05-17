@@ -57,6 +57,7 @@ class UserInDB(UserBase):
 
 
 class SongLevelInfo(SongBase):
+    wiki_id: str | None = None
     song_id: int
     song_level_id: int
     difficulty_id: int
@@ -82,6 +83,7 @@ class LevelInfo(BaseModel):
 
 
 class Song(SongBase):
+    wiki_id: str | None = None
     song_id: int
     song_levels: list[LevelInfo]
 
@@ -95,6 +97,7 @@ class SongCreate(SongBase):
 
 class SongUpdate(SongBase):
     song_id: int
+    wiki_id: str | None = None
     song_levels: list[LevelInfo] | None = None
 
 
@@ -126,6 +129,7 @@ class BatchPlayRecordCreate(BaseModel):
 
 
 class SongLevelInfoSimple(BaseModel):
+    wiki_id: str | None = None
     title: str | None = None
     version: str | None = None
     b15: bool | None = False
