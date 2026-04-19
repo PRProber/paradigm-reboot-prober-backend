@@ -1,3 +1,5 @@
+This implementation of PRP is deprecated. Please go [NEW Version](https://github.com/IceLocke/paradigm-reboot-prober-go)
+
 # 范式：起源 查分器
 
 **中文** | [English](https://github.com/PRProber/paradigm-reboot-prober-backend/blob/master/docs/README_en.md)
